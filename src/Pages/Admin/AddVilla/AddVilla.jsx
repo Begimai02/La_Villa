@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { villasContext } from '../../../contexts/VillaContext';
 import { Link } from 'react-router-dom'
+import './AddVilla.css' 
 
 const AddVilla = () => {
   const [inpTitle, setInpTitle] = useState ('')
@@ -32,7 +33,8 @@ const AddVilla = () => {
 
   return (
     <div>
-      {/* <form> */}
+      <h2>Add Brand New Villa</h2>
+      <div className="form">
         <input value={inpTitle} onChange={(e) => setInpTitle(e.target.value)} placeholder="название" type="text"/>
         <input value={inpDesc} onChange={(e) => setInpDesc(e.target.value)} placeholder="описание" type="text"/>
         <input value={inpPrice} onChange={(e) => setInpPrice(e.target.value)} placeholder="цена" type="text"/>
@@ -43,7 +45,7 @@ const AddVilla = () => {
 
         <button onClick={handleClickAdd}>Add</button>
       </Link>
-      {/* </form> */}
+      </div>
     </div>
   );
 };
