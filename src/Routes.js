@@ -10,8 +10,8 @@ import Navbar from "./components/Header/Navbar/Navbar"
             <BrowserRouter>
                 <Header/>
                     <Switch>
-                        <Route exact path="/nav" component={Navbar} />
-
+                        <Route exact path="/"/>
+                        {/* здесь будут линки навбара надо сделать для них routes */}
                         
                     </Switch>
                 

@@ -1,0 +1,11 @@
+ul{
+    font-family: 'Frank Ruhl Libre', serif;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    }
+ul li{
+    margin-left: 100px;
+    text-decoration: none !important;
+    color: #203A43;
+}
