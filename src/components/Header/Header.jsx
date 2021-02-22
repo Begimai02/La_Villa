@@ -2,10 +2,8 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div>
-            
-        </div>
-    );
+        <input></input>
+    )
 };
 
 export default Header;
