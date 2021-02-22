@@ -1,5 +1,10 @@
 {
   "villas": [
-    
+    {
+      "title": "villa"
+    },
+    {
+      "title": "price"
+    }
   ]
 }
