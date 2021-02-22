@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react'
 import axios from 'axios'
 
-export const villaContext = React.createContext()
+export const villasContext = React.createContext()
 
 const INIT_STATE = {
     villas: []
