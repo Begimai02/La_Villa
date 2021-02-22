@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -60,6 +60,35 @@ const useStyles = makeStyles((theme) => ({
 export default function Login() {
   const classes = useStyles();
 
+  const [logEmail, setLogEmail] = useState('');
+  const [logPassword, setLogPassword] = useState('');
+
+  function check() {
+    // check if stored data from register-form is equal to data from login form
+    let newData = JSON.parse(localStorage.getItem('person'))//стягиваем массив из localStorage и преобразоваем в обычный формат js
+    console.log(newData)
+    newData.forEach(item => {//перебираем массив 
+      if (item.email === logEmail && item.password === logPassword) {
+        return alert('You are loged in.');  //call here state and change the state of the main page: ADMIN OR USER
+      }
+    })
+    return alert("error")
+  }
+  
+
+  function handleLogIn() {
+    let logPerson = {
+      email: logEmail,
+      password: logPassword
+    }
+
+    setLogEmail('');
+    setLogPassword('');
+    check();
+
+    // console.log(logPerson)
+  }
+
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -83,6 +112,8 @@ export default function Login() {
               name="email"
               autoComplete="email"
               autoFocus
+              value={logEmail}
+              onChange={(e) => setLogEmail(e.target.value)}
             />
             <TextField
               variant="outlined"
@@ -94,17 +125,19 @@ export default function Login() {
               type="password"
               id="password"
               autoComplete="current-password"
+              value={logPassword}
+              onChange={(e) => setLogPassword(e.target.value)}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
             <Button
-              type="submit"
               fullWidth
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={handleLogIn}
             >
               Sign In
             </Button>

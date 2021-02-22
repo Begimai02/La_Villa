@@ -7,13 +7,11 @@ import VillasContextProvider from './contexts/VillaContext';
      return (
          <VillasContextProvider>
             <BrowserRouter>
-                <Header>
-                    <Switch>
-                        <Route>
 
-                        </Route>
+                    <Switch>
+                        
                     </Switch>
-                </Header>
+
             </BrowserRouter>
          </VillasContextProvider>
      );
