@@ -26,7 +26,6 @@ export default function VillaList({ }) {
     <>
       <Grid container spacing={3} className={classes.grid_container}>
         {
-<<<<<<< HEAD
           villas.map(item => (
             <Grid key={item.id} item xs={12} sm={6} lg={4}>
               <Link to={`villas/${item.id}`} style={{ textDecoration: 'none' }}>
@@ -34,47 +33,6 @@ export default function VillaList({ }) {
               </Link>
             </Grid>
           ))
-=======
-            villas.map(item => (
-                <Card className={classes.root}>
-            <CardActionArea>
-                <CardMedia
-                    className={classes.media}
-                    image={item.image}
-                    title="Contemplative Reptile"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {item.title}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        {item.description}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        {item.price}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        {item.size}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        {item.place}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                        Delete
-                    </Button>
-                    <Button size="small" color="primary">
-                        Buy
-                    </Button>
-                    <Button size="small" color="primary">
-                        Details
-                    </Button>
-            </CardActions>
-        </Card>
-            ))
->>>>>>> f86ff9d0e5188f8acfd7eef551d20459769b9b7b
         }
       </Grid>
 
