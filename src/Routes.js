@@ -9,6 +9,7 @@ import Navbar from "./components/Header/Navbar/Navbar"
 
 import Admin from './Pages/Auth/Admin';
 import VillaDetail from './Pages/VillaDetail/VillaDetail';
+import EditVilla from './Pages/Admin/EditVilla/EditVilla';
 
 const Routes = () => {
     return (
@@ -18,14 +19,13 @@ const Routes = () => {
                 <Switch>
                     <Route exact path="/list" component={VillaList} />
                     <Route exact path="/add" component={AddVilla} />
-                </Switch>
-                <Header/>
-                    <Switch>
+
                         <Route exact path="/"/>
                         {/* здесь будут линки навбара надо сделать для них routes */}
                         
                         <Route exact path="/admin" component={Admin} /> {/*  main */}
-                        <Route exact path="/detail" component={VillaDetail} />
+                        <Route exact path="/detail/:id" component={VillaDetail} />
+                        <Route exact path="/edit/:id" component={EditVilla} /> {/*  main */}
                     </Switch>
                 
             </BrowserRouter>

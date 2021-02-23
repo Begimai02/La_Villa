@@ -1,0 +1,12 @@
+.editBox{
+  margin-top: 30px !important;
+    width: 70%;
+    height: auto;
+    max-width: 900px;
+    margin: 50px auto;
+    border: 4px solid #c4b004;
+    border-radius: 15px;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+}

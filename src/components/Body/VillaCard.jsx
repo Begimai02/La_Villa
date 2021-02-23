@@ -8,6 +8,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { villasContext } from '../../contexts/VillaContext';
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -18,9 +20,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function VillaCard({data}) {
+export default function VillaCard({ data }) {
 
-  const { villas, getVillas } = useContext(villasContext)
+  const {id} = useParams();
+
+  const { villas, getVillas, editVilla, deleteVilla } = useContext(villasContext)
   useEffect(() => {
     getVillas()
   }, [])
@@ -36,47 +40,61 @@ export default function VillaCard({data}) {
     image
   } = data;
 
+  function handleEdit(id) {
+    editVilla(id)
+  }
+  function handleDelete(id) {
+    deleteVilla(id)
+  }
+
+  
 
   return (
     <>
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={image}
-                title={title}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {title}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {description}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {price}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {size}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {place}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                Delete
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={image}
+            title={title}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {title}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {description}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {price}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {size}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {place}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            Buy
                     </Button>
-              <Button size="small" color="primary">
-                Buy
+          <Button size="small" color="primary" >
+            Details
                     </Button>
-              <Button size="small" color="primary">
-                Details
-                    </Button>
-            </CardActions>
-          </Card>
+          <Link to="/edit">
+            <Button size="small" color="primary" onClick={() => handleEdit(id)}>
+              Edit
+            </Button>
+          </Link>
+          <Button size="small" color="primary" onClick={() => handleDelete(id)}>
+            Delete
+                    </Button>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+        </CardActions>
+      </Card>
     </>
   );
 }
+
 
