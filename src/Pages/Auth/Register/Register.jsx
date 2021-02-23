@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { userContext } from '../../../contexts/UserContext';
 
 function Copyright() {
   return (
@@ -49,21 +50,23 @@ const useStyles = makeStyles((theme) => ({
 export default function Register() {
   const classes = useStyles();
 
+  const { addUser } = useContext(userContext);  //function from context to get newUser obj
+
   const [regName, setRegName] = useState('');
   const [regLast, setRegLast] = useState('');
   const [regEmail, setRegEmail] = useState('');
   const [regPassword, setRegPassword] = useState('');
   
 
-  function setItemToStorage(obj){//добавление новых тасков в localStorage
-    if(!localStorage.getItem('person')){//проверка есть ли что-нибудь в localStorage
-    localStorage.setItem('person', '[]')//если нет то добавляем туда путой массив
-    }
+//   function setItemToStorage(obj){//добавление новых тасков в localStorage
+//     if(!localStorage.getItem('person')){//проверка есть ли что-нибудь в localStorage
+//     localStorage.setItem('person', '[]')//если нет то добавляем туда путой массив
+//     }
 
-    let data = JSON.parse(localStorage.getItem('person'));//стягиваем массив из localStorage и преобразоваем в обычный формат js
-    data.push(obj)//в массив добавляем новый обьект
-    localStorage.setItem('person', JSON.stringify(data))//обновленный массив преобразовываем в формат json и отправляем обратно в localStorage
-}
+//     let data = JSON.parse(localStorage.getItem('person'));//стягиваем массив из localStorage и преобразоваем в обычный формат js
+//     data.push(obj)//в массив добавляем новый обьект
+//     localStorage.setItem('person', JSON.stringify(data))//обновленный массив преобразовываем в формат json и отправляем обратно в localStorage
+// }
 
   // storing input from register-form
   // function store() {
@@ -82,6 +85,7 @@ export default function Register() {
         email: regEmail,
         password: regPassword
     }
+    addUser(newPerson) //here function gets newPerson's data to context
 
     setRegName('');
     setRegLast('');
@@ -95,9 +99,9 @@ export default function Register() {
       email: regEmail,
       password: regPassword
     };
-    setItemToStorage(obj)//вызов функциидобавления в localStorage
-    console.log(newPerson)
-    console.log(obj)
+    // setItemToStorage(obj)//вызов функциидобавления в localStorage
+    // console.log(newPerson)
+    // console.log(obj)
 }
 
   return (

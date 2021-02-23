@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import VillaList from './components/Body/VillaList';
 import Header from './components/Header/Header';
 import VillasContextProvider from './contexts/VillaContext';
+import UserContextProvider from './contexts/UserContext';
 import AddVilla from './Pages/Admin/AddVilla/AddVilla'
 import Navbar from "./components/Header/Navbar/Navbar"
 
@@ -11,6 +12,7 @@ import VillaDetail from './Pages/VillaDetail/VillaDetail';
 
 const Routes = () => {
     return (
+      <UserContextProvider>  {/*нужен для регистрации. Я создала отдельный контекст для регистрации*/}
         <VillasContextProvider>
             <BrowserRouter>
                 <Switch>
@@ -28,6 +30,7 @@ const Routes = () => {
                 
             </BrowserRouter>
         </VillasContextProvider>
+      </UserContextProvider>
     );
 };
 
