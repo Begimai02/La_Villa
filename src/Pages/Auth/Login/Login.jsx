@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,6 +12,10 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { userContext } from '../../../contexts/UserContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+import { useHistory } from 'react-router-dom';
 
 function Copyright() {
   return (
@@ -58,7 +62,95 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Login() {
+  const history = useHistory();
   const classes = useStyles();
+
+  const { users, getUsers } = useContext(userContext);
+
+  const [logEmail, setLogEmail] = useState('');
+  const [logPassword, setLogPassword] = useState('');
+
+  // console.log(users)
+
+  useEffect(() => {
+    getUsers()
+  }, [])
+
+  function userExistCheck(){
+    let check = false;
+    console.log(users)
+    users.map(item => {
+      if(item.email === logEmail && item.password === logPassword){
+        check = true; 
+      }
+    })
+    if(check){
+      console.log(logEmail)
+      // notify(logEmail)
+      // alert("success")
+      history.push('/');
+    } else {
+      notifyError()
+      // alert('error')
+    }
+  }
+
+
+  function handleLogIn() {
+    let logPerson = {
+      email: logEmail,
+      password: logPassword
+    }
+
+    setLogEmail('');
+    setLogPassword('');
+    // check();
+
+    // console.log(logPerson)
+    userExistCheck()
+
+  }
+  //FOR УВЕДОМЛЕНИЯ USERA
+  // const notify = (logEmail) => toast(`Вы вошли в систему как ${logEmail}!`, {
+	// 	position: "top-right",
+	// 	autoClose: 5000,
+	// 	hideProgressBar: false,
+	// 	newestOnTop: false,
+	// 	closeOnClick: true,
+	// 	rtl: false,
+	// 	pauseOnFocusLoss: true,
+	// 	draggable: true,
+	// 	pauseOnHover: true,
+	// 	type: 'success'
+	// });
+
+    const notifyError = () => toast('Неверные данные или несуществующий юзер!', {
+		position: "top-right",
+		autoClose: 5000,
+		hideProgressBar: false,
+		newestOnTop: false,
+		closeOnClick: true,
+		rtl: false,
+		pauseOnFocusLoss: true,
+		draggable: true,
+		pauseOnHover: true,
+		type: 'error'
+	});
+
+
+  //---------------------not using anymore ------------------
+  // function check() {  //TO LOCAL STORAGE  
+  //   // check if stored data from register-form is equal to data from login form
+  //   let newData = JSON.parse(localStorage.getItem('person'))//стягиваем массив из localStorage и преобразоваем в обычный формат js
+  //   console.log(newData)
+  //   newData.forEach(item => {//перебираем массив 
+  //     if (item.email === logEmail && item.password === logPassword) {
+  //       return alert('You are loged in.');  //call here state and change the state of the main page: ADMIN OR USER
+  //     }
+  //   })
+  //   return alert("error")
+  // }
+  
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -83,6 +175,8 @@ export default function Login() {
               name="email"
               autoComplete="email"
               autoFocus
+              value={logEmail}
+              onChange={(e) => setLogEmail(e.target.value)}
             />
             <TextField
               variant="outlined"
@@ -94,17 +188,19 @@ export default function Login() {
               type="password"
               id="password"
               autoComplete="current-password"
+              value={logPassword}
+              onChange={(e) => setLogPassword(e.target.value)}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
             <Button
-              type="submit"
               fullWidth
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={handleLogIn}
             >
               Sign In
             </Button>
@@ -123,6 +219,7 @@ export default function Login() {
             <Box mt={5}>
               <Copyright />
             </Box>
+            <ToastContainer />
           </form>
         </div>
       </Grid>

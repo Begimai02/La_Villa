@@ -8,28 +8,33 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { villasContext } from '../../contexts/VillaContext';
+import Grid from '@material-ui/core/Grid';
+import classes from './VillaList.module.css';
+import VillaCard from './VillaCard';
+import { Link } from 'react-router-dom';
 
-const useStyles = makeStyles({
-    root: {
-        maxWidth: 345,
-    },
-    media: {
-        height: 140,
-    },
-});
 
-export default function VillaList({}) {
+export default function VillaList({ }) {
 
-    const { villas, getVillas } = useContext(villasContext)
-    useEffect(() => {
-        getVillas()
-    }, [])
+  const { villas, getVillas } = useContext(villasContext)
+  useEffect(() => {
+    getVillas()
+  }, [])
 
-    const classes = useStyles();
 
-    return (
-        <>
+  return (
+    <>
+      <Grid container spacing={3} className={classes.grid_container}>
         {
+<<<<<<< HEAD
+          villas.map(item => (
+            <Grid key={item.id} item xs={12} sm={6} lg={4}>
+              <Link to={`villas/${item.id}`} style={{ textDecoration: 'none' }}>
+                <VillaCard data={item} />
+              </Link>
+            </Grid>
+          ))
+=======
             villas.map(item => (
                 <Card className={classes.root}>
             <CardActionArea>
@@ -69,10 +74,12 @@ export default function VillaList({}) {
             </CardActions>
         </Card>
             ))
+>>>>>>> f86ff9d0e5188f8acfd7eef551d20459769b9b7b
         }
-        
-        </>
-    );
+      </Grid>
+
+    </>
+  );
 }
 
 
