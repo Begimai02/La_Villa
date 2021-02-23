@@ -58,6 +58,7 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem onClick={handleMenuClose}>Register</MenuItem>
       <MenuItem onClick={handleMenuClose}>Log in</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Admin</MenuItem>
     </Menu>
   );
 
