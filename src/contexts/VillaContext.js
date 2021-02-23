@@ -4,7 +4,7 @@ import axios from 'axios'
 export const villasContext = React.createContext()
 
 const INIT_STATE = {
-    villas: []
+  villas: []
 }
 
 
@@ -38,6 +38,7 @@ const VillasContextProvider = ({children}) => {
         await axios.post('http://localhost:8000/villas', newVilla)
         getVillas()
     }
+    
     return (
         <villasContext.Provider value={{
             getVillas,
