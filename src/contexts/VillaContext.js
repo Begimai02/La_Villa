@@ -24,7 +24,6 @@ const VillasContextProvider = ({children}) => {
 
     const getVillas = async () => {
         const { data } = await axios('http://localhost:8000/villas')
-        console.log(data);
         dispatch({
             type: "GET_VILLAS",
             payload: data
@@ -33,8 +32,6 @@ const VillasContextProvider = ({children}) => {
     }
 
     const addVilla = async ( newVilla ) => {
-        // console.log(newVilla)
-        console.log("ASKAT")
         await axios.post('http://localhost:8000/villas', newVilla)
         getVillas()
     }
