@@ -62,6 +62,15 @@
       "place": "as",
       "image": "as",
       "id": 9
+    },
+    {
+      "title": "rasul",
+      "description": "rasul",
+      "price": "rasul",
+      "size": "rasul",
+      "place": "rasul",
+      "image": "rasul",
+      "id": 10
     }
   ],
   "users": [
@@ -103,33 +112,6 @@
   ],
   "cart": [
     {
-      "title": "priv",
-      "description": "priv",
-      "price": "priv",
-      "size": "priv",
-      "place": "priv",
-      "image": "priv",
-      "id": 3
-    },
-    {
-      "title": "nurba",
-      "description": "nurba",
-      "price": "nurba",
-      "size": "nurba",
-      "place": "nurba",
-      "image": "nurba",
-      "id": 4
-    },
-    {
-      "title": "beks",
-      "description": "kakashi",
-      "price": "priceless",
-      "size": "ambal",
-      "place": "jala-abad",
-      "image": "https://sun1-17.userapi.com/impg/NRtx819nYjXorKn6u06B0m8ZSOJgLCPRYSleYA/O9szvbzNiVE.jpg?size=400x0&quality=96&crop=0,200,1200,1200&sign=943ffe7bae52368351768a87a2193601&c_uniq_tag=2-7XH7vSDbmStdd6b2H-CtZH11oKXLEwJJ6h_3khQc4&ava=1",
-      "id": 8
-    },
-    {
       "title": "askat",
       "description": "asd",
       "price": "asd",
@@ -146,6 +128,15 @@
       "place": "as",
       "image": "as",
       "id": 9
+    },
+    {
+      "title": "rasul",
+      "description": "rasul",
+      "price": "rasul",
+      "size": "rasul",
+      "place": "rasul",
+      "image": "rasul",
+      "id": 10
     }
   ]
 }

@@ -49,13 +49,12 @@ const useStyles = makeStyles({
 });
 
 export default function CustomizedTables() {
-  let { cart, getVillasInCart } = useContext(cartContext)
+  let { cart, getVillasInCart, deleteVilla } = useContext(cartContext)
   // let [obj, setObj] = useState(cart)
   const classes = useStyles();
   useEffect(() => {
     getVillasInCart()
   }, [])
-  console.log(cart)
 
 
 
@@ -71,6 +70,8 @@ export default function CustomizedTables() {
               <StyledTableCell align="right">КОЛИЧЕСТВО</StyledTableCell>
               <StyledTableCell align="right">МЕСТОНАХОЖДЕНИЕ</StyledTableCell>
               <StyledTableCell align="right">КВАДРАТУРА</StyledTableCell>
+              <StyledTableCell align="right"></StyledTableCell>
+
             </TableRow>
           </TableHead>
           <TableBody>
@@ -80,9 +81,12 @@ export default function CustomizedTables() {
                   {item.title}
               </StyledTableCell>
                 <StyledTableCell align="right">{item.price}</StyledTableCell>
-                <StyledTableCell align="right">{item.place}</StyledTableCell>
+                <StyledTableCell align="right">1</StyledTableCell>
                 <StyledTableCell align="right">{item.place}</StyledTableCell>
                 <StyledTableCell align="right">{item.size}</StyledTableCell>
+                <StyledTableCell align="right"><button onClick={() => deleteVilla(item.id)} >&times;</button></StyledTableCell>
+
+                {/* <button>&times;</button> */}
               </StyledTableRow>
             ))}
 
@@ -94,15 +98,3 @@ export default function CustomizedTables() {
   );
 }
 
-
-// {cart.map((row) => (
-//   <StyledTableRow key={row.name}>
-//     <StyledTableCell component="th" scope="row">
-//       {row.name}
-//     </StyledTableCell>
-//     <StyledTableCell align="right">{cart.title}</StyledTableCell>
-//     <StyledTableCell align="right">{cart.place}</StyledTableCell>
-//     <StyledTableCell align="right">{cart.size}</StyledTableCell>
-//     <StyledTableCell align="right">{cart.protein}</StyledTableCell>
-//   </StyledTableRow>
-// ))}

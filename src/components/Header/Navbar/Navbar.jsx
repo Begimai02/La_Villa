@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import './Navbar.css'
 import { NavLink } from 'react-router-dom';
 import sunLogo from '../../../assets/sunLogo.svg'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -73,8 +74,8 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-     
-      
+
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -91,77 +92,80 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" className={classes.shopcart} 
-        style={{ 
-            background: 'transparent', 
-            boxShadow: 'none',
-            color: '#203A43',
-            }}>
+      <AppBar position="static" className={classes.shopcart}
+        style={{
+          background: 'transparent',
+          boxShadow: 'none',
+          color: '#203A43',
+        }}>
         <Toolbar>
-        <IconButton
+          <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
           >
-           
+
           </IconButton>
-          <img src={sunLogo} alt={"logo"} 
-              style={{
-                  height: '30px',
-                  width: '30px',
-                }}
-          /> 
-          <Typography  
-                    style={{ 
-                    fontFamily: 'Sail cursive',
-                    color: '#203A43', 
-                    textDecoration: 'none',
-                    margin: '20px 0',
-                    fontSize: '30px',
-                    marginLeft: '10px',
-                    cursor: 'pointer', 
-                    }}>
+          <img src={sunLogo} alt={"logo"}
+            style={{
+              height: '30px',
+              width: '30px',
+            }}
+          />
+          <Typography
+            style={{
+              fontFamily: 'Sail cursive',
+              color: '#203A43',
+              textDecoration: 'none',
+              margin: '20px 0',
+              fontSize: '30px',
+              marginLeft: '10px',
+              cursor: 'pointer',
+            }}>
             La Villa
           </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-              <NavLink to="/" style={{textDecoration: 'none'}}>
-                <ul>
-                    <li>
-                        Home
+            <NavLink to="/" style={{ textDecoration: 'none' }}>
+              <ul>
+                <li>
+                  Home
                     </li>
-                    <li>
-                        Our Villas
+                <li>
+                  Our Villas
                     </li>
-                    <li>
-                        About Us
+                <li>
+                  About Us
                     </li>
-                    <li>
-                        Contacts
+                <li>
+                  Contacts
                     </li>
-                </ul>
-              </NavLink>
+              </ul>
+            </NavLink>
             <IconButton color="inherit">
             </IconButton>
-            <IconButton color="inherit">
-              <Badge color="secondary">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
+
+            <Link to="/cart">
+              <IconButton color="inherit">
+                <Badge color="secondary">
+                  <ShoppingCartIcon />
+                </Badge>
+              </IconButton>
+            </Link>
             <IconButton
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              
+
             >
               <AccountCircle />
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
-            
+
           </div>
         </Toolbar>
       </AppBar>

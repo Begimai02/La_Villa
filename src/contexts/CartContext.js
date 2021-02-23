@@ -49,6 +49,11 @@ const CartContextProvider = ({ children }) => {
             notifyError()
         }
     }
+
+    const deleteVilla = async (id) => {
+        await axios.delete(`http://localhost:8000/cart/${id}`)
+        getVillasInCart()
+    }
     
     const notifyError = () => toast('Уже в корзине!', {
         position: "top-right",
@@ -68,6 +73,7 @@ const CartContextProvider = ({ children }) => {
             getVillasInCart,
             getVillaById,
             addToCard,
+            deleteVilla,
             cart: state.cart
         }}>
             {children}

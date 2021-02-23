@@ -7,7 +7,6 @@ import Select from '@material-ui/core/Select';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
-import Typical from 'react-typical';
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
