@@ -36,7 +36,7 @@ export default function VillaList({}) {
                 <CardMedia
                     className={classes.media}
                     image={item.image}
-                    title="Contemplative Reptile"
+                    title={item.title}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
