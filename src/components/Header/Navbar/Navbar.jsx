@@ -14,9 +14,6 @@ import { NavLink } from 'react-router-dom';
 import sunLogo from '../../../assets/sunLogo.svg'
 
 const useStyles = makeStyles((theme) => ({
-  shopcart: {
-    color: '#203A43',
-    },
   grow: {
     flexGrow: 1,
   },
@@ -93,7 +90,12 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" className={classes.shopcart} style={{ background: 'transparent', boxShadow: 'none'}}>
+      <AppBar position="static" className={classes.shopcart} 
+        style={{ 
+            background: 'transparent', 
+            boxShadow: 'none',
+            color: '#203A43',
+            }}>
         <Toolbar>
         <IconButton
             edge="start"
@@ -117,7 +119,7 @@ export default function PrimarySearchAppBar() {
                     margin: '20px 0',
                     fontSize: '30px',
                     marginLeft: '10px',
-                    cursor: 'pointer' 
+                    cursor: 'pointer', 
                     }}>
             La Villa
           </Typography>
