@@ -35,7 +35,7 @@ export default function VillaList({}) {
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image="/static/images/cards/contemplative-reptile.jpg"
+                    image={item.image}
                     title="Contemplative Reptile"
                 />
                 <CardContent>
@@ -53,9 +53,6 @@ export default function VillaList({}) {
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         {item.place}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        {item.image}
                     </Typography>
                 </CardContent>
             </CardActionArea>
