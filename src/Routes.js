@@ -12,6 +12,7 @@ import CreditCard from './components/Payment/CreditCard';
 
 import Admin from './Pages/Auth/Admin';
 import VillaDetail from './Pages/VillaDetail/VillaDetail';
+import Footer from './components/Footer/Footer';
 
 const Routes = () => {
     return (
@@ -26,6 +27,7 @@ const Routes = () => {
                         <Route exact path="/admin" component={Admin} /> {/*  main */}
                         <Route exact path="/detail" component={VillaDetail} />
                     </Switch>
+                    <Footer/>
             </BrowserRouter>
         </VillasContextProvider>
       </UserContextProvider>
