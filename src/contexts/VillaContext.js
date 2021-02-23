@@ -36,7 +36,7 @@ const VillasContextProvider = ({children}) => {
         // console.log(newVilla)
         console.log("ASKAT")
         await axios.post('http://localhost:8000/villas', newVilla)
-        // getVillas()
+        getVillas()
     }
     return (
         <villasContext.Provider value={{

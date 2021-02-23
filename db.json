@@ -3,29 +3,11 @@
     {
       "title": "tilek",
       "description": "tilek",
-      "price": "tilek",
+      "price": "tile",
       "size": "tilek",
       "place": "tilek",
-      "image": "tilek",
+      "image": "https://yandex.ru/images/search?source=morda&text=%D0%9C%D0%BB%D0%B5%D1%87%D0%BD%D1%8B%D0%B9+%D0%9F%D1%83%D1%82%D1%8C&pos=1&rpt=simage&img_url=https%3A%2F%2Fwww.azuloxworkshops.com%2Fwp-content%2Fuploads%2F2017%2F06%2FMilky-Way-Photo-Edit-Learn-Milky-Way-Photography-Austin-Astrophotography-Workshops-001.jpg&nl=1&utm_source=main_stripe_big",
       "id": 1
-    },
-    {
-      "title": "meerim",
-      "description": "meerim",
-      "price": "meerim",
-      "size": "meerim",
-      "place": "meerim",
-      "image": "meerim",
-      "id": 2
-    },
-    {
-      "title": "meerim",
-      "description": "meerim",
-      "price": "meerim",
-      "size": "meerim",
-      "place": "meerim",
-      "image": "meerim",
-      "id": 3
     }
   ]
 }
