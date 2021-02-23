@@ -1,0 +1,20 @@
+.py-3{
+    background-color: blanchedalmond;
+    height: 350px;
+
+}
+
+.logo{
+    width: 150px;
+    height: 100px;
+    margin-right: 30px;
+}
+
+.logoLink{
+    margin: 0;
+}
+
+.text-center{
+    display: flex;
+
+}
