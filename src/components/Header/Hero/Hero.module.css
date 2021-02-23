@@ -1,0 +1,9 @@
+.hero_container{
+    margin: 0px auto;
+}
+
+.hero_video{
+    height: 100%;
+    width: 100%;
+    /* filter: brightness(50%); */
+}

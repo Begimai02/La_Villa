@@ -1,10 +1,31 @@
 {
   "villas": [
     {
-      "title": "villa"
+      "title": "tilek",
+      "description": "tilek",
+      "price": "tilek",
+      "size": "tilek",
+      "place": "tilek",
+      "image": "tilek",
+      "id": 1
     },
     {
-      "title": "price"
+      "title": "meerim",
+      "description": "meerim",
+      "price": "meerim",
+      "size": "meerim",
+      "place": "meerim",
+      "image": "meerim",
+      "id": 2
+    },
+    {
+      "title": "meerim",
+      "description": "meerim",
+      "price": "meerim",
+      "size": "meerim",
+      "place": "meerim",
+      "image": "meerim",
+      "id": 3
     }
   ]
 }
