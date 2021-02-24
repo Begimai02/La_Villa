@@ -11,6 +11,8 @@ import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { villasContext } from '../../../contexts/VillaContext';
 import { cartContext } from '../../../contexts/CartContext';
+import Truncate from 'react-truncate'
+
 
 const useStyles = makeStyles({
   root: {
@@ -24,7 +26,7 @@ const useStyles = makeStyles({
 export default function MainCard({ data }) {
 
   // const {id} = useParams();
-  const {getVillaById} = useContext(cartContext)
+  const { getVillaById } = useContext(cartContext)
 
   const { villas, getVillas, villaDetail } = useContext(villasContext)
   useEffect(() => {
@@ -47,10 +49,10 @@ export default function MainCard({ data }) {
     villaDetail(id)
   }
 
-  function handleBuy () {
+  function handleBuy() {
     getVillaById(id)
   }
-  
+
   return (
     <>
       <Card className={classes.root}>
@@ -65,16 +67,18 @@ export default function MainCard({ data }) {
               {title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              {description}
+              <Truncate lines={2} ellipsis={<span>...</span>}>
+                Описание: {description}
+              </Truncate>
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              {price}
+              $ {price}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              {size}
+              Квадратура: {size}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              {place}
+              Местонахождение: {place}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -82,12 +86,12 @@ export default function MainCard({ data }) {
           <Button size="small" color="primary" onClick={handleBuy}>
             Buy
           </Button>
-          <Link to={`/detail/${id}`} style={{textDecoration: "none"}}>
+          <Link to={`/detail/${id}`} style={{ textDecoration: "none" }}>
             <Button size="small" color="primary" >
-            Details
+              Details
             </Button>
           </Link>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+
         </CardActions>
       </Card>
     </>

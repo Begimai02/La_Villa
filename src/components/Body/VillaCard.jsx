@@ -33,10 +33,8 @@ export default function VillaCard({ data }) {
   const { villas, getVillas, editVilla, deleteVilla } = useContext(villasContext)
   const { getVillaById } = useContext(cartContext);
 
-  debugger
-
   useEffect(() => {
-    
+    getVillas()
   }, [])
 
   const classes = useStyles();
