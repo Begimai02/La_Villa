@@ -10,10 +10,9 @@ import CreditCard from './components/Payment/CreditCard';
 
 import Admin from './Pages/Auth/Admin';
 import VillaDetail from './Pages/VillaDetail/VillaDetail';
-import Footer from './components/Footer/Footer';
-import Navbar from "./components/Header/Navbar/Navbar";
 import Cart from './components/Cart/Cart'
 import CartContextProvider from './contexts/CartContext';
+import FooterNew from './components/Footer/FooterNew';
 
 const Routes = () => {
     return (
@@ -27,14 +26,15 @@ const Routes = () => {
                             <Route exact path="/add" component={AddVilla} />
                             <Route exact path="/" />
                             {/* здесь будут линки навбара надо сделать для них routes */}
-                        
-                        <Route exact path="/admin" component={Admin} /> {/*  main */}
-                        <Route exact path="/detail" component={VillaDetail} />
-                    {/* <Footer/> */}
+
+                            <Route exact path="/admin" component={Admin} /> {/*  main */}
+                            <Route exact path="/detail" component={VillaDetail} />
                             <Route exact path="/admin" component={Admin} /> {/*  main */}
                             <Route exact path="/detail" component={VillaDetail} />
                             <Route exact path="/cart" component={Cart} />
-
+                            <Route exact path="/footer" component={FooterNew} />
+                    
+                          
                         </Switch>
                     </BrowserRouter>
                 </CartContextProvider>

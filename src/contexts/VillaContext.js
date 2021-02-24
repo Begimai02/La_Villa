@@ -4,12 +4,12 @@ import axios from 'axios'
 export const villasContext = React.createContext()
 
 const INIT_STATE = {
-  villas: []
+    villas: []
 }
 
 
-const reducer = (state=INIT_STATE, action) => {
-    switch(action.type){
+const reducer = (state = INIT_STATE, action) => {
+    switch (action.type) {
         case "GET_VILLAS":
             return {
                 ...state,
@@ -19,7 +19,7 @@ const reducer = (state=INIT_STATE, action) => {
     }
 }
 
-const VillasContextProvider = ({children}) => {
+const VillasContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE)
 
     const getVillas = async () => {
@@ -27,16 +27,16 @@ const VillasContextProvider = ({children}) => {
         dispatch({
             type: "GET_VILLAS",
             payload: data
-            
+
         })
     }
 
 
-    const addVilla = async ( newVilla ) => {
+    const addVilla = async (newVilla) => {
         await axios.post('http://localhost:8000/villas', newVilla)
         getVillas()
     }
-    
+
     return (
         <villasContext.Provider value={{
             getVillas,
