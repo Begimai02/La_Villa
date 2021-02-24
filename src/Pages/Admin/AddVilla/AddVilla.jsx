@@ -3,6 +3,7 @@ import { villasContext } from '../../../contexts/VillaContext';
 import { Link } from 'react-router-dom'
 import './AddVilla.css' 
 import Navbar from '../../../components/Header/Navbar/Navbar'
+import VillaList from '../../../components/Body/VillaList';
 
 const AddVilla = () => {
   const [inpTitle, setInpTitle] = useState ('')
@@ -47,6 +48,7 @@ const AddVilla = () => {
         <button onClick={handleClickAdd}>Add</button>
       </Link>
       </div>
+      <VillaList />
     </div>
   );
 };

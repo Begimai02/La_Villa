@@ -73,43 +73,7 @@
       "id": 11
     }
   ],
-  "users": [
-    {
-      "name": "temir",
-      "lastname": "tima",
-      "email": "temir@gmail.com",
-      "password": "111",
-      "id": 1
-    },
-    {
-      "name": "Hello",
-      "lastname": "world",
-      "email": "hell@gmail.com",
-      "password": "222",
-      "id": 2
-    },
-    {
-      "name": "tima",
-      "lastname": "tima",
-      "email": "tima@gmail.com",
-      "password": "000",
-      "id": 3
-    },
-    {
-      "name": "ya",
-      "lastname": "ya",
-      "email": "ya@gmail.com",
-      "password": "111",
-      "id": 4
-    },
-    {
-      "name": "admin",
-      "lastname": "admin",
-      "email": "admin@gmail.com",
-      "password": "1",
-      "id": 4
-    }
-  ],
+  "users": [],
   "cart": [
     {
       "title": "askat",
