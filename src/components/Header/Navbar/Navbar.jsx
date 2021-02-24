@@ -8,7 +8,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-// import './Navbar.css'
 import { NavLink, Link } from 'react-router-dom';
 import { red, green } from '@material-ui/core/colors';
 import { userContext } from '../../../contexts/UserContext';
