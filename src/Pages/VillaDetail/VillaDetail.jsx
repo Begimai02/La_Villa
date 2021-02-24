@@ -1,26 +1,42 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { villasContext } from '../../contexts/VillaContext';
 import './VillaDetail.css';
 
 const VillaDetail = () => {
-  const { villas } = useContext(villasContext);  //, getVillaDetail
-  
-  const {id} = useParams();
-  // useEffect(() => {
-	// 	getVillaDetail(); //here maybe id inside parenthesies
-	// }, [])
+  const { villas, villaDetail, forDetail } = useContext(villasContext);  //, getVillaDetail
+  const [detail, setDetail] = useState(null)
 
-	// console.log(villaDetail)
+  const { id } = useParams();
+
+  useEffect(() => {
+    setDetail(forDetail)
+  }, [forDetail])
+
+  useEffect(() => {
+    villaDetail(id)
+  }, [id])
+  // useEffect(() => {
+  // 	getVillaDetail(); //here maybe id inside parenthesies
+  // }, [])
+
+  // console.log(villaDetail)
 
   return (
     <>
-      <div className="det-container">
-        <div className="det-img">
-          <img src="" alt="some villa"/>
-        </div>
-        <h1>La Villa</h1>
-      </div>
+    <h1>Detail</h1>
+      {
+        detail ?
+          <>
+            <div className="det-container">
+              <div className="det-img">
+                <img src={detail.image} alt="some villa" />
+              </div>
+              <h1>{detail.title}</h1>
+            </div>
+          </>
+        : <h1>Loading...</h1>
+    }
     </>
   );
 };

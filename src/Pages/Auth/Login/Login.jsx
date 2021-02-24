@@ -50,7 +50,8 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    // backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "blue",
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -69,6 +70,8 @@ export default function Login() {
 
   const [logEmail, setLogEmail] = useState('');
   const [logPassword, setLogPassword] = useState('');
+
+  const [isAdmin, setIsAdmin] = useState(false);
 
   // console.log(users)
 
@@ -104,7 +107,7 @@ export default function Login() {
 
     setLogEmail('');
     setLogPassword('');
-    // check();
+    setUserToStorage(logPerson);
 
     // console.log(logPerson)
     userExistCheck()
@@ -150,6 +153,16 @@ export default function Login() {
   //   })
   //   return alert("error")
   // }
+
+  function setUserToStorage(obj){//добавление новых тасков в localStorage
+        if(!localStorage.getItem('person')){//проверка есть ли что-нибудь в localStorage
+        localStorage.setItem('person', '[]')//если нет то добавляем туда путой массив
+        }
+    
+        let data = JSON.parse(localStorage.getItem('person'));//стягиваем массив из localStorage и преобразоваем в обычный формат js
+        data.push(obj)//в массив добавляем новый обьект
+        localStorage.setItem('person', JSON.stringify(data))//обновленный массив преобразовываем в формат json и отправляем обратно в localStorage
+    }
   
 
   return (

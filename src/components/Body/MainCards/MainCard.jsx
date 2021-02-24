@@ -7,9 +7,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { villasContext } from '../../contexts/VillaContext';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import { villasContext } from '../../../contexts/VillaContext';
 
 const useStyles = makeStyles({
   root: {
@@ -20,11 +20,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function VillaCard({ data }) {
+export default function MainCard({ data }) {
 
   // const {id} = useParams();
 
-  const { villas, getVillas, editVilla, deleteVilla } = useContext(villasContext)
+  const { villas, getVillas, villaDetail } = useContext(villasContext)
   useEffect(() => {
     getVillas()
   }, [])
@@ -41,14 +41,11 @@ export default function VillaCard({ data }) {
     id
   } = data;
 
-  function handleEdit(id) {
-    editVilla(id)
-  }
-  function handleDelete(id) {
-    deleteVilla(id)
+  function handleDetail(id) {
+    villaDetail(id)
   }
 
-
+  
 
   return (
     <>
@@ -78,19 +75,15 @@ export default function VillaCard({ data }) {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Link to={`/detail/${id}`} style={{ textDecoration: "none" }}>
+          <Button size="small" color="primary">
+            Buy
+          </Button>
+          <Link to={`/detail/${id}`} style={{textDecoration: "none"}}>
             <Button size="small" color="primary" >
-              Details
+            Details
             </Button>
           </Link>
-          <Link to={`/edit/${id}`} style={{ textDecoration: "none" }}>
-            <Button size="small" color="primary" >
-              Edit
-            </Button>
-          </Link>
-          <Button size="small" color="primary" onClick={() => handleDelete(id)}>
-            Delete
-                    </Button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
         </CardActions>
       </Card>
     </>

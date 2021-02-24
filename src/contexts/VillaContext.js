@@ -5,6 +5,7 @@ export const villasContext = React.createContext()
 
 const INIT_STATE = {
   villas: [],
+  forDetail: null,
   forEdit: null,
 }
 
@@ -16,6 +17,12 @@ const reducer = (state = INIT_STATE, action) => {
         ...state,
         villas: action.payload
       }
+    case "DETAIL_VILLA": {
+      return {
+        ...state,
+        forDetail: action.payload
+      }
+    }
     case "EDIT_VILLA":
       return{
         ...state,
@@ -30,7 +37,7 @@ const VillasContextProvider = ({ children }) => {
 
   const getVillas = async () => {
     const { data } = await axios('http://localhost:8000/villas')
-    console.log(data);
+    // console.log(data);
     dispatch({
       type: "GET_VILLAS",
       payload: data
@@ -45,6 +52,16 @@ const VillasContextProvider = ({ children }) => {
     getVillas()
   }
 
+  const villaDetail = async(id) => {
+    console.log(id)
+    let { data } = await axios(`http://localhost:8000/villas/${id}`)
+    console.log('detail: ', data);
+
+    dispatch({
+      type: "DETAIL_VILLA",
+      payload: data
+  })
+  }
   const editVilla = async(id) => {
     console.log(id)
     let { data } = await axios(`http://localhost:8000/villas/${id}`)
@@ -71,12 +88,14 @@ const VillasContextProvider = ({ children }) => {
 return (
   <villasContext.Provider value={{
     villas: state.villas,
+    forDetail: state.forDetail,
     forEdit: state.forEdit,
     getVillas,
     addVilla,
     editVilla,
     saveNewEditVilla,
     deleteVilla,
+    villaDetail
   }}>
     {children}
   </villasContext.Provider>

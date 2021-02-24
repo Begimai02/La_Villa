@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { villasContext } from '../../../contexts/VillaContext';
 import { Link } from 'react-router-dom'
 import './AddVilla.css' 
+import VillaList from '../../../components/Body/VillaList';
 
 const AddVilla = () => {
   const [inpTitle, setInpTitle] = useState ('')
@@ -46,6 +47,7 @@ const AddVilla = () => {
         <button onClick={handleClickAdd}>Add</button>
       </Link>
       </div>
+      <VillaList />
     </div>
   );
 };

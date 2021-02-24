@@ -3,7 +3,7 @@ import { villasContext } from '../../../contexts/VillaContext';
 import AddIcon from '@material-ui/icons/Add';
 import Fab from '@material-ui/core/Fab';
 import TextField from '@material-ui/core/TextField';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 const EditVilla = () => {
   const classes = useStyles();
 
-  const { forEdit, saveNewEditVilla } = useContext(villasContext);  // {NAME: BEGIMAI, SURNAME: ASD}
+  const { forEdit, saveNewEditVilla, editVilla } = useContext(villasContext);  // {NAME: BEGIMAI, SURNAME: ASD}
   const [edit, setEdit] = useState(null); //{NAME: BEGIMAI, SURNAME: ASD123}
 
   // const [editTitle, setEditTitle] = useState (edit.title)
@@ -27,11 +27,16 @@ const EditVilla = () => {
   // const [editSize, setEditSize] = useState(edit.size)
   // const [editPlace, setEditPlace] = useState(edit.place)
   // const [editImage, setEditImage] = useState(edit.image)
+  const {id} = useParams()
 
-  useEffect(() => {
+  useEffect(() => {    
     setEdit(forEdit)
   }, [forEdit])
 
+  useEffect(() => {
+    editVilla(id)
+  }, [id])
+  
   function handleEditInp(e) {
     let newObj = {
         ...edit,
@@ -55,9 +60,11 @@ const EditVilla = () => {
                 <input onChange={handleEditInp} value={edit.size} type="text" name="size" id=""/>
                 <input onChange={handleEditInp} value={edit.place} type="text" name="place" id=""/>
                 <input onChange={handleEditInp} value={edit.image} type="text" name="image" id=""/>
-                <button onClick={handleClickAdd} >Save</button>
+                <Link to="/list" >
+                    <button onClick={handleClickAdd} >Save</button>
+                </Link>
             </div>
-            : null
+            : <h1>loading...</h1>
     }
       
     </>
