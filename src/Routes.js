@@ -19,6 +19,7 @@ const Routes = () => {
                     <Switch>
                         
                             <Route exact path="/" component={Mainbox} />
+                           
                             {/* здесь будут линки навбара надо сделать для них routes */}
                         
                         <Route exact path="/admin" component={Admin} /> {/*  main */}
