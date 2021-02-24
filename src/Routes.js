@@ -18,6 +18,7 @@ import CartContextProvider from './contexts/CartContext';
 import OrderEnd from './BookingForm/OrderEnd';
 import CreditCard from './components/Payment/CreditCard';
 import BookingForm from './BookingForm/BookingForm';
+import MainList from './components/Body/MainCards/MainList';
 
 const Routes = () => {
   return (
@@ -27,6 +28,7 @@ const Routes = () => {
           <BrowserRouter>
             <Switch>
               <Route exact path="/" component={Mainbox} />
+              <Route exact path="/mainlist" component={MainList} />
               <Route exact path="/list" component={VillaList} />
               <Route exact path="/add" component={AddVilla} />
               <Route exact path="/" />

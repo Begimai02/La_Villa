@@ -6,16 +6,17 @@ import { villasContext } from '../../../contexts/VillaContext';
 import MainCard from './MainCard';
 
 
-export default function MainList({ }) {
+export default function MainList({  }) {
 
   const { villas, getVillas } = useContext(villasContext)
   useEffect(() => {
-    getVillas()
+    getVillas('http://localhost:8000/villas')
   }, [])
 
 
   return (
     <>
+    <h1>Test</h1>
       <Grid container spacing={3} className={classes.grid_container}>
         {
           villas.map(item => (

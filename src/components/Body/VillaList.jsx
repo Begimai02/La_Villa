@@ -13,14 +13,14 @@ export default function VillaList({ }) {
 
   const [page, setPage] = useState(+search.get("page") || 1);
   const { villas, count, getVillas } = useContext(villasContext)
-  
+
   useEffect(()=>{
     setPage(+search.get("page") || 1)
   },[history.location.search])
 
   useEffect(() => {
     getVillas(`http://localhost:8000/villas?_limit=3&_page=${page}`)
-  }, [page])
+  }, [page, villas])
 
   const onPaginationChange = (e, value) => {
     history.push("/list?page="+value);
