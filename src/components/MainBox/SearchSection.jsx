@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -7,6 +7,7 @@ import Select from '@material-ui/core/Select';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
+import { villasContext } from '../../contexts/VillaContext';
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
@@ -84,6 +85,21 @@ export default function CustomizedSelects() {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
+
+  const [nameOfVilla, setNameOfVilla] = useState('');
+  const [filter, setFilter] = useState('');
+
+  const { getVillas } = useContext(villasContext);
+
+  useEffect(()=> {
+    if(filter){
+      getVillas(`http://localhost:8000/villas&q=${nameOfVilla}&place=${filter}`)
+    }
+    else{
+      getVillas(`http://localhost:8000/villas&q=${nameOfVilla}`)
+    }
+  }, [nameOfVilla, filter])
+  
   return (
     <>
       <h2 style={{
@@ -102,7 +118,10 @@ export default function CustomizedSelects() {
       </p>
       <div className={classes.searchControl}>
       <FormControl className={[classes.margin, classes.inputSearch].join(' ')}>
-        <InputLabel htmlFor="demo-customized-textbox">Name of Villa</InputLabel>
+        <InputLabel htmlFor="demo-customized-textbox" onChange={(e) => {
+          e.preventDefault();
+          setNameOfVilla(e.target.value)
+        }} value={nameOfVilla}>Name of Villa</InputLabel>
         <BootstrapInput placeholder='Write the name of Villa' id="demo-customized-textbox" />
       </FormControl>
       
@@ -128,7 +147,7 @@ export default function CustomizedSelects() {
         <NativeSelect
           id="demo-customized-select-native"
           value={age}
-          onChange={handleChange}
+          onChange={(e) => setFilter(e.target.value)}
           input={<BootstrapInput />}
         >
           <option aria-label="None" value="" />

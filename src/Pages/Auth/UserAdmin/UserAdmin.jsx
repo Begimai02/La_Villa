@@ -136,7 +136,7 @@ export default function UserAdmin() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Are you an Admin?
+          Really? Let's check it!
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
