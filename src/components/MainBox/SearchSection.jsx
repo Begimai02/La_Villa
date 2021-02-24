@@ -7,7 +7,6 @@ import Select from '@material-ui/core/Select';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
-import Typical from 'react-typical';
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
@@ -119,9 +118,9 @@ export default function CustomizedSelects() {
           <MenuItem value="">
             <em>from</em>
           </MenuItem>
-          <MenuItem value={10}>15000$</MenuItem>
-          <MenuItem value={20}>25000$</MenuItem>
-          <MenuItem value={30}>45000$</MenuItem>
+          <MenuItem value={10}>150,000$</MenuItem>
+          <MenuItem value={20}>250,000$</MenuItem>
+          <MenuItem value={30}>450,000$</MenuItem>
         </Select>
       </FormControl>
       <FormControl className={[classes.margin, classes.inputCountry].join(' ')}>
