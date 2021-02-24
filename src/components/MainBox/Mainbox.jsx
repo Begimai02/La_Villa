@@ -7,7 +7,7 @@ const Mainbox = () => {
   return (
         <div className="Mainbox">
            <Header />
-            <SearchSection/>
+            {/* <SearchSection/> */}
        
             <MainList />
             <div style={{height: 500, width: 500}}> 

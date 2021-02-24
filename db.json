@@ -71,6 +71,15 @@
       "place": "zxczx",
       "image": "zxc",
       "id": 12
+    },
+    {
+      "title": "lavilla",
+      "description": "asdfghjk",
+      "price": "23456789",
+      "size": "2345",
+      "place": "Dubai",
+      "image": "a",
+      "id": 13
     }
   ],
   "users": [
