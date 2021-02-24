@@ -4,9 +4,11 @@ import Grid from '@material-ui/core/Grid';
 import classes from './VillaList.module.css';
 import VillaCard from './VillaCard';
 import { Link } from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 
 export default function VillaList({ }) {
+  let history = useHistory()
 
   const { villas, getVillas } = useContext(villasContext)
   useEffect(() => {
@@ -27,7 +29,7 @@ export default function VillaList({ }) {
           ))
         }
       </Grid>
-
+        <button onClick={() => history.push('/cart')} >test</button>
     </>
   );
 }

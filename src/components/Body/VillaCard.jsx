@@ -10,13 +10,15 @@ import Typography from '@material-ui/core/Typography';
 import { villasContext } from '../../contexts/VillaContext';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import { cartContext } from '../../contexts/CartContext';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    maxHeight: 140,
+    minHeight: 140
   },
 });
 
@@ -48,7 +50,7 @@ export default function VillaCard({ data }) {
     deleteVilla(id)
   }
 
-
+  
 
   return (
     <>

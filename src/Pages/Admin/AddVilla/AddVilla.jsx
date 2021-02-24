@@ -33,7 +33,7 @@ const AddVilla = () => {
   }
 
   return (
-    <div>
+    <div className="add-block">
       <h2>Add Brand New Villa</h2>
       <div className="form">
         <input value={inpTitle} onChange={(e) => setInpTitle(e.target.value)} placeholder="название" type="text"/>

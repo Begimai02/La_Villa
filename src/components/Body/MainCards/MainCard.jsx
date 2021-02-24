@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { villasContext } from '../../../contexts/VillaContext';
+import { cartContext } from '../../../contexts/CartContext';
 
 const useStyles = makeStyles({
   root: {
@@ -23,6 +24,7 @@ const useStyles = makeStyles({
 export default function MainCard({ data }) {
 
   // const {id} = useParams();
+  const {getVillaById} = useContext(cartContext)
 
   const { villas, getVillas, villaDetail } = useContext(villasContext)
   useEffect(() => {
@@ -45,8 +47,10 @@ export default function MainCard({ data }) {
     villaDetail(id)
   }
 
+  function handleBuy () {
+    getVillaById(id)
+  }
   
-
   return (
     <>
       <Card className={classes.root}>
@@ -75,7 +79,7 @@ export default function MainCard({ data }) {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
+          <Button size="small" color="primary" onClick={handleBuy}>
             Buy
           </Button>
           <Link to={`/detail/${id}`} style={{textDecoration: "none"}}>

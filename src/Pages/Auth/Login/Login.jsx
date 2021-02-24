@@ -14,7 +14,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { userContext } from '../../../contexts/UserContext';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.min.css';
 import { useHistory } from 'react-router-dom';
 
 function Copyright() {

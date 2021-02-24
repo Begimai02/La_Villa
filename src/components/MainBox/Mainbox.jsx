@@ -2,18 +2,18 @@ import React from 'react';
 import MainList from '../Body/MainCards/MainList';
 import Header from '../Header/Header';
 import SearchSection from '../MainBox/SearchSection';
-
+import Slider from '../MainBox/Slider';
 const Mainbox = () => {
-    return (
+  return (
         <div className="Mainbox">
            <Header />
-            <SearchSection>
-            
-            </SearchSection>
+            <SearchSection/>
+       
             <MainList />
             <div style={{height: 500, width: 500}}> 
             </div>
-        </div>
+             
+        </div >
     );
 };
 
