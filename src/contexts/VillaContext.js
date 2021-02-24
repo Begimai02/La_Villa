@@ -32,7 +32,6 @@ const reducer = (state = INIT_STATE, action) => {
   }
 }
 
-<<<<<<< HEAD
 const VillasContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE)
 
@@ -101,35 +100,6 @@ return (
     {children}
   </villasContext.Provider>
 )
-=======
-const VillasContextProvider = ({children}) => {
-    const [state, dispatch] = useReducer(reducer, INIT_STATE)
-
-    const getVillas = async () => {
-        const { data } = await axios('http://localhost:8000/villas')
-        dispatch({
-            type: "GET_VILLAS",
-            payload: data
-            
-        })
-    }
-
-
-    const addVilla = async ( newVilla ) => {
-        await axios.post('http://localhost:8000/villas', newVilla)
-        getVillas()
-    }
-    
-    return (
-        <villasContext.Provider value={{
-            getVillas,
-            addVilla,
-            villas: state.villas
-        }}>
-            {children}
-        </villasContext.Provider>
-    )
->>>>>>> 2397a4c88fea7894b5cb596fffe17e2b63eab09b
 }
 
 export default VillasContextProvider
