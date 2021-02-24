@@ -85,10 +85,10 @@ const useStyles = makeStyles((theme) => ({
   },
   addBtn: {
     textDecoration: "none",
+    border: "none",
     color: "black",
-    background: "#e0073e",
+    background: "#e0073e !important",
     borderRadius: "2px",
-    marginRight: "15px",
     color: "#fff"
   }
 }));
@@ -174,8 +174,8 @@ export default function PrimarySearchAppBar() {
       {
         odmen ?
           <>
-            <Link to="/add" className={classes.addBtn}>
-              <MenuItem onClick={handleMenuClose}>Add</MenuItem>
+            <Link to="/add" style={{ textDecoration: "none"}} >
+              <MenuItem onClick={handleMenuClose}><button className={classes.addBtn}>Add</button></MenuItem>
             </Link>
           </>
           : null
