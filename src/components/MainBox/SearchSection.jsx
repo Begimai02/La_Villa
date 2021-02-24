@@ -7,6 +7,7 @@ import Select from '@material-ui/core/Select';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
+import Fade from 'react-reveal/Fade';
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
@@ -86,6 +87,8 @@ export default function CustomizedSelects() {
   };
   return (
     <>
+      <Fade top>
+
       <h2 style={{
         textAlign: 'center', 
         fontFamily: 'Sawarabi Gothic, sans-serif',
@@ -93,6 +96,7 @@ export default function CustomizedSelects() {
         }}>
           Our villas are waiting for you!
       </h2>
+      </Fade>
       <p style={{
         fontFamily: 'Sawarabi Gothic, sans-serif',
         fontSize: '25px',

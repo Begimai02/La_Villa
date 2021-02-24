@@ -11,7 +11,6 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import sunLogo from '../../../assets/sunLogo.svg';
 
-
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1, 
