@@ -10,8 +10,7 @@ const Mainbox = () => {
             <SearchSection/>
        
             <MainList />
-            <div style={{height: 500, width: 500}}> 
-            </div>
+           
              
         </div >
     );

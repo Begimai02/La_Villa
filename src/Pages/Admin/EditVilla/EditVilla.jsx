@@ -60,7 +60,7 @@ const EditVilla = () => {
                 <input onChange={handleEditInp} value={edit.size} type="text" name="size" id=""/>
                 <input onChange={handleEditInp} value={edit.place} type="text" name="place" id=""/>
                 <input onChange={handleEditInp} value={edit.image} type="text" name="image" id=""/>
-                <Link to="/list" >
+                <Link to="/add" >
                     <button onClick={handleClickAdd} >Save</button>
                 </Link>
             </div>
