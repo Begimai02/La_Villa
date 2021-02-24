@@ -31,10 +31,12 @@ export default function VillaCard({ data }) {
   // const {id} = useParams();
 
   const { villas, getVillas, editVilla, deleteVilla } = useContext(villasContext)
-  const { getVillaById } = useContext(cartContext)
+  const { getVillaById } = useContext(cartContext);
+
+  debugger
 
   useEffect(() => {
-    getVillas()
+    
   }, [])
 
   const classes = useStyles();
@@ -49,8 +51,10 @@ export default function VillaCard({ data }) {
     id
   } = data;
 
-  function handleBuy() {
-    getVillaById(id)
+    function handleBuy() {
+      getVillaById(id)
+    }
+  
     function handleEdit(id) {
       editVilla(id)
     }
@@ -61,7 +65,6 @@ export default function VillaCard({ data }) {
 
 
     return (
-      <>
         <Card className={classes.root}>
           <CardActionArea>
             <CardMedia
@@ -105,7 +108,5 @@ export default function VillaCard({ data }) {
                     </Button>
           </CardActions>
         </Card>
-      </>
     );
-  }
 }

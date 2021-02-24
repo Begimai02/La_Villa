@@ -16,6 +16,8 @@ import UserAdmin from './Pages/Auth/UserAdmin/UserAdmin';
 import Cart from './components/Cart/Cart'
 import CartContextProvider from './contexts/CartContext';
 import OrderEnd from './BookingForm/OrderEnd';
+import CreditCard from './components/Payment/CreditCard';
+import BookingForm from './BookingForm/BookingForm';
 
 const Routes = () => {
   return (

@@ -47,11 +47,12 @@ const reducer = (state = INIT_STATE, action) => {
                 const data = await res.json();
     
                 console.log(parseInt(res.headers.get("x-total-count")))
-                console.table(res)
+                
                 dispatch({
                     type: "GET_VILLAS",
                     payload: data
                 })
+
                 dispatch ({
                     type: "GET_VILLAS_COUNT",
                     payload: parseInt(res.headers.get("x-total-count"))

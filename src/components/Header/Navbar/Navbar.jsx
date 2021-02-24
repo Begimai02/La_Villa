@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { makeStyles, styled } from '@material-ui/core/styles';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import { makeStyles, styled, fade } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -9,8 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import Typography from '@material-ui/core/Typography';
-import './Navbar.css'
+// import './Navbar.css'
 import { NavLink, Link } from 'react-router-dom';
 import { red, green } from '@material-ui/core/colors';
 import { userContext } from '../../../contexts/UserContext';
