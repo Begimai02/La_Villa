@@ -8,19 +8,22 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { villasContext } from '../../contexts/VillaContext';
+import { cartContext } from '../../contexts/CartContext';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    maxHeight: 140,
+    minHeight: 140
   },
 });
 
 export default function VillaCard({data}) {
 
   const { villas, getVillas } = useContext(villasContext)
+  const {getVillaById} = useContext(cartContext)
   useEffect(() => {
     getVillas()
   }, [])
@@ -33,10 +36,13 @@ export default function VillaCard({data}) {
     price,
     size,
     place,
-    image
+    image,
+    id
   } = data;
 
-
+  function handleBuy () {
+    getVillaById(id)
+  }
   return (
     <>
           <Card className={classes.root}>
@@ -68,9 +74,9 @@ export default function VillaCard({data}) {
               <Button size="small" color="primary">
                 Delete
                     </Button>
-              <Button size="small" color="primary">
+              <Button onClick={handleBuy} size="small" color="primary">
                 Buy
-                    </Button>
+              </Button>
               <Button size="small" color="primary">
                 Details
                     </Button>
