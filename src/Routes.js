@@ -34,12 +34,7 @@ const Routes = () => {
               <Route exact path="/" />
               {/* здесь будут линки навбара надо сделать для них routes */}
 
-              <Route exact path="/admin" component={Admin} /> {/*  main */}
-              <Route exact path="/detail" component={VillaDetail} />
               {/* <Footer/> */}
-              <Route exact path="/admin" component={Admin} /> {/*  main */}
-              <Route exact path="/detail" component={VillaDetail} />
-              <Route exact path="/cart" component={Cart} />
               <Route exact path="/payment" component={CreditCard} />
               <Route exact path="/booking" component={BookingForm} />
               <Route exact path="/order" component={OrderEnd} />

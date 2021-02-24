@@ -103,7 +103,7 @@ export default function VillaCard({ data }) {
             </Link>
             <Button size="small" color="primary" onClick={() => handleDelete(id)}>
               Delete
-                    </Button>
+            </Button>
           </CardActions>
         </Card>
     );
