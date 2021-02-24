@@ -11,10 +11,14 @@ import { villasContext } from '../../contexts/VillaContext';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { cartContext } from '../../contexts/CartContext';
+import Truncate from 'react-truncate'
+import { ToastContainer } from 'react-toastify';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    maxHeight: 370,
+    minHeight: 370
   },
   media: {
     maxHeight: 140,
@@ -27,8 +31,12 @@ export default function VillaCard({ data }) {
   // const {id} = useParams();
 
   const { villas, getVillas, editVilla, deleteVilla } = useContext(villasContext)
+  const { getVillaById } = useContext(cartContext);
+
+  debugger
+
   useEffect(() => {
-    getVillas()
+    
   }, [])
 
   const classes = useStyles();
@@ -43,60 +51,62 @@ export default function VillaCard({ data }) {
     id
   } = data;
 
-  function handleEdit(id) {
-    editVilla(id)
-  }
-  function handleDelete(id) {
-    deleteVilla(id)
-  }
-
+    function handleBuy() {
+      getVillaById(id)
+    }
   
+    function handleEdit(id) {
+      editVilla(id)
+    }
+    function handleDelete(id) {
+      deleteVilla(id)
+    }
 
-  return (
-    <>
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={image}
-            title={title}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {description}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {price}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {size}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {place}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Link to={`/detail/${id}`} style={{ textDecoration: "none" }}>
-            <Button size="small" color="primary" >
-              Details
+
+
+    return (
+        <Card className={classes.root}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image={image}
+              title={title}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                {title}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                <Truncate lines={2} ellipsis={<span>...</span>}>
+                  Описание: {description}
+                </Truncate>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                $ {price}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Квадратура: {size}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Местонахождение: {place}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            <Link to={`/detail/${id}`} style={{ textDecoration: "none" }}>
+              <Button size="small" color="primary" >
+                Details
             </Button>
-          </Link>
-          <Link to={`/edit/${id}`} style={{ textDecoration: "none" }}>
-            <Button size="small" color="primary" >
-              Edit
+            </Link>
+            <Link to={`/edit/${id}`} style={{ textDecoration: "none" }}>
+              <Button size="small" color="primary" >
+                Edit
             </Button>
-          </Link>
-          <Button size="small" color="primary" onClick={() => handleDelete(id)}>
-            Delete
+            </Link>
+            <Button size="small" color="primary" onClick={() => handleDelete(id)}>
+              Delete
                     </Button>
-        </CardActions>
-      </Card>
-    </>
-  );
+          </CardActions>
+        </Card>
+    );
 }
-
-

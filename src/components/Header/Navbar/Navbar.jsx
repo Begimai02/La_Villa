@@ -9,7 +9,6 @@ import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { NavLink, Link } from 'react-router-dom';
-
 import { red, green } from '@material-ui/core/colors';
 import { userContext } from '../../../contexts/UserContext';
 import MoreIcon from '@material-ui/icons/MoreVert';
@@ -19,7 +18,7 @@ import sunLogo from '../../../assets/sunLogo.svg';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
-    flexGrow: 1, 
+    flexGrow: 1,
   },
   navbar: {
     background: 'linear-gradient(to left, #2980b9, #6dd5fa, #ffffff)',
@@ -153,9 +152,9 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       {
-        newData ? 
-          <> 
-            <MenuItem onClick={handleLogOut}>Log Out</MenuItem>  
+        newData ?
+          <>
+            <MenuItem onClick={handleLogOut}>Log Out</MenuItem>
             <MenuItem>{emailOn}</MenuItem>  {/*  NOT WORKING -------------------*/}
           </>
           :
@@ -205,8 +204,8 @@ export default function PrimarySearchAppBar() {
           color="inherit"
         >
           <AccountCircle style={{ color: green[500] }} />
-          </IconButton>
-        </MenuItem>
+        </IconButton>
+      </MenuItem>
       <MenuItem>
         <IconButton color="inherit">
           <p>Home</p>
@@ -216,7 +215,7 @@ export default function PrimarySearchAppBar() {
         <IconButton color="inherit">
           <p>About us</p>
         </IconButton>
-      </MenuItem> 
+      </MenuItem>
       <MenuItem>
         <IconButton color="inherit">
           <p>Our Villas</p>
@@ -228,7 +227,7 @@ export default function PrimarySearchAppBar() {
         </IconButton>
       </MenuItem>
     </Menu>
-    
+
   );
 
   return (
@@ -237,12 +236,12 @@ export default function PrimarySearchAppBar() {
         <Toolbar>
 
           <IconButton>
-          <img src={sunLogo} alt={"logo"}
-            style={{
-              height: '28px',
-              width: '23px',
-            }}
-          />
+            <img src={sunLogo} alt={"logo"}
+              style={{
+                height: '28px',
+                width: '23px',
+              }}
+            />
             <Typography
               style={{
                 fontFamily: 'Sail cursive',
@@ -257,7 +256,7 @@ export default function PrimarySearchAppBar() {
           </Typography>
           </IconButton>
 
-          <div className={classes.grow} /> 
+          <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton className={classes.navlinks}>
               <Typography>
@@ -280,10 +279,10 @@ export default function PrimarySearchAppBar() {
               </Typography>
             </IconButton>
             <IconButton className={classes.navlinks}>
-              <AddShoppingCartIcon/>
+              <AddShoppingCartIcon />
 
             </IconButton>
-            
+
             <IconButton
               edge="end"
               aria-label="account of current user"
