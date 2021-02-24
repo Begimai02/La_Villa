@@ -46,7 +46,6 @@ const reducer = (state = INIT_STATE, action) => {
                 const res = await fetch(url);
                 const data = await res.json();
     
-                console.log(parseInt(res.headers.get("x-total-count")))
                 
                 dispatch({
                     type: "GET_VILLAS",
