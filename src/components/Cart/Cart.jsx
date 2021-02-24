@@ -8,6 +8,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { cartContext } from '../../contexts/CartContext';
+import { Link } from 'react-router-dom';
+
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -79,21 +81,23 @@ export default function CustomizedTables() {
               <StyledTableRow key={index + "cart"}>
                 <StyledTableCell component="th" scope="row">
                   {item.title}
-              </StyledTableCell>
+                </StyledTableCell>
                 <StyledTableCell align="right">{item.price}</StyledTableCell>
                 <StyledTableCell align="right">1</StyledTableCell>
                 <StyledTableCell align="right">{item.place}</StyledTableCell>
                 <StyledTableCell align="right">{item.size}</StyledTableCell>
                 <StyledTableCell align="right"><button onClick={() => deleteVilla(item.id)} >&times;</button></StyledTableCell>
-
-                {/* <button>&times;</button> */}
               </StyledTableRow>
             ))}
 
           </TableBody>
         </Table>
       </TableContainer>
-
+      <Link to="/booking">
+        <div style={{ display: 'flex', justifyContent: 'flex-end'}} >
+          <button>BUY</button>
+        </div>
+      </Link>
     </>
   );
 }

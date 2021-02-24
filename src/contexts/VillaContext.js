@@ -4,7 +4,8 @@ import axios from 'axios'
 export const villasContext = React.createContext()
 
 const INIT_STATE = {
-  villas: []
+  villas: [],
+  count: 0
 }
 
 
@@ -15,6 +16,11 @@ const reducer = (state=INIT_STATE, action) => {
                 ...state,
                 villas: action.payload
             }
+        case "GET_VILLAS_COUNT": 
+            return {
+                ...state,
+                count: action.payload
+            }
         default: return state
     }
 }
@@ -22,14 +28,27 @@ const reducer = (state=INIT_STATE, action) => {
 const VillasContextProvider = ({children}) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE)
 
-    const getVillas = async () => {
-        const { data } = await axios('http://localhost:8000/villas')
-        dispatch({
-            type: "GET_VILLAS",
-            payload: data
+    const getVillas = async (url) => {
+        try {
+            const res = await fetch(url);
+            const data = await res.json();
             
-        })
+            console.log(parseInt(res.headers.get("x-total-count")))
+            console.table(res)
+            dispatch({
+                type: "GET_VILLAS",
+                payload: data
+            })
+            dispatch ({
+                type: "GET_VILLAS_COUNT",
+                payload: parseInt(res.headers.get("x-total-count"))
+            })
+        } catch (error) {
+            
+        }
     }
+
+
 
 
     const addVilla = async ( newVilla ) => {
@@ -41,7 +60,8 @@ const VillasContextProvider = ({children}) => {
         <villasContext.Provider value={{
             getVillas,
             addVilla,
-            villas: state.villas
+            villas: state.villas,
+            count: state.count
         }}>
             {children}
         </villasContext.Provider>

@@ -9,10 +9,14 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { villasContext } from '../../contexts/VillaContext';
 import { cartContext } from '../../contexts/CartContext';
+import Truncate from 'react-truncate'
+import { ToastContainer } from 'react-toastify';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    maxHeight: 370,
+    minHeight: 370
   },
   media: {
     maxHeight: 140,
@@ -20,10 +24,10 @@ const useStyles = makeStyles({
   },
 });
 
-export default function VillaCard({data}) {
+export default function VillaCard({ data }) {
 
   const { villas, getVillas } = useContext(villasContext)
-  const {getVillaById} = useContext(cartContext)
+  const { getVillaById } = useContext(cartContext)
   useEffect(() => {
     getVillas()
   }, [])
@@ -40,48 +44,51 @@ export default function VillaCard({data}) {
     id
   } = data;
 
-  function handleBuy () {
+  function handleBuy() {
     getVillaById(id)
   }
   return (
     <>
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={image}
-                title={title}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {title}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {description}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {price}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {size}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {place}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                Delete
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={image}
+            title={title}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {title}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              <Truncate lines={2} ellipsis={<span>...</span>}>
+                Описание: {description}
+              </Truncate>
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              $ {price}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              Квадратура: {size}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              Местонахождение: {place}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            Delete
                     </Button>
-              <Button onClick={handleBuy} size="small" color="primary">
-                Buy
+          <Button onClick={handleBuy} size="small" color="primary">
+            Buy
               </Button>
-              <Button size="small" color="primary">
-                Details
+          <Button size="small" color="primary">
+            Details
                     </Button>
-            </CardActions>
-          </Card>
+        </CardActions>
+      </Card>
+      <ToastContainer />
     </>
   );
 }

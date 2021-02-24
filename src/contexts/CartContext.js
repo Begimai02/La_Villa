@@ -1,11 +1,14 @@
 import axios from 'axios';
 import React, { useReducer } from 'react';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const cartContext = React.createContext()
 
 const INIT_STATE = {
-    cart: []
+    cart: [],
+    orderInfo: null
+
 }
 
 const reducer = (state = INIT_STATE, action) => {
@@ -19,6 +22,11 @@ const reducer = (state = INIT_STATE, action) => {
             return {
                 ...state,
                 cart: action.payload
+            }
+        case "SAVE_ORDER":
+            return {
+                ...state,
+                orderInfo: action.payload
             }
         default: return state
     }
@@ -49,12 +57,27 @@ const CartContextProvider = ({ children }) => {
             notifyError()
         }
     }
+    function test(){
+        console.log("test")
+        toast("WOW")
+
+    }
 
     const deleteVilla = async (id) => {
         await axios.delete(`http://localhost:8000/cart/${id}`)
         getVillasInCart()
     }
-    
+
+    // booking
+
+    const handleSendInfo = (orderObj) => {
+        dispatch({
+            type: "SAVE_ORDER",
+            payload: orderObj
+        })
+        console.log(orderObj);
+    }
+
     const notifyError = () => toast('Уже в корзине!', {
         position: "top-right",
         autoClose: 5000,
@@ -66,7 +89,7 @@ const CartContextProvider = ({ children }) => {
         draggable: true,
         pauseOnHover: true,
         type: 'error'
-    });        
+    });
 
     return (
         <cartContext.Provider value={{
@@ -74,7 +97,9 @@ const CartContextProvider = ({ children }) => {
             getVillaById,
             addToCard,
             deleteVilla,
-            cart: state.cart
+            handleSendInfo,
+            cart: state.cart,
+            orderInfo: state.orderInfo
         }}>
             {children}
         </cartContext.Provider>

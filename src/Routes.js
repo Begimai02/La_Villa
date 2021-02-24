@@ -14,6 +14,7 @@ import Footer from './components/Footer/Footer';
 import Navbar from "./components/Header/Navbar/Navbar";
 import Cart from './components/Cart/Cart'
 import CartContextProvider from './contexts/CartContext';
+import OrderEnd from './BookingForm/OrderEnd';
 
 const Routes = () => {
     return (
@@ -34,6 +35,10 @@ const Routes = () => {
                             <Route exact path="/admin" component={Admin} /> {/*  main */}
                             <Route exact path="/detail" component={VillaDetail} />
                             <Route exact path="/cart" component={Cart} />
+                            <Route exact path="/payment" component={CreditCard} />
+                            <Route exact path="/booking" component={BookingForm} />
+                            <Route exact path="/order" component={OrderEnd} />
+
 
                         </Switch>
                     </BrowserRouter>
