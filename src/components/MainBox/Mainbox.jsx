@@ -7,7 +7,7 @@ const Mainbox = () => {
   return (
         <div className="Mainbox">
            <Header />
-            <SearchSection/>
+            {/* <SearchSection/> */}
        
             <MainList />
            

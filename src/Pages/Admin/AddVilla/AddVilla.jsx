@@ -44,7 +44,6 @@ const AddVilla = () => {
         <input value={inpPlace} onChange={(e) => setInpPlace(e.target.value)} placeholder="локация" type="text"/>
         <input value={inpImage} onChange={(e) => setInpImage(e.target.value)} placeholder="картинка" type="text"/>
       <Link to="/list">
-
         <button onClick={handleClickAdd}>Add</button>
       </Link>
       </div>
