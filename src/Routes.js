@@ -14,29 +14,43 @@ import Login from './Pages/Auth/Login/Login';
 import Register from './Pages/Auth/Register/Register';
 import UserAdmin from './Pages/Auth/UserAdmin/UserAdmin';
 import Cart from './components/Cart/Cart'
+import CartContextProvider from './contexts/CartContext';
+import OrderEnd from './BookingForm/OrderEnd';
 
 const Routes = () => {
   return (
     <UserContextProvider>  {/*нужен для регистрации. Я создала отдельный контекст для регистрации*/}
       <VillasContextProvider>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/list" component={VillaList} />
-            <Route exact path="/add" component={AddVilla} />
-            
+        <CartContextProvider>
+          <BrowserRouter>
+            <Switch>
+              <Route exact path="/" component={Mainbox} />
+              <Route exact path="/list" component={VillaList} />
+              <Route exact path="/add" component={AddVilla} />
+              <Route exact path="/" />
+              {/* здесь будут линки навбара надо сделать для них routes */}
 
-            <Route exact path="/" component={Mainbox} />
-            {/* здесь будут линки навбара надо сделать для них routes */}
+              <Route exact path="/admin" component={Admin} /> {/*  main */}
+              <Route exact path="/detail" component={VillaDetail} />
+              {/* <Footer/> */}
+              <Route exact path="/admin" component={Admin} /> {/*  main */}
+              <Route exact path="/detail" component={VillaDetail} />
+              <Route exact path="/cart" component={Cart} />
+              <Route exact path="/payment" component={CreditCard} />
+              <Route exact path="/booking" component={BookingForm} />
+              <Route exact path="/order" component={OrderEnd} />
 
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/isadmin" component={UserAdmin} /> {/*  main */}
-            <Route exact path="/admin" component={Admin} /> {/*  main */}
-            <Route exact path="/detail/:id" component={VillaDetail} />  {/*ADD HERE /:id -------!!!!!!!!!!!!!!!!!1 */}
-            <Route exact path="/edit/:id" component={EditVilla} /> {/*  main */}
-            <Route exact path="/cart" component={Cart} />
-          </Switch>
-        </BrowserRouter>
+
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/isadmin" component={UserAdmin} /> {/*  main */}
+              <Route exact path="/admin" component={Admin} /> {/*  main */}
+              <Route exact path="/detail/:id" component={VillaDetail} />  {/*ADD HERE /:id -------!!!!!!!!!!!!!!!!!1 */}
+              <Route exact path="/edit/:id" component={EditVilla} /> {/*  main */}
+              <Route exact path="/cart" component={Cart} />
+            </Switch>
+          </BrowserRouter>
+        </CartContextProvider>
       </VillasContextProvider>
     </UserContextProvider>
   );

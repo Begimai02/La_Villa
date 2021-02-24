@@ -8,6 +8,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { cartContext } from '../../contexts/CartContext';
+import { Link } from 'react-router-dom';
+
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -49,13 +51,12 @@ const useStyles = makeStyles({
 });
 
 export default function CustomizedTables() {
-  let { cart, getVillasInCart } = useContext(cartContext)
+  let { cart, getVillasInCart, deleteVilla } = useContext(cartContext)
   // let [obj, setObj] = useState(cart)
   const classes = useStyles();
   useEffect(() => {
     getVillasInCart()
   }, [])
-  console.log(cart)
 
 
 
@@ -71,6 +72,8 @@ export default function CustomizedTables() {
               <StyledTableCell align="right">КОЛИЧЕСТВО</StyledTableCell>
               <StyledTableCell align="right">МЕСТОНАХОЖДЕНИЕ</StyledTableCell>
               <StyledTableCell align="right">КВАДРАТУРА</StyledTableCell>
+              <StyledTableCell align="right"></StyledTableCell>
+
             </TableRow>
           </TableHead>
           <TableBody>
@@ -78,31 +81,24 @@ export default function CustomizedTables() {
               <StyledTableRow key={index + "cart"}>
                 <StyledTableCell component="th" scope="row">
                   {item.title}
-              </StyledTableCell>
+                </StyledTableCell>
                 <StyledTableCell align="right">{item.price}</StyledTableCell>
-                <StyledTableCell align="right">{item.place}</StyledTableCell>
+                <StyledTableCell align="right">1</StyledTableCell>
                 <StyledTableCell align="right">{item.place}</StyledTableCell>
                 <StyledTableCell align="right">{item.size}</StyledTableCell>
+                <StyledTableCell align="right"><button onClick={() => deleteVilla(item.id)} >&times;</button></StyledTableCell>
               </StyledTableRow>
             ))}
 
           </TableBody>
         </Table>
       </TableContainer>
-
+      <Link to="/booking">
+        <div style={{ display: 'flex', justifyContent: 'flex-end'}} >
+          <button>BUY</button>
+        </div>
+      </Link>
     </>
   );
 }
 
-
-// {cart.map((row) => (
-//   <StyledTableRow key={row.name}>
-//     <StyledTableCell component="th" scope="row">
-//       {row.name}
-//     </StyledTableCell>
-//     <StyledTableCell align="right">{cart.title}</StyledTableCell>
-//     <StyledTableCell align="right">{cart.place}</StyledTableCell>
-//     <StyledTableCell align="right">{cart.size}</StyledTableCell>
-//     <StyledTableCell align="right">{cart.protein}</StyledTableCell>
-//   </StyledTableRow>
-// ))}

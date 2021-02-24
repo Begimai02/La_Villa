@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { villasContext } from '../../../contexts/VillaContext';
 import { Link } from 'react-router-dom'
 import './AddVilla.css' 
+import Navbar from '../../../components/Header/Navbar/Navbar'
 import VillaList from '../../../components/Body/VillaList';
 
 const AddVilla = () => {
