@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     width: '270px',
     height: '40px',
     marginTop: '30px',
-    backgroundColor: '#93dde3',
+    backgroundColor: '#dffafc',
     fontFamily: 'DM Serif Text, serif',
   },
   inputPrice: {

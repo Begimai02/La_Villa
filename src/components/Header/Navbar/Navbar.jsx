@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { makeStyles, styled } from '@material-ui/core/styles';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -7,6 +8,13 @@ import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import Typography from '@material-ui/core/Typography';
+import './Navbar.css'
+import { NavLink, Link } from 'react-router-dom';
+
+import { red, green } from '@material-ui/core/colors';
+import { userContext } from '../../../contexts/UserContext';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import sunLogo from '../../../assets/sunLogo.svg';
@@ -79,6 +87,14 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  addBtn: {
+    textDecoration: "none",
+    color: "black",
+    background: "#e0073e",
+    borderRadius: "2px",
+    marginRight: "15px",
+    color: "#fff"
+  }
 }));
 
 export default function PrimarySearchAppBar() {
@@ -101,6 +117,28 @@ export default function PrimarySearchAppBar() {
     setAnchorEl(null);
     handleMobileMenuClose();
   };
+  const handleLogOut = () => {
+    setAnchorEl(null);
+    handleMobileMenuClose();
+    localStorage.clear();
+  }
+
+  // FOR LOG IN PART, CHECK, IF USER LOGGED IN => SHOW JUST LOG OUT BUTTON. IF NOW => SHOW ALL WITHOUT LOG OUT BTN
+  let newData = JSON.parse(localStorage.getItem('person'))//стягиваем массив из localStorage и преобразоваем в обычный формат js
+  console.log(newData)
+  let emailOn = newData?.email
+  let odmen = false
+
+  // CHECKING FOR: IS IT ADMIN OR NOT ???
+  const { yes } = useContext(userContext);
+  console.log("yes isAdmin", yes)
+  if (newData) {
+    if (newData[0].email == "admin@gmail.com" && newData[0].password == "1") {
+      console.log('I AM ADMIN')
+      odmen = true
+      // alert('You are loged in.');
+    }
+  }
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
@@ -117,9 +155,35 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Sign in</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Sign out</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Admin</MenuItem>
+      {
+        newData ? 
+          <> 
+            <MenuItem onClick={handleLogOut}>Log Out</MenuItem>  
+            <MenuItem>{emailOn}</MenuItem>  {/*  NOT WORKING -------------------*/}
+          </>
+          :
+          <>
+            <Link to="/register" style={{ textDecoration: "none", color: "black" }}>
+              <MenuItem onClick={handleMenuClose}>Sign Up</MenuItem>
+            </Link>
+            <Link to="/login" style={{ textDecoration: "none", color: "black" }}>
+              <MenuItem onClick={handleMenuClose}>Sign In</MenuItem> {/*ВОЙТИ */}
+            </Link>
+            {/* <MenuItem onClick={handleLogOut}>Log Out</MenuItem> */}
+            <Link to="/isadmin" style={{ textDecoration: "none", color: "black" }}>
+              <MenuItem onClick={handleMenuClose}>Admin</MenuItem>
+            </Link>
+          </>
+      }
+      {
+        odmen ?
+          <>
+            <Link to="/add" className={classes.addBtn}>
+              <MenuItem onClick={handleMenuClose}>Add</MenuItem>
+            </Link>
+          </>
+          : null
+      }
     </Menu>
   );
 
@@ -134,6 +198,18 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
+
+
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <IconButton
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <AccountCircle style={{ color: green[500] }} />
+          </IconButton>
+        </MenuItem>
       <MenuItem>
         <IconButton color="inherit">
           <p>Home</p>
