@@ -1,18 +1,20 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 import MainList from '../Body/MainCards/MainList';
 import FooterNew from '../Footer/FooterNew';
 import Header from '../Header/Header';
 import SearchSection from '../MainBox/SearchSection';
 import Slider from '../MainBox/Slider';
 const Mainbox = () => {
-  return (
+    return (
         <div className="Mainbox">
-           <Header />
+            <ToastContainer />
+            <Header />
             {/* <SearchSection/> */}
-       
+
             <MainList />
-           <FooterNew />
-             
+            <FooterNew />
+
         </div >
     );
 };

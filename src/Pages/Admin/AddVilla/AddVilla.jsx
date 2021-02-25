@@ -11,7 +11,9 @@ const AddVilla = () => {
   const [inpPrice, setInpPrice] = useState('')
   const [inpSize, setInpSize] = useState('')
   const [inpPlace, setInpPlace] = useState('')
-  const [inpImage, setInpImage] = useState([])
+  const [inpImage, setInpImage] = useState('')
+  const [inpImage2, setInpImage2] = useState('')
+  const [inpImage3, setInpImage3] = useState('')
   const {addVilla} = useContext(villasContext)
 
   function handleClickAdd(){
@@ -21,7 +23,11 @@ const AddVilla = () => {
       price: inpPrice,
       size: inpSize,
       place: inpPlace,
-      image: inpImage
+      image: [
+        inpImage,
+        inpImage2,
+        inpImage3
+      ]
     }
     console.log(newObj);
     addVilla(newObj)
@@ -35,14 +41,16 @@ const AddVilla = () => {
 
   return (
     <div className="add-block">
-      <h2>Add Brand New Villa</h2>
-      <div className="form">
+      <div className="form add-page-form">
+      <h2 className="name-of-page">Add Brand New Villa</h2>
         <input value={inpTitle} onChange={(e) => setInpTitle(e.target.value)} placeholder="название" type="text"/>
         <input value={inpDesc} onChange={(e) => setInpDesc(e.target.value)} placeholder="описание" type="text"/>
         <input value={inpPrice} onChange={(e) => setInpPrice(e.target.value)} placeholder="цена" type="text"/>
         <input value={inpSize} onChange={(e) => setInpSize(e.target.value)} placeholder="квадратура" type="text"/>
         <input value={inpPlace} onChange={(e) => setInpPlace(e.target.value)} placeholder="локация" type="text"/>
         <input value={inpImage} onChange={(e) => setInpImage(e.target.value)} placeholder="картинка" type="text"/>
+        <input value={inpImage2} onChange={(e) => setInpImage2(e.target.value)} placeholder="картинка" type="text"/>
+        <input value={inpImage3} onChange={(e) => setInpImage3(e.target.value)} placeholder="картинка" type="text"/>
       <Link to="/list">
         <button onClick={handleClickAdd}>Add</button>
       </Link>

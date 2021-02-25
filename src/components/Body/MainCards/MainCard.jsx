@@ -63,7 +63,7 @@ export default function MainCard({ data }) {
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image={image}
+            image={image[0]}
             title={title}
           />
           <CardContent>
