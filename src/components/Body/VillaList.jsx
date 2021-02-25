@@ -1,27 +1,32 @@
-import React, { useContext, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import React, { useContext, useEffect, useState } from 'react';
 import { villasContext } from '../../contexts/VillaContext';
 import Grid from '@material-ui/core/Grid';
 import classes from './VillaList.module.css';
 import VillaCard from './VillaCard';
-import { Link } from 'react-router-dom';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import ProductsPagination from '../Pagination/ProductsPagination';
 
 
 export default function VillaList({ }) {
-  let history = useHistory()
+  let history = useHistory();
+  const search  = new URLSearchParams(history.location.search);
 
-  const { villas, getVillas } = useContext(villasContext)
+  const [page, setPage] = useState(+search.get("page") || 1);
+  const { villas, count, getVillas } = useContext(villasContext)
+  
+  useEffect(()=>{
+    setPage(+search.get("page") || 1)
+  },[history.location.search])
+
   useEffect(() => {
-    getVillas()
-  }, [])
+    getVillas(`http://localhost:8000/villas?_limit=3&_page=${page}`)
+  }, [page])
+
+  const onPaginationChange = (e, value) => {
+    history.push("/list?page="+value);
+    // setPage(value)
+  }
+
 
 
   return (
@@ -31,16 +36,22 @@ export default function VillaList({ }) {
           villas.map(item => (
             <Grid key={item.id} item xs={12} sm={6} lg={4}>
               {/* <Link to={`villas/${item.id}`} style={{ textDecoration: 'none' }}> */}
-                <VillaCard data={item} />
+              <VillaCard data={item} />
               {/* </Link> */}
             </Grid>
           ))
         }
+        
       </Grid>
-        <button onClick={() => history.push('/cart')} >test</button>
+
+      <ProductsPagination count={Math.ceil(count/3)} page={page} onChange={onPaginationChange} />
+      <button onClick={() => history.push('/cart')} >test</button>
+        
     </>
+    
   );
 }
+
 
 
 // import { villasContext } from '../../contexts/VillaContext';

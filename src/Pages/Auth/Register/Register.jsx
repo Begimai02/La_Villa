@@ -5,7 +5,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -13,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { userContext } from '../../../contexts/UserContext';
+import { Link } from 'react-router-dom';
 
 function Copyright() {
   return (
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "blue",
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -85,21 +85,23 @@ export default function Register() {
         email: regEmail,
         password: regPassword
     }
-    addUser(newPerson) //here function gets newPerson's data to context
+    addUser(newPerson) //here function gets newPerson's data for context
 
+    console.log(newPerson)
     setRegName('');
     setRegLast('');
     setRegEmail('');
     setRegPassword('');
     // store()
 
-    let obj = {
-      name: regName,
-      lasName: regLast,
-      email: regEmail,
-      password: regPassword
-    };
-    // setItemToStorage(obj)//вызов функциидобавления в localStorage
+
+    // let obj = {
+    //   name: regName,
+    //   lasName: regLast,
+    //   email: regEmail,
+    //   password: regPassword
+    // };
+    // setItemToStorage(obj)//вызов функции добавления в localStorage
     // console.log(newPerson)
     // console.log(obj)
 }
@@ -177,6 +179,7 @@ export default function Register() {
               />
             </Grid>
           </Grid>
+          <Link to="/login" style={{textDecoration: "none", color: "black"}}>
           <Button
             fullWidth
             variant="contained"
@@ -186,6 +189,7 @@ export default function Register() {
           >
             Sign Up
           </Button>
+          </Link>
           <Grid container justify="flex-end">
             <Grid item>
               <Link href="#" variant="body2">
