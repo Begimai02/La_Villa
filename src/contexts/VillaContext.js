@@ -8,6 +8,7 @@ const INIT_STATE = {
     count: 0,
     forDetail: null,
     forEdit: null,
+    favorite: null,
 }
 
 
@@ -24,16 +25,20 @@ const reducer = (state = INIT_STATE, action) => {
                 ...state,
                 count: action.payload
             }
-        case "DETAIL_VILLA": {
+        case "DETAIL_VILLA": 
             return {
                 ...state,
                 forDetail: action.payload
             }
-        }
         case "EDIT_VILLA":
             return {
                 ...state,
                 forEdit: action.payload
+            }
+        case "FAVO_VILLA": 
+            return {
+              ...state,
+              favorite: action.payload
             }
         default: return state
     }
@@ -100,8 +105,23 @@ const reducer = (state = INIT_STATE, action) => {
             getVillas()
         }
 
-        const getFavoriteId = (id) => {
+        const getFavoriteId = async (id) => {
+          console.log(id)
+          let { data } = await axios(`http://localhost:8000/villas/${id}`)
+          console.log('favo: ', data);
+            dispatch({
+                type: "FAVO_VILLA",
+                payload: data
+            })
+
+
+            if(!localStorage.getItem('favorite')){//проверка есть ли что-нибудь в localStorage
+              localStorage.setItem('favorite', '[]')//если нет то добавляем туда путой массив
+              }
           
+              let local = JSON.parse(localStorage.getItem('favorite'));//стягиваем массив из localStorage и преобразоваем в обычный формат js
+              local.push(data)//в массив добавляем новый обьект
+              localStorage.setItem('favorite', JSON.stringify(local))//обновленный массив преобразовываем в формат json и отправляем обратно в localStorage
         }
 
         return (
@@ -110,6 +130,8 @@ const reducer = (state = INIT_STATE, action) => {
                 count: state.count,
                 forDetail: state.forDetail,
                 forEdit: state.forEdit,
+                favorite: state.favorite,
+                getFavoriteId,
                 getVillas,
                 addVilla,
                 editVilla,

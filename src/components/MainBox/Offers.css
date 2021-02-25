@@ -1,0 +1,12 @@
+.gallery-carousel {
+  height: 400px;
+  width: 100%;
+  
+}
+
+.gallery-text {
+  margin: 80px auto;
+  background: linear-gradient(to top, #ffefba, #ffffff);
+  font-size: 25px;
+  font-family: 'Playfair Display SC', serif;
+}

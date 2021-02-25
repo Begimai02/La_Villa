@@ -15,7 +15,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import sunLogo from '../../../assets/sunLogo.svg';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
-
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
   navlinks: {
     marginRight: theme.spacing(5),
   },
+  navLikes: {
+    marginRight: '15px'
+  }, 
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -289,6 +292,11 @@ export default function PrimarySearchAppBar() {
               <AddShoppingCartIcon />
             </Link>
             </IconButton>
+            <Link to="/favorite">
+              <IconButton className={classes.navLikes}>
+              <BookmarkBorderIcon />
+              </IconButton> 
+            </Link>
 
 
             

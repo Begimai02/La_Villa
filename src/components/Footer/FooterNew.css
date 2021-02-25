@@ -1,10 +1,12 @@
 .footer-container {
   background: linear-gradient(to right, #6190e8, #a7bfe8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding: 4rem 0 2rem 0;
+  /* padding: 4rem 0 2rem 0; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 50%;
+  width: 100%;
 }
 
 .footer-subscription {
@@ -47,7 +49,8 @@
   width: 100%;
   max-width: 1000px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+
 }
 
 .footer-link-wrapper {

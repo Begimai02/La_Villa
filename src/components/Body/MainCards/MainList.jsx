@@ -11,6 +11,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { villasContext } from '../../../contexts/VillaContext';
 import MainCard from './MainCard';
 import ProductsPagination from '../../Pagination/ProductsPagination';
+import './MainList.css'
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
@@ -160,7 +161,7 @@ export default function MainList({ }) {
         </Button>
       </div>
       <h1>Test</h1>
-      <Grid container spacing={3} className={classes.grid_container}>
+      <Grid container spacing={3} className="grid_container">
         {
           villas.map(item => (
             <Grid key={item.id} item xs={12} sm={6} lg={4}>
