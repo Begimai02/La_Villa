@@ -1,5 +1,5 @@
 .formBody{
-    background-image:url('https://images.pexels.com/photos/733475/pexels-photo-733475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-image:url('https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     height: 100vh;
     background-repeat: no-repeat;
     width: 100%;
@@ -12,7 +12,7 @@
 }
 
 .BookingForm {
-    background-image: linear-gradient( to right bottom, #2193b0, #6dd5ed);
+    background-color:#1c92d2;
     width: 450px;
     height: 420px;
     margin: 0 auto;
@@ -22,6 +22,7 @@
     padding: 15px;
     box-shadow:black;
     text-align: center;
+
 }
 .BookingForm h3{
     color: black;
@@ -34,7 +35,8 @@
     height: 35px;
     margin: 20px;
     border: none;
-    border-radius: 10px ;
+    border-radius: 10px;
+    margin-top: 20px;
     
 }
 
@@ -48,11 +50,11 @@
         padding: 5px 0;
         margin-top: 20 px;
         padding-top: 15px;
-        border-radius: 10px;
+        border-radius: 20px;
         font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
         letter-spacing: 2px;
-        background-image: linear-gradient(to right, #9EEFE1 0%, #dedcf1 51%, #2193b0 100%);
+        background-image: linear-gradient(to right,#FFFFFF 51%,  #dedcf1 100%);
         background-size: 200% auto;
         box-shadow: 0 0 20px rgba(0, 0, 0, .1);
         transition: .5s;
