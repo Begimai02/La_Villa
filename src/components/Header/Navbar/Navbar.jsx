@@ -8,7 +8,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-// import './Navbar.css'
 import { NavLink, Link } from 'react-router-dom';
 import { red, green } from '@material-ui/core/colors';
 import { userContext } from '../../../contexts/UserContext';
@@ -86,10 +85,10 @@ const useStyles = makeStyles((theme) => ({
   },
   addBtn: {
     textDecoration: "none",
+    border: "none",
     color: "black",
-    background: "#e0073e",
+    background: "#e0073e !important",
     borderRadius: "2px",
-    marginRight: "15px",
     color: "#fff"
   }
 }));
@@ -175,8 +174,8 @@ export default function PrimarySearchAppBar() {
       {
         odmen ?
           <>
-            <Link to="/add" className={classes.addBtn}>
-              <MenuItem onClick={handleMenuClose}>Add</MenuItem>
+            <Link to="/add" style={{ textDecoration: "none"}} >
+              <MenuItem onClick={handleMenuClose}><button className={classes.addBtn}>Add</button></MenuItem>
             </Link>
           </>
           : null

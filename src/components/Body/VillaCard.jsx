@@ -33,10 +33,8 @@ export default function VillaCard({ data }) {
   const { villas, getVillas, editVilla, deleteVilla } = useContext(villasContext)
   const { getVillaById } = useContext(cartContext);
 
-  debugger
-
   useEffect(() => {
-    
+    getVillas()
   }, [])
 
   const classes = useStyles();
@@ -105,7 +103,7 @@ export default function VillaCard({ data }) {
             </Link>
             <Button size="small" color="primary" onClick={() => handleDelete(id)}>
               Delete
-                    </Button>
+            </Button>
           </CardActions>
         </Card>
     );
