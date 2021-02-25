@@ -18,10 +18,10 @@ const Mainbox = () => {
             {/* <SearchSection/> */}
 
             <MainList />
-            {/* <Offers /> */}
-            {/* <Gallery /> */}
-            {/* <AboutUs /> */}
-           {/* <FooterNew /> */}
+            <Offers />
+            <Gallery />
+            <AboutUs />
+           <FooterNew />
              
         </div >
     );
