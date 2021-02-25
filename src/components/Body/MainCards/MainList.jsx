@@ -156,9 +156,9 @@ export default function MainList({ }) {
             <option value="Maldives">Maldives</option>
           </NativeSelect>
         </FormControl>
-        <Button className={[classes.margin, classes.inputSearch2].join(' ')} variant="contained">
+        {/* <Button className={[classes.margin, classes.inputSearch2].join(' ')} variant="contained">
           Search
-        </Button>
+        </Button> */}
       </div>
       <h1>Test</h1>
       <Grid container spacing={3} className="grid_container">
