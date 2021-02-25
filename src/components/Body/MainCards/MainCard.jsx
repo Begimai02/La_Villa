@@ -28,7 +28,7 @@ export default function MainCard({ data }) {
   // const {id} = useParams();
   const { getVillaById } = useContext(cartContext)
 
-  const { villas, getVillas, villaDetail } = useContext(villasContext)
+  const { villas, getVillas, villaDetail, getFavoriteId } = useContext(villasContext)
   useEffect(() => {
     getVillas()
   }, [])
@@ -51,6 +51,10 @@ export default function MainCard({ data }) {
 
   function handleBuy() {
     getVillaById(id)
+  }
+
+  function handleFavorite(){
+    getFavoriteId(id)
   }
 
   return (
@@ -91,6 +95,9 @@ export default function MainCard({ data }) {
               Details
             </Button>
           </Link>
+            <Button size="small" color="primary" onClick={handleFavorite}>
+              Favorite
+            </Button>
 
         </CardActions>
       </Card>

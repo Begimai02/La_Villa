@@ -70,13 +70,18 @@ export default function UserAdmin() {
 
   function adminExistCheck(){
     console.log(users)
+    console.log(adminEmail, adminPassword)
     users.map(item => {
       if(item.email === adminEmail && item.password === adminPassword){
         setCheck(!check)
         isAdmin(check)
+        console.log(check, "yes")
+        console.log("email", item.email === adminEmail )
+        console.log("pass", item.password === adminPassword )
       }
     })
     if(check){
+      console.log(check, "err")
       console.log(adminEmail)
       // notify(logEmail)
       // alert("success")
@@ -97,7 +102,9 @@ export default function UserAdmin() {
     setAdminEmail('');
     setAdminPassword('');
     // check();
-    setUserToStorage(logAdmin);
+    if(check) {
+      setUserToStorage(logAdmin);
+    }
 
     // console.log(logPerson)
     adminExistCheck()

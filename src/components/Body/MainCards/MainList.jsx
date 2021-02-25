@@ -107,7 +107,7 @@ export default function MainList({ }) {
     }else {
       getVillas(`http://localhost:8000/villas?_limit=3&_page=${page}&q=${inpSearch}`)
         }
-  }, [page, villas, inpSearch, filter])
+  }, [page, inpSearch, filter])
 
   const onPaginationChange = (e, value) => {
     history.push(`${history.location.pathname}?page=${value}`);
