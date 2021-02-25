@@ -9,6 +9,7 @@ input {
     transition: border-color .15s;
     margin: 15px;
     width: 260px;
+    
 }
 .CreditCard form{
     display: flex;
@@ -17,14 +18,14 @@ input {
     
 }
 
-.btn-block{
+.btnBlock{
     background-color:cadetblue;
     font-size: 1rem;
     width: 290px;
     height: 40px;
     border: none;
-    color: #fff;
+    color: rgb(33, 156, 228);
     border-radius: .25rem;
-    margin: 15px;
+    margin: 5px;
 
 }

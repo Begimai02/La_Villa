@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Cards from 'react-credit-cards';
-import '../Payment/CreditCard.css';
 import 'react-credit-cards/es/styles-compiled.css'
 import { Link } from 'react-router-dom';
+import classes from "./CreditCard.module.css";
 
 function CreditCard() {
     const [number, setNumber] = useState('');
@@ -13,7 +13,7 @@ function CreditCard() {
 
 
     return (
-        <div className="CreditCard">
+        <div className={classes.CreditCard}>
             <Cards
                 number={number}
                 name={name}
@@ -64,7 +64,7 @@ function CreditCard() {
 
                 <Link to="/order">
                     <div className="form-actions">
-                        <button className="btn btn-primary btn-block">PAY</button>
+                        <button className="btn" className={classes.btnBlock} className="btn-primary" >PAY</button>
                     </div>
                 </Link>
 

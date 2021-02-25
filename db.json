@@ -80,6 +80,24 @@
       "place": "Dubai",
       "image": "a",
       "id": 13
+    },
+    {
+      "title": "house",
+      "description": "big house",
+      "price": "$233321",
+      "size": "4556 кв.м",
+      "place": "spain",
+      "image": [],
+      "id": 14
+    },
+    {
+      "title": "asap",
+      "description": "cool",
+      "price": "$312321",
+      "size": "123222 кв м",
+      "place": "italy",
+      "image": "qq",
+      "id": 15
     }
   ],
   "users": [
@@ -136,13 +154,13 @@
       "id": 4
     },
     {
-      "title": "priv",
-      "description": "priv",
-      "price": "priv",
-      "size": "priv",
-      "place": "priv",
-      "image": "priv",
-      "id": 3
+      "title": "asa",
+      "description": "",
+      "price": "",
+      "size": "",
+      "place": "",
+      "image": [],
+      "id": 6
     }
   ]
 }

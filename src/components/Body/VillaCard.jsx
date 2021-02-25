@@ -6,7 +6,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';git 
+import Typography from '@material-ui/core/Typography';
 import { villasContext } from '../../contexts/VillaContext';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
