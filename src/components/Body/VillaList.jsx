@@ -11,7 +11,7 @@ import VillaCard from './VillaCard';
 import { useHistory } from 'react-router-dom';
 import ProductsPagination from '../Pagination/ProductsPagination';
 import Button from '@material-ui/core/Button';
-
+import './MainCards/MainList.css';
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
@@ -152,7 +152,7 @@ export default function VillaList({ }) {
           Search
         </Button>
       </div>
-      <Grid container spacing={3} className={classes.grid_container}>
+      <Grid container spacing={3} className="grid_container">
         {
           villas.map(item => (
             <Grid key={item.id} item xs={12} sm={6} lg={4}>

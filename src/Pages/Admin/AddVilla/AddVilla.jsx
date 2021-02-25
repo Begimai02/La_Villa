@@ -21,7 +21,8 @@ const AddVilla = () => {
       price: inpPrice,
       size: inpSize,
       place: inpPlace,
-      image: inpImage
+      image: inpImage,
+      status: false
     }
     console.log(newObj);
     addVilla(newObj)

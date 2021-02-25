@@ -7,7 +7,7 @@ import './FooterNew.css';
 const Footer = () => {
   return (
     <div className='footer-container'>
-      <section className="footer-subscription">
+      {/* <section className="footer-subscription">
         <p className="footer-subscription-heading">
           Join the Adventures newsletter to receive our best
           vacation deals with La Vitta!
@@ -27,7 +27,7 @@ const Footer = () => {
               }}>Subscribe</Button>
           </form>
         </div>
-      </section>
+      </section> */}
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">

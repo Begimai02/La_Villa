@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -12,7 +12,8 @@ import { useParams } from 'react-router-dom';
 import { villasContext } from '../../../contexts/VillaContext';
 import { cartContext } from '../../../contexts/CartContext';
 import Truncate from 'react-truncate'
-
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const useStyles = makeStyles({
   root: {
@@ -27,6 +28,11 @@ export default function MainCard({ data }) {
 
   // const {id} = useParams();
   const { getVillaById } = useContext(cartContext)
+  const [like, setLike] = useState(false)
+
+  useEffect(() => {
+    setLike()
+  }, [])
 
   const { villas, getVillas, villaDetail, getFavoriteId } = useContext(villasContext)
   useEffect(() => {
@@ -53,19 +59,34 @@ export default function MainCard({ data }) {
     getVillaById(id)
   }
 
-  function handleFavorite(){
+  function handleFavorite() {
     getFavoriteId(id)
+  }
+
+  function handleLike() {
+    setLike(!like);
+
+    if (!localStorage.getItem('likes')) {//проверка есть ли что-нибудь в localStorage
+      localStorage.setItem('likes', '[]')//если нет то добавляем туда путой массив
+    }
+
+    let localLike = JSON.parse(localStorage.getItem('likes'));//стягиваем массив из localStorage и преобразоваем в обычный формат js
+    localLike.push(like)//в массив добавляем новый обьект
+    localStorage.setItem('likes', JSON.stringify(localLike))//обновленный массив преобразовываем в формат json и отправляем обратно в localStorage
+
   }
 
   return (
     <>
       <Card className={classes.root}>
         <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={image}
-            title={title}
-          />
+          <Link to={`/detail/${id}`} style={{ textDecoration: "none" }}>
+            <CardMedia
+              className={classes.media}
+              image={image[0]}
+              title={title}
+            />
+          </Link>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {title}
@@ -95,9 +116,12 @@ export default function MainCard({ data }) {
               Details
             </Button>
           </Link>
-            <Button size="small" color="primary" onClick={handleFavorite}>
-              Favorite
+          <Button size="small" color="primary" onClick={handleFavorite}>
+            Favorite
             </Button>
+          <Button size="small" color="primary" onClick={handleLike}>
+            {like ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+          </Button>
 
         </CardActions>
       </Card>

@@ -20,38 +20,46 @@ import CreditCard from './components/Payment/CreditCard';
 import BookingForm from './BookingForm/BookingForm';
 import MainList from './components/Body/MainCards/MainList';
 import Footer from './components/Footer/Footer';
+import Favorite from './components/Favorite/Favorite';
+import FooterNew from './components/Footer/FooterNew';
+import CommentContextProvider from './contexts/CommentContext';
 
 const Routes = () => {
   return (
     <UserContextProvider>  {/*нужен для регистрации. Я создала отдельный контекст для регистрации*/}
       <VillasContextProvider>
         <CartContextProvider>
-          <BrowserRouter>
-            <Switch>
-              <Route exact path="/" component={Mainbox} />
-              <Route exact path="/mainlist" component={MainList} />
-              <Route exact path="/list" component={VillaList} />
-              <Route exact path="/add" component={AddVilla} />
-              <Route exact path="/" />
-              {/* здесь будут линки навбара надо сделать для них routes */}
+          <CommentContextProvider>
+            <BrowserRouter>
+              <Navbar />
+              <Switch>
+                <Route exact path="/" component={Mainbox} />
+                <Route exact path="/mainlist" component={MainList} />
+                <Route exact path="/list" component={VillaList} />
+                <Route exact path="/add" component={AddVilla} />
+                <Route exact path="/" />
+                {/* здесь будут линки навбара надо сделать для них routes */}
 
-              {/* <Footer/> */}
-              <Route exact path="/payment" component={CreditCard} />
-              <Route exact path="/booking" component={BookingForm} />
-              <Route exact path="/order" component={OrderEnd} />
+                {/* <Footer/> */}
+                <Route exact path="/payment" component={CreditCard} />
+                <Route exact path="/booking" component={BookingForm} />
+                <Route exact path="/order" component={OrderEnd} />
 
 
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/register" component={Register} />
-              <Route exact path="/isadmin" component={UserAdmin} /> {/*  main */}
-              <Route exact path="/admin" component={Admin} /> {/*  main */}
-              <Route exact path="/detail/:id" component={VillaDetail} />  {/*ADD HERE /:id -------!!!!!!!!!!!!!!!!!1 */}
-              <Route exact path="/edit/:id" component={EditVilla} /> {/*  main */}
-              <Route exact path="/cart" component={Cart} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/register" component={Register} />
+                <Route exact path="/isadmin" component={UserAdmin} /> {/*  main */}
+                <Route exact path="/admin" component={Admin} /> {/*  main */}
+                <Route exact path="/detail/:id" component={VillaDetail} />  {/*ADD HERE /:id -------!!!!!!!!!!!!!!!!!1 */}
+                <Route exact path="/edit/:id" component={EditVilla} /> {/*  main */}
+                <Route exact path="/cart" component={Cart} />
 
-              {/* <Route exact path="/footer" component={Footer} />  My blue footer */}
-            </Switch>
-          </BrowserRouter>
+                {/* <Route exact path="/footer" component={Footer} />  My blue footer */}
+                <Route exact path="/favorite" component={Favorite} />
+              </Switch>
+              <FooterNew />
+            </BrowserRouter>
+          </CommentContextProvider>
         </CartContextProvider>
       </VillasContextProvider>
     </UserContextProvider>

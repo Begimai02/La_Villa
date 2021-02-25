@@ -14,6 +14,7 @@ import { cartContext } from '../../contexts/CartContext';
 import Truncate from 'react-truncate'
 import { ToastContainer } from 'react-toastify';
 
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
