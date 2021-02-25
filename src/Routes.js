@@ -19,6 +19,7 @@ import OrderEnd from './BookingForm/OrderEnd';
 import CreditCard from './components/Payment/CreditCard';
 import BookingForm from './BookingForm/BookingForm';
 import MainList from './components/Body/MainCards/MainList';
+import Footer from './components/Footer/Footer';
 
 const Routes = () => {
   return (
@@ -47,6 +48,8 @@ const Routes = () => {
               <Route exact path="/detail/:id" component={VillaDetail} />  {/*ADD HERE /:id -------!!!!!!!!!!!!!!!!!1 */}
               <Route exact path="/edit/:id" component={EditVilla} /> {/*  main */}
               <Route exact path="/cart" component={Cart} />
+
+              {/* <Route exact path="/footer" component={Footer} />  My blue footer */}
             </Switch>
           </BrowserRouter>
         </CartContextProvider>

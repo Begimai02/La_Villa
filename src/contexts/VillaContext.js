@@ -100,6 +100,9 @@ const reducer = (state = INIT_STATE, action) => {
             getVillas()
         }
 
+        const getFavoriteId = (id) => {
+          
+        }
 
         return (
             <villasContext.Provider value={{

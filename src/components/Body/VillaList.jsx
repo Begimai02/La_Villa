@@ -101,7 +101,7 @@ export default function VillaList({ }) {
 
   useEffect(() => {
     getVillas(`http://localhost:8000/villas?_limit=3&_page=${page}`)
-  }, [page, villas])
+  }, [page])
 
   const onPaginationChange = (e, value) => {
     history.push(`${history.location.pathname}?page=${value}`);
