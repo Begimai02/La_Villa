@@ -1,4 +1,5 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 import MainList from '../Body/MainCards/MainList';
 import FooterNew from '../Footer/FooterNew';
 import Header from '../Header/Header';
@@ -10,11 +11,12 @@ import Gallery from '../MainBox/Gallery'
 import Offers from '../MainBox/Offers';
 
 const Mainbox = () => {
-  return (
+    return (
         <div className="Mainbox">
-           {/* <Header /> */}
+            <ToastContainer />
+            {/* <Header /> */}
             {/* <SearchSection/> */}
-       
+
             <MainList />
             {/* <Offers /> */}
             {/* <Gallery /> */}

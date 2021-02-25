@@ -180,10 +180,10 @@ export default function PrimarySearchAppBar() {
         odmen ?
           <>
             <MenuItem >ADMIN: {emailOn}</MenuItem>
-            <Link to="/add" style={{ textDecoration: "none"}} >
+            <Link to="/add" style={{ textDecoration: "none" }} >
               <MenuItem onClick={handleMenuClose}><button className={classes.addBtn}>Add</button></MenuItem>
             </Link>
-              
+
           </>
           : null
       }
@@ -212,7 +212,7 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle style={{ color: green[500] }} />
         </IconButton>
-        
+
       </MenuItem>
       <MenuItem>
         <IconButton color="inherit">
@@ -287,8 +287,10 @@ export default function PrimarySearchAppBar() {
               </Typography>
             </IconButton>
             <IconButton className={classes.navlinks}>
-              <AddShoppingCartIcon />
+            <Link to="/cart">
 
+              <AddShoppingCartIcon />
+            </Link>
             </IconButton>
             <Link to="/favorite">
               <IconButton className={classes.navLikes}>
@@ -296,16 +298,20 @@ export default function PrimarySearchAppBar() {
               </IconButton> 
             </Link>
 
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
+
+            
+              <IconButton
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton>
+           
+
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
@@ -317,7 +323,6 @@ export default function PrimarySearchAppBar() {
             >
               <MoreIcon />
             </IconButton>
-           
           </div>
         </Toolbar>
       </AppBar>
