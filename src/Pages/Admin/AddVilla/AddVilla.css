@@ -1,8 +1,7 @@
 .add-block{
-    background-image: url('https://images.pexels.com/photos/221457/pexels-photo-221457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-    background-size: contain;
+    background: url(../../../assets/img/backgrounf.jpg) no-repeat;
+    background-size: cover;
     height: 100%;
-    object-fit: cover;
 }
 
 .form{
@@ -10,12 +9,14 @@
     height: auto;
     max-width: 500px;
     margin: 50px auto;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     border-radius: 15px;
     padding: 50px 30px;
     display: flex;
     flex-direction: column;
-    background: transparent;
+    background: oldlace;
+    align-items: center;
+    /* background: transparent; */
 }
 
 .form input{
@@ -32,4 +33,18 @@
     width: 70px;
     align-self: flex-end;
     background-color: blue;
+}
+
+.add-page-form{
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.add-page-form input::placeholder{
+    text-align: center;
+}
+
+.name-of-page{
+    padding-top: 0px;
 }
