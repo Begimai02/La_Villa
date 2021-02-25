@@ -18,9 +18,9 @@ const Mainbox = () => {
             {/* <SearchSection/> */}
 
             <MainList />
-            {/* <Offers /> */}
-            {/* <Gallery /> */}
-            {/* <AboutUs /> */}
+            <Offers />
+            <Gallery />
+            <AboutUs />
            {/* <FooterNew /> */}
              
         </div >
