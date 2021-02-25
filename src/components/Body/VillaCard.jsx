@@ -14,6 +14,7 @@ import { cartContext } from '../../contexts/CartContext';
 import Truncate from 'react-truncate'
 import { ToastContainer } from 'react-toastify';
 
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -49,6 +50,7 @@ export default function VillaCard({ data }) {
     id
   } = data;
 
+  console.log(image[0])
     function handleBuy() {
       getVillaById(id)
     }
@@ -67,7 +69,7 @@ export default function VillaCard({ data }) {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image={image}
+              image={image[0]}
               title={title}
             />
             <CardContent>

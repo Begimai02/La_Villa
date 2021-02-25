@@ -33,3 +33,26 @@
     height: 500px; */
     /* margin-top: 250px;
     margin-left: -250px; */
+
+
+    .SlideBox {
+      font-family: sans-serif;
+      text-align: center;
+      
+    }
+    
+    .bg {
+      width: 90%;
+      height: 500px;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      will-change: opacity;
+      border-radius: 15px;
+    }

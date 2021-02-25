@@ -14,7 +14,8 @@ import { userContext } from '../../../contexts/UserContext';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import sunLogo from '../../../assets/sunLogo.svg';
-
+import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -26,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
   navlinks: {
     marginRight: theme.spacing(5),
   },
+  navLikes: {
+    marginRight: '15px'
+  }, 
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -89,7 +93,8 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     background: "#e0073e !important",
     borderRadius: "2px",
-    color: "#fff"
+    color: "#fff",
+    width: "100%",
   }
 }));
 
@@ -122,7 +127,7 @@ export default function PrimarySearchAppBar() {
   // FOR LOG IN PART, CHECK, IF USER LOGGED IN => SHOW JUST LOG OUT BUTTON. IF NOW => SHOW ALL WITHOUT LOG OUT BTN
   let newData = JSON.parse(localStorage.getItem('person'))//стягиваем массив из localStorage и преобразоваем в обычный формат js
   console.log(newData)
-  let emailOn = newData?.email
+  let emailOn
   let odmen = false
 
   // CHECKING FOR: IS IT ADMIN OR NOT ???
@@ -131,6 +136,7 @@ export default function PrimarySearchAppBar() {
   if (newData) {
     if (newData[0].email == "admin@gmail.com" && newData[0].password == "1") {
       console.log('I AM ADMIN')
+      emailOn = newData[0].email
       odmen = true
       // alert('You are loged in.');
     }
@@ -155,7 +161,6 @@ export default function PrimarySearchAppBar() {
         newData ?
           <>
             <MenuItem onClick={handleLogOut}>Log Out</MenuItem>
-            <MenuItem>{emailOn}</MenuItem>  {/*  NOT WORKING -------------------*/}
           </>
           :
           <>
@@ -174,9 +179,11 @@ export default function PrimarySearchAppBar() {
       {
         odmen ?
           <>
-            <Link to="/add" style={{ textDecoration: "none"}} >
+            <MenuItem >ADMIN: {emailOn}</MenuItem>
+            <Link to="/add" style={{ textDecoration: "none" }} >
               <MenuItem onClick={handleMenuClose}><button className={classes.addBtn}>Add</button></MenuItem>
             </Link>
+
           </>
           : null
       }
@@ -205,6 +212,7 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle style={{ color: green[500] }} />
         </IconButton>
+
       </MenuItem>
       <MenuItem>
         <IconButton color="inherit">
@@ -279,20 +287,31 @@ export default function PrimarySearchAppBar() {
               </Typography>
             </IconButton>
             <IconButton className={classes.navlinks}>
+            <Link to="/cart">
+
               <AddShoppingCartIcon />
-
+            </Link>
             </IconButton>
+            <Link to="/favorite">
+              <IconButton className={classes.navLikes}>
+              <BookmarkBorderIcon />
+              </IconButton> 
+            </Link>
 
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
+
+            
+              <IconButton
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton>
+           
+
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

@@ -1,12 +1,16 @@
-.editBox{
-  margin-top: 30px !important;
-    width: 70%;
-    height: auto;
-    max-width: 900px;
-    margin: 50px auto;
-    border: 4px solid #c4b004;
-    border-radius: 15px;
-    padding: 50px 30px;
-    display: flex;
-    flex-direction: column;
+.edit-block{
+  background-image: url('https://images.pexels.com/photos/4215110/pexels-photo-4215110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.form input{
+  margin-top: 10px;
+  height: 30px;
+}
+
+.edit-page{
+  display: flex;
+    align-items: center;
+    margin-top: 0px;
 }

@@ -27,46 +27,51 @@ const EditVilla = () => {
   // const [editSize, setEditSize] = useState(edit.size)
   // const [editPlace, setEditPlace] = useState(edit.place)
   // const [editImage, setEditImage] = useState(edit.image)
-  const {id} = useParams()
+  const { id } = useParams()
 
-  useEffect(() => {    
+  useEffect(() => {
     setEdit(forEdit)
   }, [forEdit])
 
   useEffect(() => {
     editVilla(id)
   }, [id])
-  
+
   function handleEditInp(e) {
     let newObj = {
-        ...edit,
-        [e.target.name]: e.target.value
+      ...edit,
+      [e.target.name]: e.target.value
     }
     setEdit(newObj)
     console.log(newObj)
-}
+  }
 
-  function handleClickAdd(){
+  function handleClickAdd() {
     saveNewEditVilla(edit)
   }
 
   return (
     <>
-    {edit ? 
-            <div>
-                <input onChange={handleEditInp} value={edit.title} type="text" name="title" id=""/>
-                <input onChange={handleEditInp} value={edit.description} type="text" name="description" id=""/>
-                <input onChange={handleEditInp} value={edit.price} type="text" name="price" id=""/>
-                <input onChange={handleEditInp} value={edit.size} type="text" name="size" id=""/>
-                <input onChange={handleEditInp} value={edit.place} type="text" name="place" id=""/>
-                <input onChange={handleEditInp} value={edit.image} type="text" name="image" id=""/>
-                <Link to="/add" >
-                    <button onClick={handleClickAdd} >Save</button>
-                </Link>
-            </div>
-            : <h1>loading...</h1>
-    }
+      {edit ? 
       
+      
+      <div className="edit-block">
+        <div className="form edit-page">
+          <h2>Edit</h2>
+          <input onChange={handleEditInp} value={edit.title} type="text" name="title" id="" />
+          <input onChange={handleEditInp} value={edit.description} type="text" name="description" id="" />
+          <input onChange={handleEditInp} value={edit.price} type="text" name="price" id="" />
+          <input onChange={handleEditInp} value={edit.size} type="text" name="size" id="" />
+          <input onChange={handleEditInp} value={edit.place} type="text" name="place" id="" />
+          <input onChange={handleEditInp} value={edit.image} type="text" name="image" id="" />
+          <Link to="/add" >
+            <button onClick={handleClickAdd} >Save</button>
+          </Link>
+        </div>
+      </div>
+        : <h1>loading...</h1>
+      }
+
     </>
   );
 };
