@@ -21,11 +21,7 @@ const Mainbox = () => {
             <Offers />
             <Gallery />
             <AboutUs />
-<<<<<<< HEAD
-           <FooterNew />
-=======
            {/* <FooterNew /> */}
->>>>>>> 0c111aa39ea77a7d9fb41bb24c5586cd91e1ef92
              
         </div >
     );
