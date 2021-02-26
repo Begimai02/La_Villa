@@ -14,6 +14,9 @@ import { cartContext } from '../../../contexts/CartContext';
 import Truncate from 'react-truncate'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
+import BookmarkIcon from '@material-ui/icons/Bookmark';
+import Favorite from '../../Favorite/Favorite';
 
 const useStyles = makeStyles({
   root: {
@@ -29,6 +32,7 @@ export default function MainCard({ data }) {
   // const {id} = useParams();
   const { getVillaById } = useContext(cartContext)
   const [like, setLike] = useState(false)
+  const [favorite, setFavorite] = useState(false)
 
   useEffect(() => {
     setLike()
@@ -61,6 +65,7 @@ export default function MainCard({ data }) {
 
   function handleFavorite() {
     getFavoriteId(id)
+    setFavorite(!favorite)
   }
 
   function handleLike() {
@@ -117,7 +122,7 @@ export default function MainCard({ data }) {
             </Button>
           </Link>
           <Button size="small" color="primary" onClick={handleFavorite}>
-            Favorite
+             {favorite ? <BookmarkIcon /> : <BookmarkBorderIcon /> }
             </Button>
           <Button size="small" color="primary" onClick={handleLike}>
             {like ? <FavoriteIcon /> : <FavoriteBorderIcon />}
