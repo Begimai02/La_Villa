@@ -37,7 +37,7 @@
 
     .SlideBox {
       font-family: sans-serif;
-      text-align: center;
+      /* text-align: center; */
       
     }
     
@@ -49,8 +49,9 @@
       left: 0;
       right: 0;
       margin-left: auto;
+      margin-top: 80px;
       margin-right: auto;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       will-change: opacity;
