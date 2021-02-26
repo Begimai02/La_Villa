@@ -53,16 +53,22 @@ const VillaDetail = () => {
       {
         forDetail ?
           <>
+          <div style={{marginTop: "40px"}}>
             <h1>{forDetail.title}</h1>
+          </div>
             <div className="det-container">
-              <div>
-                <SlideBox images={forDetail} />
+              <div style={{marginBottom: "40px"}}>
+                <SlideBox images={forDetail} style={{marginTop: "50px"}} />
               </div>
-              <div style={{ marginTop: '600px' }}>
+              <div style={{ marginTop: '550px', padding: "15px" }}>
                 <p>{forDetail.description}</p>
               </div>
-
-
+              <div>
+                <h4>{forDetail.price}</h4>
+              </div>
+              <div>
+                <h4>{forDetail.place}</h4>
+              </div>
 
               {
                 comments ?
