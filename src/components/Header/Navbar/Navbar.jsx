@@ -126,16 +126,13 @@ export default function PrimarySearchAppBar() {
 
   // FOR LOG IN PART, CHECK, IF USER LOGGED IN => SHOW JUST LOG OUT BUTTON. IF NOW => SHOW ALL WITHOUT LOG OUT BTN
   let newData = JSON.parse(localStorage.getItem('person'))//стягиваем массив из localStorage и преобразоваем в обычный формат js
-  console.log(newData)
   let emailOn
   let odmen = false
 
   // CHECKING FOR: IS IT ADMIN OR NOT ???
   const { yes } = useContext(userContext);
-  console.log("yes isAdmin", yes)
   if (newData) {
     if (newData[0].email == "admin@gmail.com" && newData[0].password == "1") {
-      console.log('I AM ADMIN')
       emailOn = newData[0].email
       odmen = true
       // alert('You are loged in.');

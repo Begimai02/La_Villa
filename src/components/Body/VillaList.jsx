@@ -38,7 +38,7 @@ export default function VillaList({ }) {
     // setPage(value)
   }
 
-
+  console.log(villas)
 
   return (
     <>
@@ -48,7 +48,7 @@ export default function VillaList({ }) {
           villas.map(item => (
             <Grid key={item.id} item xs={12} sm={6} lg={4}>
               {/* <Link to={`villas/${item.id}`} style={{ textDecoration: 'none' }}> */}
-              <VillaCard data={item} />
+              <VillaCard data={item} url={`http://localhost:8000/villas?_limit=3&_page=${page}`} />
               {/* </Link> */}
             </Grid>
           ))

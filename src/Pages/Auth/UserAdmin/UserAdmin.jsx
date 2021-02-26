@@ -99,6 +99,10 @@ export default function UserAdmin() {
       password: adminPassword
     }
 
+    if(!logAdmin.email.trim() || !logAdmin.password.trim()){
+      return notifyError2 ()
+    }
+
     setAdminEmail('');
     setAdminPassword('');
     // check();
@@ -123,6 +127,19 @@ export default function UserAdmin() {
 
 
   const notifyError = () => toast('Неверные данные!', {
+		position: "top-right",
+		autoClose: 5000,
+		hideProgressBar: false,
+		newestOnTop: false,
+		closeOnClick: true,
+		rtl: false,
+		pauseOnFocusLoss: true,
+		draggable: true,
+		pauseOnHover: true,
+		type: 'error'
+	});
+
+  const notifyError2 = () => toast('Заполните все поля!', {
 		position: "top-right",
 		autoClose: 5000,
 		hideProgressBar: false,

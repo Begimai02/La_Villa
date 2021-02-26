@@ -46,10 +46,6 @@ const EditVilla = () => {
     console.log(newObj)
   }
 
-  function handleClickAdd() {
-    saveNewEditVilla(edit)
-  }
-
   return (
     <>
       {edit ? 
@@ -65,7 +61,7 @@ const EditVilla = () => {
           <input onChange={handleEditInp} value={edit.place} type="text" name="place" id="" />
           <input onChange={handleEditInp} value={edit.image} type="text" name="image" id="" />
           <Link to="/add" >
-            <button onClick={handleClickAdd} >Save</button>
+            <button onClick={() => saveNewEditVilla(edit)} >Save</button>
           </Link>
         </div>
       </div>

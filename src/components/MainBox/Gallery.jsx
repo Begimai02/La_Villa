@@ -30,12 +30,11 @@ const About = () => {
   return (
     <div>
       <div className="revies">
-        <div >
           <div className="about1">
             <Flip right>
-              <div className="img_about" style={{ margin: '30px' }} >
+              <div className="img_about" style={{ margin: '30px', maxWidth: '500px'}} >
                 <img style={{
-                  width: '500px',
+                  maxWidth: '500px',
                   height: '500px',
                   borderRadius: '20px',
                   boxShadow: '0 0 10px rgba(0,0,0,0.5)',
@@ -43,10 +42,12 @@ const About = () => {
                   src="https://www.prestigevillarental.com/child/assets/img/bienvenido.jpg" alt=""></img>
               </div>
             </Flip>
-            <div className="title_offers" style={{ fontSize: '20px', fontFamily: 'Butler, san-serif' }}>
+            <div className="title_offers" style={{ fontSize: '20px', fontFamily: 'Butler, san-serif'}}>
               <h2>Why La Villa?</h2>
 
-              <div style={{ width: '600px', textAlign: 'left' }}>
+              <div style={{ 
+                maxWidth: '600px', 
+                textAlign: 'left' }}>
                 <p>La Villa is a real estate agency specializing in the vacation rental of mid and high-end
                 villas and also real estate transaction. The team, with more than 10 years of experience in tourism and real estate, has selected for you the best vacation rentals in the
                 French Caribbean (luxury villas in Guadeloupe, luxury villas in St. Barth, luxury villas in St.
@@ -63,7 +64,6 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
 
       </div>
     </div>

@@ -36,7 +36,6 @@ const CartContextProvider = ({ children }) => {
 
     const getVillasInCart = async () => {
         const { data } = await axios('http://localhost:8000/cart')
-        console.log(data)
         dispatch({
             type: "SHOW_VILLAS_IN_CART",
             payload: data
@@ -58,7 +57,6 @@ const CartContextProvider = ({ children }) => {
         }
     }
     function test(){
-        console.log("test")
         toast("WOW")
 
     }
@@ -75,7 +73,6 @@ const CartContextProvider = ({ children }) => {
             type: "SAVE_ORDER",
             payload: orderObj
         })
-        console.log(orderObj);
     }
 
     const notifyError = () => toast('Уже в корзине!', {

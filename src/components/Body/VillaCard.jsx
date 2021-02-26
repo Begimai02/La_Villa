@@ -27,15 +27,13 @@ const useStyles = makeStyles({
   },
 });
 
-export default function VillaCard({ data }) {
-
-  // const {id} = useParams();
+export default function VillaCard({ data, url }) {
 
   const { villas, getVillas, editVilla, deleteVilla } = useContext(villasContext)
   const { getVillaById } = useContext(cartContext);
 
   useEffect(() => {
-    getVillas()
+    getVillas(url)
   }, [])
 
   const classes = useStyles();
@@ -50,16 +48,12 @@ export default function VillaCard({ data }) {
     id
   } = data;
 
-  console.log(image[0])
     function handleBuy() {
       getVillaById(id)
     }
   
     function handleEdit(id) {
       editVilla(id)
-    }
-    function handleDelete(id) {
-      deleteVilla(id)
     }
 
 
@@ -93,17 +87,17 @@ export default function VillaCard({ data }) {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Link to={`/detail/${id}`} style={{ textDecoration: "none" }}>
+            <Link to={`/detail/${id}/`} style={{ textDecoration: "none" }}>
               <Button size="small" color="primary" >
                 Details
             </Button>
             </Link>
             <Link to={`/edit/${id}`} style={{ textDecoration: "none" }}>
-              <Button size="small" color="primary" >
+              <Button size="small" color="primary">
                 Edit
             </Button>
             </Link>
-            <Button size="small" color="primary" onClick={() => handleDelete(id)}>
+            <Button size="small" color="primary" onClick={() => deleteVilla(id, url)}>
               Delete
             </Button>
           </CardActions>

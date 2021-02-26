@@ -20,7 +20,6 @@ const BookingForm = () => {
             email: ordEmail,
             // [e.target.name]: e.target.value
         }
-        console.log(newObj)
         // setOrder(newObj)
         handleSendInfo(newObj)
         setOrdName('')
