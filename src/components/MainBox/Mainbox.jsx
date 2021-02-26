@@ -14,7 +14,7 @@ const Mainbox = () => {
     return (
         <div className="Mainbox">
             <ToastContainer />
-            {/* <Header /> */}
+            <Header />
             {/* <SearchSection/> */}
 
             <MainList />

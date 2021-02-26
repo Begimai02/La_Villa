@@ -47,16 +47,16 @@ const Footer = () => {
         </div>
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
-            <h2>Videos</h2>
+            <h2>Video</h2>
             <Link to='./'>Agency</Link>
             <Link to='./'>Terms</Link>
-            <Link to='./'>Ambassador</Link>
-            <Link to='./'>Influencer</Link>
+            <Link to='./'>JS</Link>
+            <Link to='./'>Info</Link>
           </div>
           <div className="footer-link-items">
-            <h2>Social Media</h2>
-            <Link to='./'>Instagram</Link>
-            <Link to='./'>Facebook</Link>
+            <h2>Media</h2>
+            <Link to='./'>Inst</Link>
+            <Link to='./'>FB</Link>
             <Link to='./'>Youtube</Link>
             <Link to='./'>Twitter</Link>
           </div>

@@ -1,0 +1,10 @@
+.revies{
+    display: flex;
+    justify-content: center;
+}
+.about1{
+    display: flex;
+    margin: 25px auto;
+    /* flex-wrap: 'wrap' */
+    justify-content: center;
+}

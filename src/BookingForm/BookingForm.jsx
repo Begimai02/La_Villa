@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, } from 'react';
 import '..//BookingForm/BookingForm.css'
 import { cartContext } from '../contexts/CartContext';
 import { Link } from 'react-router-dom';

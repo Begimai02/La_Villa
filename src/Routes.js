@@ -31,7 +31,6 @@ const Routes = () => {
         <CartContextProvider>
           <CommentContextProvider>
             <BrowserRouter>
-              <Navbar />
               <Switch>
                 <Route exact path="/" component={Mainbox} />
                 <Route exact path="/mainlist" component={MainList} />

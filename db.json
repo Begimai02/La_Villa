@@ -170,7 +170,7 @@
       "email": "hell@gmail.com",
       "password": "666"
     },
-      {
+    {
       "name": "Tilek",
       "lastname": "sds",
       "email": "tilek1199@gmail.com",
@@ -202,18 +202,6 @@
         "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/Celestial-Horizon-Villa-Sifnos-Island-Quality-Brand-Villas-2-1920x1080.jpg"
       ],
       "id": 3
-    },
-    {
-      "title": "Marina Villa",
-      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
-      "price": "200000$",
-      "place": "Dubai",
-      "image": [
-        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/Luxury-Villa-Lily-Lefkada-Island-quality-brand-villas-1-1920x1080.jpg",
-        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/stylish-villa-perseus-mykonos-island-quality-brand-villas-2-1920x1080.jpg",
-        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/Celestial-Horizon-Villa-Sifnos-Island-Quality-Brand-Villas-2-1920x1080.jpg"
-      ],
-      "id": 1
     }
   ],
   "comments": [
