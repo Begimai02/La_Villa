@@ -23,6 +23,7 @@ import Footer from './components/Footer/Footer';
 import Favorite from './components/Favorite/Favorite';
 import FooterNew from './components/Footer/FooterNew';
 import CommentContextProvider from './contexts/CommentContext';
+import testEnd from './BookingForm/testEnd';
 
 const Routes = () => {
   return (
@@ -56,6 +57,8 @@ const Routes = () => {
 
                 {/* <Route exact path="/footer" component={Footer} />  My blue footer */}
                 <Route exact path="/favorite" component={Favorite} />
+
+                <Route exact path="/book" component={testEnd} />
               </Switch>
               <FooterNew />
             </BrowserRouter>
