@@ -240,6 +240,7 @@ export default function PrimarySearchAppBar() {
       <AppBar className={classes.navbar} position="static">
         <Toolbar>
 
+        <Link to="/" style={{textDecoration: "none"}}>
           <IconButton>
             <img src={sunLogo} alt={"logo"}
               style={{
@@ -260,6 +261,8 @@ export default function PrimarySearchAppBar() {
               La Villa
           </Typography>
           </IconButton>
+
+          </Link>
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>

@@ -13,6 +13,7 @@ import MainCard from './MainCard';
 import ProductsPagination from '../../Pagination/ProductsPagination';
 import './MainList.css'
 
+
 const BootstrapInput = withStyles((theme) => ({
   root: {
     'label + &': {
@@ -116,16 +117,15 @@ export default function MainList({ }) {
   }
 
   return (
-    <>
+    <div className='style'>
       <h2 style={{
         textAlign: 'center',
-        fontFamily: 'Sawarabi Gothic, sans-serif',
         marginTop: '50px',
       }}>
         Our villas are waiting for you!
       </h2>
       <p style={{
-        fontFamily: 'Sawarabi Gothic, sans-serif',
+        // fontFamily: 'Sawarabi Gothic, sans-serif',
         fontSize: '25px',
       }}>
         La Villa offers diverse  villas in different countries to help you spend your dream vacation. <br></br>
@@ -174,7 +174,7 @@ export default function MainList({ }) {
       </Grid>
       <ProductsPagination count={Math.ceil(count / 3)} page={page} onChange={onPaginationChange} />
 
-    </>
+    </div>
   );
 }
 
