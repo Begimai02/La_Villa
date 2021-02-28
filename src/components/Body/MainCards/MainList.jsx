@@ -121,12 +121,14 @@ export default function MainList({ }) {
       <h2 style={{
         textAlign: 'center',
         marginTop: '50px',
+        padding: '0 50px'
       }}>
         Our villas are waiting for you!
       </h2>
       <p style={{
         // fontFamily: 'Sawarabi Gothic, sans-serif',
         fontSize: '25px',
+        padding: '0 30px'
       }}>
         La Villa offers diverse  villas in different countries to help you spend your dream vacation. <br></br>
         Order your villa online quickly and safely with La Vitta.
@@ -160,7 +162,7 @@ export default function MainList({ }) {
           Search
         </Button> */}
       </div>
-      <h1>Test</h1>
+      <h1>View our Villas</h1>
       <Grid container spacing={3} className="grid_container">
         {
           villas.map(item => (

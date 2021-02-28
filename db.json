@@ -1,225 +1,69 @@
 {
   "villas": [
     {
-      "title": "888888888",
-      "description": "123",
-      "price": "123",
-      "size": "123",
-      "place": "123",
+      "title": "Orlando Villa",
+      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
+      "price": "452430$",
+      "size": "8000",
+      "place": "Dubai",
       "image": [
-        "123",
-        "123",
-        "123"
+        "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/144140119.jpg?k=aa0dd36c1c8ac4ff70e5fe312625a96b58da59c5ee48fe3c478d98f2fdcf50da&o=",
+        "https://photos.zillowstatic.com/fp/9c0420a3fdb99e5aaed28a6c8b618215-uncropped_scaled_within_1536_1152.webp",
+        "https://photos.zillowstatic.com/fp/58d69077d5d8d181f63c651889fbc60e-uncropped_scaled_within_1536_1152.webp"
       ],
-      "id": 9
+      "id": 2
     },
     {
-      "title": "312",
-      "description": "321",
-      "price": "312",
-      "size": "312",
-      "place": "312",
+      "title": "Rena Villa",
+      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
+      "price": "700000$",
+      "size": "3000",
+      "place": "Italy",
       "image": [
-        "312",
-        "312",
-        "312"
+        "https://photos.zillowstatic.com/fp/b104d678e8626fb6f015a24532cc5712-uncropped_scaled_within_1536_1152.webp",
+        "https://www.holiday-villas.ru/images/im06/5/26c7cc8d05a0dc19cfc07baa975877f1.jpg",
+        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/Celestial-Horizon-Villa-Sifnos-Island-Quality-Brand-Villas-2-1920x1080.jpg"
       ],
-      "id": 10
+      "id": 3
     },
     {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
+      "title": "Sifora Villa",
+      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
+      "price": "900000$",
+      "size": "3000",
+      "place": "Turkey",
       "image": [
-        "",
-        "312",
-        "312"
+        "https://s1.1zoom.ru/big3/832/359485-admin.jpg",
+        "https://photos.zillowstatic.com/fp/93ec45e446840ce36587c415c6a67ac8-uncropped_scaled_within_1536_1152.webp",
+        "https://photos.zillowstatic.com/fp/67969c2d830b209f659fe6a7c98b2c8f-uncropped_scaled_within_1536_1152.webp"
       ],
-      "id": 11
+      "id": 4
     },
     {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
+      "title": "Coco Villa",
+      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
+      "price": "200000$",
+      "size": "8000",
+      "place": "Maldives",
       "image": [
-        "",
-        "312",
-        "312"
+        "https://pbs.twimg.com/media/DttFxVSVYAAVWbn.jpg",
+        "https://static.wixstatic.com/media/85f7dd_6603d801bc444e229e6314cc8f387d6f~mv2_d_4000_2500_s_4_2.jpg",
+        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/Celestial-Horizon-Villa-Sifnos-Island-Quality-Brand-Villas-2-1920x1080.jpg"
       ],
-      "id": 12
+      "id": 5
     },
     {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
+      "title": "Beno Villa test",
+      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
+      "price": "200000$",
+      "size": "5000",
+      "place": "Spain",
       "image": [
-        "",
-        "312",
-        "312"
+        "https://tabairarealestate.com/media/images/properties/thumbnails/o_1b4ls7hmm8oa129am82tbch21c_w_102400x80000.jpg",
+        "https://photos.zillowstatic.com/fp/075c4ccfd84e7ce4221963d16bf978fd-uncropped_scaled_within_1536_1152.webp",
+        "https://www.passepartout-homes.com/property_images/317/l712villa-di-lusso-toscana-con-piscina.jpg"
       ],
-      "id": 13
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
-      "image": [
-        "",
-        "312",
-        "312"
-      ],
-      "id": 14
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
-      "image": [
-        "",
-        "312",
-        "312"
-      ],
-      "id": 15
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
-      "image": [
-        "",
-        "312",
-        "312"
-      ],
-      "id": 16
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
-      "image": [
-        "",
-        "312",
-        "312"
-      ],
-      "id": 17
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
-      "image": [
-        "",
-        "312",
-        "312"
-      ],
-      "id": 18
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
-      "image": [
-        "",
-        "312",
-        "312"
-      ],
-      "id": 19
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
-      "image": [
-        "",
-        "312",
-        "312"
-      ],
-      "id": 20
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
-      "image": [
-        "",
-        "312",
-        "312"
-      ],
-      "id": 21
-    },
-    {
-      "title": "1231`2121",
-      "description": "54545",
-      "price": "454545",
-      "size": "454545",
-      "place": "4555",
-      "image": [
-        "",
-        "312",
-        "312"
-      ],
-      "id": 22
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
-      "image": [
-        "",
-        "312",
-        "312"
-      ],
-      "id": 23
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
-      "image": [
-        "",
-        "312",
-        "312"
-      ],
-      "id": 24
-    },
-    {
-      "title": "     ",
-      "description": "",
-      "price": "",
-      "size": "",
-      "place": "",
-      "image": [
-        "",
-        "",
-        ""
-      ],
-      "id": 25
+      "id": 8
     }
   ],
   "users": [
@@ -242,32 +86,48 @@
       "email": "tilek1199@gmail.com",
       "password": "tilek",
       "id": 2
+    },
+    {
+      "name": "tile",
+      "lastname": "sh",
+      "email": "ti@gmail.com",
+      "password": "3",
+      "id": 3
+    },
+    {
+      "name": "Kubat",
+      "lastname": "Kubatov",
+      "email": "kubat1@gmail.com",
+      "password": "123",
+      "id": 4
     }
   ],
   "cart": [
     {
-      "title": "Orlando Villa",
-      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
-      "price": "200000$",
-      "place": "Dubai",
-      "image": [
-        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/Luxury-Villa-Lily-Lefkada-Island-quality-brand-villas-1-1920x1080.jpg",
-        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/stylish-villa-perseus-mykonos-island-quality-brand-villas-2-1920x1080.jpg",
-        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/Celestial-Horizon-Villa-Sifnos-Island-Quality-Brand-Villas-2-1920x1080.jpg"
-      ],
-      "id": 2
-    },
-    {
       "title": "Marina Villa",
       "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
       "price": "200000$",
+      "size": "3000",
+      "place": "Spain",
+      "image": [
+        "https://www.mk-villas.com/wp-content/uploads/2015/07/17.jpg",
+        "https://photos.zillowstatic.com/fp/4df1b93d5538a3e7fd45fb24edb8caef-uncropped_scaled_within_1536_1152.webp",
+        "https://photos.zillowstatic.com/fp/f186e73b93113b468afa0d686e8e9ae1-uncropped_scaled_within_1536_1152.webp"
+      ],
+      "id": 1
+    },
+    {
+      "title": "Orlando Villa",
+      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
+      "price": "452430$",
+      "size": "8000",
       "place": "Dubai",
       "image": [
-        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/Luxury-Villa-Lily-Lefkada-Island-quality-brand-villas-1-1920x1080.jpg",
-        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/stylish-villa-perseus-mykonos-island-quality-brand-villas-2-1920x1080.jpg",
-        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/Celestial-Horizon-Villa-Sifnos-Island-Quality-Brand-Villas-2-1920x1080.jpg"
+        "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/144140119.jpg?k=aa0dd36c1c8ac4ff70e5fe312625a96b58da59c5ee48fe3c478d98f2fdcf50da&o=",
+        "https://photos.zillowstatic.com/fp/9c0420a3fdb99e5aaed28a6c8b618215-uncropped_scaled_within_1536_1152.webp",
+        "https://photos.zillowstatic.com/fp/58d69077d5d8d181f63c651889fbc60e-uncropped_scaled_within_1536_1152.webp"
       ],
-      "id": 3
+      "id": 2
     }
   ],
   "comments": [
@@ -385,23 +245,28 @@
       "id": 20
     },
     {
-<<<<<<< HEAD
       "comment": "ptivet",
       "villaID": "2",
       "data": "26.02.2021, 09:50:20",
       "id": 21
-=======
-      "comment": "",
-      "villaID": "1",
-      "data": "26.02.2021, 10:35:10",
-      "id": 21
     },
     {
-      "comment": "",
-      "villaID": "1",
-      "data": "26.02.2021, 10:35:10",
+      "comment": "wow",
+      "villaID": "4",
+      "data": "26.02.2021, 14:39:11",
       "id": 22
->>>>>>> 4b88de2863bc45df8c61f3035bd2a84832ce91d1
+    },
+    {
+      "comment": "очень клаа=сяяная вилла",
+      "villaID": "2",
+      "data": "26.02.2021, 15:13:24",
+      "id": 23
+    },
+    {
+      "comment": "test",
+      "villaID": "3",
+      "data": "26.02.2021, 20:35:18",
+      "id": 24
     }
   ]
 }

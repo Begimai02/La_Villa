@@ -61,7 +61,7 @@ export default function VerticalTabs() {
   };
 
   return (
-    <div className={classes.root} className='main-div'>
+    <div style={{display:'flex',flexWrap:'wrap', justifyContent: 'center'}} className={classes.root} className='main-div'>
       <Tabs
         orientation="vertical"
         variant="scrollable"

@@ -15,27 +15,6 @@ const testEnd = () => {
             Price
           </div>
         </div>
-
-        <div className={classes.products}>
-          <div className={classes.title}>
-            Title of Product
-          </div>
-          <div>
-            Price
-          </div>
-        </div>
-
-
-        <div className={classes.products}>
-          <div className={classes.title}>
-            Title of Product
-          </div>
-          <div>
-            Price
-          </div>
-        </div>
-
-
         <div className={classes.info}>
           <div>
           <h3> Shipping </h3>

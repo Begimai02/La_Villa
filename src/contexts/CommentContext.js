@@ -32,10 +32,9 @@ const CommentContextProvider = ({ children }) => {
   }
 
   const addComment = async (newComment) => {
-    console.log("comment")
     await axios.post('http://localhost:8000/comments', newComment)
     getComments(newComment.villaID)
-    console.log(newComment.villaID)
+ 
   }
 
 
