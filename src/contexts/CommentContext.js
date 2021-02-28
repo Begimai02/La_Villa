@@ -24,7 +24,6 @@ const CommentContextProvider = ({ children }) => {
 
   const getComments = async (idVilla) => {
     const { data } = await axios(`http://localhost:8000/comments?villaID=${idVilla}`)
-    console.log(data);
     dispatch({
       type: "GET_COMMENTS",
       payload: data
@@ -33,11 +32,9 @@ const CommentContextProvider = ({ children }) => {
   }
 
   const addComment = async (newComment) => {
-    console.log(newComment)
-    console.log("comment")
     await axios.post('http://localhost:8000/comments', newComment)
     getComments(newComment.villaID)
-    console.log(newComment.villaID)
+ 
   }
 
 

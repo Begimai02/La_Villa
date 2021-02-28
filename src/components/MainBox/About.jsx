@@ -5,7 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-
+import './About.css'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -61,7 +61,7 @@ export default function VerticalTabs() {
   };
 
   return (
-    <div className={classes.root}>
+    <div style={{display:'flex',flexWrap:'wrap', justifyContent: 'center'}} className={classes.root} className='main-div'>
       <Tabs
         orientation="vertical"
         variant="scrollable"

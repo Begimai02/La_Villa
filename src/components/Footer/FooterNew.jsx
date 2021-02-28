@@ -1,33 +1,11 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import './Footer.css'
 import { Link } from 'react-router-dom';
 import './FooterNew.css';
 
 const Footer = () => {
   return (
     <div className='footer-container'>
-      {/* <section className="footer-subscription">
-        <p className="footer-subscription-heading">
-          Join the Adventures newsletter to receive our best
-          vacation deals with La Vitta!
-            </p>
-        <p className="footer-subscription-text">
-          You can unsubscribe at any time.
-            </p>
-        <div className="input-areas">
-          <form>
-            <input type="email" name="email" placeholder="Your Email"
-              className="footer-input" />
-            <Button className="btn-footer"
-              style={{
-                color: '#fff',
-                backgroundColor: '#242424',
-                fontSize: '18px'
-              }}>Subscribe</Button>
-          </form>
-        </div>
-      </section> */}
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
@@ -47,16 +25,16 @@ const Footer = () => {
         </div>
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
-            <h2>Videos</h2>
+            <h2>Video</h2>
             <Link to='./'>Agency</Link>
             <Link to='./'>Terms</Link>
-            <Link to='./'>Ambassador</Link>
-            <Link to='./'>Influencer</Link>
+            <Link to='./'>JS</Link>
+            <Link to='./'>Inf</Link>
           </div>
           <div className="footer-link-items">
-            <h2>Social Media</h2>
-            <Link to='./'>Instagram</Link>
-            <Link to='./'>Facebook</Link>
+            <h2>Media</h2>
+            <Link to='./'>Inst</Link>
+            <Link to='./'>FB</Link>
             <Link to='./'>Youtube</Link>
             <Link to='./'>Twitter</Link>
           </div>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, } from 'react';
 import '..//BookingForm/BookingForm.css'
 import { cartContext } from '../contexts/CartContext';
 import { Link } from 'react-router-dom';
@@ -20,7 +20,6 @@ const BookingForm = () => {
             email: ordEmail,
             // [e.target.name]: e.target.value
         }
-        console.log(newObj)
         // setOrder(newObj)
         handleSendInfo(newObj)
         setOrdName('')

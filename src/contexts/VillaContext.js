@@ -47,16 +47,14 @@ const reducer = (state = INIT_STATE, action) => {
         const [state, dispatch] = useReducer(reducer, INIT_STATE)
 
         const getVillas = async (url) => {
+            console.log(url, "222222")
             try {
                 const res = await fetch(url);
                 const data = await res.json();
-    
-                
                 dispatch({
                     type: "GET_VILLAS",
                     payload: data
                 })
-
                 dispatch ({
                     type: "GET_VILLAS_COUNT",
                     payload: parseInt(res.headers.get("x-total-count"))
@@ -68,9 +66,8 @@ const reducer = (state = INIT_STATE, action) => {
 
         const addVilla = async (newVilla) => {
             // console.log(newVilla)
-            console.log("ASKAT")
             await axios.post('http://localhost:8000/villas', newVilla)
-            getVillas()
+            getVillas('http://localhost:8000/villas?_limit=3')
         }
 
         const villaDetail = async (id) => {
@@ -87,28 +84,26 @@ const reducer = (state = INIT_STATE, action) => {
             console.log(id)
             let { data } = await axios(`http://localhost:8000/villas/${id}`)
             console.log('data: ', data);
-
             dispatch({
                 type: "EDIT_VILLA",
                 payload: data
             })
+            getVillas()
         }
 
         const saveNewEditVilla = async (newEditVilla) => {
             await axios.patch(`http://localhost:8000/villas/${newEditVilla.id}`, newEditVilla)
-            getVillas()
+            getVillas('http://localhost:8000/villas?_limit=3')
         }
 
-        const deleteVilla = (id) => {
-            console.log(id);
-            axios.delete(`http://localhost:8000/villas/${id}`)
-            getVillas()
+        const deleteVilla = async (id, url) => {
+            console.log(url)
+            await axios.delete(`http://localhost:8000/villas/${id}`)
+            getVillas(url)
         }
 
         const getFavoriteId = async (id) => {
-          console.log(id)
           let { data } = await axios(`http://localhost:8000/villas/${id}`)
-          console.log('favo: ', data);
             dispatch({
                 type: "FAVO_VILLA",
                 payload: data

@@ -29,7 +29,9 @@ const AddVilla = () => {
         inpImage3
       ]
     }
-    console.log(newObj);
+    if(!newObj.title.trim() || !newObj.description.trim() || !newObj.price.trim() || !newObj.size.trim() || !newObj.place.trim()){
+      return alert("Заполните все поля")
+    }
     addVilla(newObj)
     setInpTitle('')
     setInpDesc('')
@@ -37,6 +39,8 @@ const AddVilla = () => {
     setInpSize('')
     setInpPlace('')
     setInpImage('')
+    setInpImage2('')
+    setInpImage3('')
   }
 
   return (
@@ -51,9 +55,7 @@ const AddVilla = () => {
         <input value={inpImage} onChange={(e) => setInpImage(e.target.value)} placeholder="картинка" type="text"/>
         <input value={inpImage2} onChange={(e) => setInpImage2(e.target.value)} placeholder="картинка" type="text"/>
         <input value={inpImage3} onChange={(e) => setInpImage3(e.target.value)} placeholder="картинка" type="text"/>
-      <Link to="/list">
         <button onClick={handleClickAdd}>Add</button>
-      </Link>
       </div>
       <VillaList />
     </div>

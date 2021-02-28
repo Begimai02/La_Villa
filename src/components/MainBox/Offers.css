@@ -11,3 +11,11 @@
   font-size: 25px;
   font-family: 'Playfair Display SC', serif;
 }
+
+
+
+@media all and (max-width: 910px) {
+  .gallery-text {
+    display: none;
+  }
+}

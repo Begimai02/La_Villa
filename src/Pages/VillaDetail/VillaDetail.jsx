@@ -119,7 +119,7 @@ const VillaDetail = () => {
                         Comments:
                           </Typography>
                       <div style={{ textAlign: "start" }}>
-                        <input value={inpComm} type="text" onChange={(e) => setInpComm(e.target.value)} />
+                        <input style={{maxWidth: '150px'}} value={inpComm} type="text" onChange={(e) => setInpComm(e.target.value)} />
                         <button style={{ height: "38px", border: "none", pointer: "cursor", background: "#68cff6", borderRadius: "7px" }} onClick={() => handleAddComment()}>Add comment</button>
                       </div>
                       {comments.map((item, index) => (

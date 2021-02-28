@@ -1,0 +1,38 @@
+.revies{
+    display: flex;
+    justify-content: center;
+}
+
+/* .block23{
+    display: flex;
+
+} */
+.about1{
+    display: flex;
+    margin: 25px auto;
+    width: 90%;
+    justify-content: center;
+}
+
+
+
+.title_offers{
+    padding: 0 15px;
+}
+
+
+@media all and (max-width: 800px){
+    .about1{
+        flex-wrap: wrap; 
+    }
+    .img_about{
+        width: 100% !important;
+    }
+    .img_about img {
+        width: 90%;
+    }
+    .title_offers{
+        max-width: 80%
+    }
+}
+

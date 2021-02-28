@@ -47,31 +47,39 @@ const rows = [
 const useStyles = makeStyles({
   table: {
     minWidth: 700,
-  },
+    backgroundColor: '#FDFB30'
+  }
 });
 
 export default function CustomizedTables() {
   let { cart, getVillasInCart, deleteVilla } = useContext(cartContext)
-  // let [obj, setObj] = useState(cart)
+
+  let [totalCount, setTotalCount] = useState(0)
+
   const classes = useStyles();
   useEffect(() => {
-    getVillasInCart()
+    let price = totalCount;
+    cart?.map(item => {
+      price += +item.price
+    })
+    getVillasInCart(cart);
+    setTotalCount(price)
+console.log(totalCount);
   }, [])
-
 
 
   return (
     <>
-
-      <TableContainer component={Paper}>
+    <h1>Shopping Cart</h1>
+      <TableContainer  component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
-            <TableRow>
-              <StyledTableCell>ВАШИ ЗАКАЗЫ</StyledTableCell>
-              <StyledTableCell align="right">ЦЕНА</StyledTableCell>
-              <StyledTableCell align="right">КОЛИЧЕСТВО</StyledTableCell>
-              <StyledTableCell align="right">МЕСТОНАХОЖДЕНИЕ</StyledTableCell>
-              <StyledTableCell align="right">КВАДРАТУРА</StyledTableCell>
+            <TableRow className={classes.title}>
+              <StyledTableCell>Your Orders</StyledTableCell>
+              <StyledTableCell align="right">Price</StyledTableCell>
+              <StyledTableCell align="right">Quantity</StyledTableCell>
+              <StyledTableCell align="right">Location</StyledTableCell>
+              <StyledTableCell align="right">Size</StyledTableCell>
               <StyledTableCell align="right"></StyledTableCell>
 
             </TableRow>
@@ -82,10 +90,10 @@ export default function CustomizedTables() {
                 <StyledTableCell component="th" scope="row">
                   {item.title}
                 </StyledTableCell>
-                <StyledTableCell align="right">{item.price}</StyledTableCell>
+                <StyledTableCell align="right">${item.price}</StyledTableCell>
                 <StyledTableCell align="right">1</StyledTableCell>
                 <StyledTableCell align="right">{item.place}</StyledTableCell>
-                <StyledTableCell align="right">{item.size}</StyledTableCell>
+                <StyledTableCell align="right">{item.size} sq mtr</StyledTableCell>
                 <StyledTableCell align="right"><button onClick={() => deleteVilla(item.id)} >&times;</button></StyledTableCell>
               </StyledTableRow>
             ))}
@@ -93,11 +101,11 @@ export default function CustomizedTables() {
           </TableBody>
         </Table>
       </TableContainer>
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '15px', textDecoration: 'none', }} >
       <Link to="/booking">
-        <div style={{ display: 'flex', justifyContent: 'flex-end'}} >
           <button>BUY</button>
-        </div>
       </Link>
+        </div>
     </>
   );
 }

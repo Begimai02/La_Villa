@@ -19,11 +19,11 @@ import OrderEnd from './BookingForm/OrderEnd';
 import CreditCard from './components/Payment/CreditCard';
 import BookingForm from './BookingForm/BookingForm';
 import MainList from './components/Body/MainCards/MainList';
-import Footer from './components/Footer/Footer';
 import Favorite from './components/Favorite/Favorite';
 import FooterNew from './components/Footer/FooterNew';
 import CommentContextProvider from './contexts/CommentContext';
 import testEnd from './BookingForm/testEnd';
+import Header from './components/Header/Header';
 
 const Routes = () => {
   return (
@@ -32,7 +32,7 @@ const Routes = () => {
         <CartContextProvider>
           <CommentContextProvider>
             <BrowserRouter>
-              <Navbar />
+            <Navbar/>
               <Switch>
                 <Route exact path="/" component={Mainbox} />
                 <Route exact path="/mainlist" component={MainList} />

@@ -31,7 +31,6 @@ const useStyles = makeStyles({
 const Favorite = () => {
   
   const { favorite } = useContext(villasContext);
-  console.log(favorite)
 
   let favos = JSON.parse(localStorage.getItem('favorite'));//стягиваем массив из localStorage и преобразоваем в обычный формат js
   const [ f, setF ] = useState(favos)
