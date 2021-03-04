@@ -9,6 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { cartContext } from '../../contexts/CartContext';
 import { Link } from 'react-router-dom';
+import './Cart.css'
 
 
 const StyledTableCell = withStyles((theme) => ({
@@ -52,7 +53,7 @@ const useStyles = makeStyles({
 });
 
 export default function CustomizedTables() {
-  let { cart, getVillasInCart, deleteVilla } = useContext(cartContext)
+  let { cart, getDiamondsInCart, deleteDiamonds } = useContext(cartContext)
 
   let [totalCount, setTotalCount] = useState(0)
 
@@ -62,7 +63,7 @@ export default function CustomizedTables() {
     cart?.map(item => {
       price += +item.price
     })
-    getVillasInCart(cart);
+    getDiamondsInCart(cart);
     setTotalCount(price)
 console.log(totalCount);
   }, [])
@@ -94,14 +95,14 @@ console.log(totalCount);
                 <StyledTableCell align="right">1</StyledTableCell>
                 <StyledTableCell align="right">{item.place}</StyledTableCell>
                 <StyledTableCell align="right">{item.size} sq mtr</StyledTableCell>
-                <StyledTableCell align="right"><button onClick={() => deleteVilla(item.id)} >&times;</button></StyledTableCell>
+                <StyledTableCell align="right"><button onClick={() => deleteDiamonds(item.id)} >&times;</button></StyledTableCell>
               </StyledTableRow>
             ))}
 
           </TableBody>
         </Table>
       </TableContainer>
-        <div style={{ display: 'flex', justifyContent: 'center', padding: '15px', textDecoration: 'none', }} >
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '15px', textDecoration: 'none'}} >
       <Link to="/booking">
           <button>BUY</button>
       </Link>

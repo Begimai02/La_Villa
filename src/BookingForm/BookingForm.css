@@ -1,5 +1,5 @@
 .formBody{
-    background-image:url('https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-image:url('https://geocult.ru/wp-content/uploads/2017/06/diamond-3f.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     width: 100%;
@@ -8,11 +8,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
 
 }
 
 .BookingForm {
-    background-color: oldlace;
+    background-color: rgba(0, 0, 0, 0);
     width: 450px;
     height: 420px;
     margin: 0 auto;
@@ -40,8 +44,6 @@
     
 }
 
-
-
 .btn{
         text-decoration: none;
         height: 30px;
@@ -54,7 +56,7 @@
         font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
         letter-spacing: 2px;
-        background-image: linear-gradient(to right,#FFFFFF 51%,  #dedcf1 100%);
+        background-image: linear-gradient(to right, #dedcf1 51%,   #a8c0ff 100%);
         background-size: 200% auto;
         box-shadow: 0 0 20px rgba(0, 0, 0, .1);
         transition: .5s;

@@ -1,15 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Mainbox from './components/MainBox/Mainbox';
-import VillaList from './components/Body/VillaList';
-import VillasContextProvider from './contexts/VillaContext';
+import DiamondsList from './components/Body/DiamondsList';
 import UserContextProvider from './contexts/UserContext';
-import AddVilla from './Pages/Admin/AddVilla/AddVilla';
+import addDiamonds from './Pages/Admin/AddDiamonds/AddDiamonds';
 import Navbar from "./components/Header/Navbar/Navbar";
 
 import Admin from './Pages/Auth/Admin';
-import VillaDetail from './Pages/VillaDetail/VillaDetail';
-import EditVilla from './Pages/Admin/EditVilla/EditVilla';
+import VillaDetail from './Pages/DiamondsDetail/DiamondsDetail';
+import EditVilla from './Pages/Admin/EditDiamonds/EditDiamonds';
 import Login from './Pages/Auth/Login/Login';
 import Register from './Pages/Auth/Register/Register';
 import UserAdmin from './Pages/Auth/UserAdmin/UserAdmin';
@@ -23,25 +22,23 @@ import Favorite from './components/Favorite/Favorite';
 import FooterNew from './components/Footer/FooterNew';
 import CommentContextProvider from './contexts/CommentContext';
 import testEnd from './BookingForm/testEnd';
-import Header from './components/Header/Header';
+import DiamondContextProvider from './contexts/ProductsContext';
 
 const Routes = () => {
   return (
-    <UserContextProvider>  {/*нужен для регистрации. Я создала отдельный контекст для регистрации*/}
-      <VillasContextProvider>
+    <UserContextProvider>
+      <DiamondContextProvider>
         <CartContextProvider>
           <CommentContextProvider>
             <BrowserRouter>
-            <Navbar/>
+              <Navbar />
               <Switch>
                 <Route exact path="/" component={Mainbox} />
                 <Route exact path="/mainlist" component={MainList} />
-                <Route exact path="/list" component={VillaList} />
-                <Route exact path="/add" component={AddVilla} />
+                <Route exact path="/list" component={DiamondsList} />
+                <Route exact path="/add" component={addDiamonds} />
                 <Route exact path="/" />
-                {/* здесь будут линки навбара надо сделать для них routes */}
 
-                {/* <Footer/> */}
                 <Route exact path="/payment" component={CreditCard} />
                 <Route exact path="/booking" component={BookingForm} />
                 <Route exact path="/order" component={OrderEnd} />
@@ -49,22 +46,20 @@ const Routes = () => {
 
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
-                <Route exact path="/isadmin" component={UserAdmin} /> {/*  main */}
-                <Route exact path="/admin" component={Admin} /> {/*  main */}
-                <Route exact path="/detail/:id" component={VillaDetail} />  {/*ADD HERE /:id -------!!!!!!!!!!!!!!!!!1 */}
-                <Route exact path="/edit/:id" component={EditVilla} /> {/*  main */}
+                <Route exact path="/isadmin" component={UserAdmin} />
+                <Route exact path="/admin" component={Admin} />
+                <Route exact path="/detail/:id" component={VillaDetail} />
+                <Route exact path="/edit/:id" component={EditVilla} />
                 <Route exact path="/cart" component={Cart} />
 
-                {/* <Route exact path="/footer" component={Footer} />  My blue footer */}
                 <Route exact path="/favorite" component={Favorite} />
-
                 <Route exact path="/book" component={testEnd} />
               </Switch>
               <FooterNew />
             </BrowserRouter>
           </CommentContextProvider>
         </CartContextProvider>
-      </VillasContextProvider>
+      </DiamondContextProvider>
     </UserContextProvider>
   );
 };

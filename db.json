@@ -1,69 +1,121 @@
 {
-  "villas": [
+  "diamonds": [
     {
-      "title": "Orlando Villa",
-      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
-      "price": "452430$",
-      "size": "8000",
-      "place": "Dubai",
+      "title": "Nana",
+      "description": "78 pear-shaped and round brilliant pink sapphires weighing a total of approximately 8.92 carats and 99 marquise and round brilliant diamonds weighing a total of approximately 8.61 carats, set in platinum.",
+      "price": "700000",
+      "size": "19",
+      "place": "Necklace",
       "image": [
-        "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/144140119.jpg?k=aa0dd36c1c8ac4ff70e5fe312625a96b58da59c5ee48fe3c478d98f2fdcf50da&o=",
-        "https://photos.zillowstatic.com/fp/9c0420a3fdb99e5aaed28a6c8b618215-uncropped_scaled_within_1536_1152.webp",
-        "https://photos.zillowstatic.com/fp/58d69077d5d8d181f63c651889fbc60e-uncropped_scaled_within_1536_1152.webp"
-      ],
-      "id": 2
-    },
-    {
-      "title": "Rena Villa",
-      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
-      "price": "700000$",
-      "size": "3000",
-      "place": "Italy",
-      "image": [
-        "https://photos.zillowstatic.com/fp/b104d678e8626fb6f015a24532cc5712-uncropped_scaled_within_1536_1152.webp",
-        "https://www.holiday-villas.ru/images/im06/5/26c7cc8d05a0dc19cfc07baa975877f1.jpg",
-        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/Celestial-Horizon-Villa-Sifnos-Island-Quality-Brand-Villas-2-1920x1080.jpg"
-      ],
-      "id": 3
-    },
-    {
-      "title": "Sifora Villa",
-      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
-      "price": "900000$",
-      "size": "3000",
-      "place": "Turkey",
-      "image": [
-        "https://s1.1zoom.ru/big3/832/359485-admin.jpg",
-        "https://photos.zillowstatic.com/fp/93ec45e446840ce36587c415c6a67ac8-uncropped_scaled_within_1536_1152.webp",
-        "https://photos.zillowstatic.com/fp/67969c2d830b209f659fe6a7c98b2c8f-uncropped_scaled_within_1536_1152.webp"
-      ],
-      "id": 4
-    },
-    {
-      "title": "Coco Villa",
-      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
-      "price": "200000$",
-      "size": "8000",
-      "place": "Maldives",
-      "image": [
-        "https://pbs.twimg.com/media/DttFxVSVYAAVWbn.jpg",
-        "https://static.wixstatic.com/media/85f7dd_6603d801bc444e229e6314cc8f387d6f~mv2_d_4000_2500_s_4_2.jpg",
-        "https://www.qualitybrandvillas.com/booking/wp-content/uploads/2020/04/Celestial-Horizon-Villa-Sifnos-Island-Quality-Brand-Villas-2-1920x1080.jpg"
-      ],
-      "id": 5
-    },
-    {
-      "title": "Beno Villa test",
-      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
-      "price": "200000$",
-      "size": "5000",
-      "place": "Spain",
-      "image": [
-        "https://tabairarealestate.com/media/images/properties/thumbnails/o_1b4ls7hmm8oa129am82tbch21c_w_102400x80000.jpg",
-        "https://photos.zillowstatic.com/fp/075c4ccfd84e7ce4221963d16bf978fd-uncropped_scaled_within_1536_1152.webp",
-        "https://www.passepartout-homes.com/property_images/317/l712villa-di-lusso-toscana-con-piscina.jpg"
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_lariat_necklace_diamond_and_pink_sapphire_NKPSPLTFLRFMN_trans_1.png?itok=DMl97ytt",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_lariat_necklace_diamond_and_pink_sapphire_NKPSPLTFLRFMN_trans_1.png?itok=DMl97ytt",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_lariat_necklace_diamond_and_pink_sapphire_NKPSPLTFLRFMN_trans_2.png?itok=MgKlWgh8"
       ],
       "id": 8
+    },
+    {
+      "title": "Diamond Earrings",
+      "description": "10 pear-shaped diamonds weighing a total of approximately 3.38 carats with 6 round sapphires weighing a total of approximately 2.81 carats, set in platinum.",
+      "price": "90000",
+      "size": "13",
+      "place": "Earrings",
+      "image": [
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/berry_cluster_by_harry_winston_earrings_sapphire_and_diamond_EASPCLRFBER_568121_trans_1.png?itok=E24rpd7x",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/berry_cluster_by_harry_winston_earrings_sapphire_and_diamond_EASPCLRFBER_568121_trans_2.png?itok=sgYUok_N",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/berry_cluster_by_harry_winston_earrings_sapphire_and_diamond_EASPCLRFBER_568121_trans_1.png?itok=E24rpd7x"
+      ],
+      "id": 9
+    },
+    {
+      "title": "Forget-Me-Not",
+      "description": " 12 pear-shaped diamonds surround 2 round brilliant diamonds, weighing a total of approximately 1.70 carats, set in platinum. Following the House's longstanding fine jewelry tradition, this delicate design marries nature's beauty with the world's rarest diamonds. Add brilliance to any occasion and celebrate one of nature's most treasured gifts with this diamond jewelry creation.",
+      "price": "900000",
+      "size": "11",
+      "place": "Earrings",
+      "image": [
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_diamond_earrings_EADP1MFLRFMN_trans-1h.png?itok=p_rSBzBF",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_diamond_earrings_EADP1MFLRFMN_trans-1h.png?itok=p_rSBzBF",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_diamond_earrings_EADP1MFLRFMN_trans-2h.png?itok=8ot2d0Eu"
+      ],
+      "id": 10
+    },
+    {
+      "title": "Sunflower",
+      "description": " Versatile and wearable, the Sunflower Collection seamlessly transitions from day-to-night. 17 round brilliant diamonds weighing a total of approximately 1.74 carats, center stone is approximately 0.72 carats, set in platinum.",
+      "price": "700000",
+      "size": "14",
+      "place": "Rings",
+      "image": [
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry/FRDPNASMSF_258670_1_Masked.png?itok=jMsPw9FI",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/FRDPNASMSF_258670_2_Masked_0.png?itok=WgMBVe8H",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry/FRDPNASMSF_258670_1_Masked.png?itok=jMsPw9FI"
+      ],
+      "id": 11
+    },
+    {
+      "title": "Ring Bella",
+      "description": "Inspired by the beauty of nature, the Sunflower Collection is a cluster of round brilliant diamonds, where diamonds are set with minimal metal to maximize the light returned. The result is a three-dimensional sculpture of brilliance that captures the delicate symmetry of a sunflower. Versatile and wearable, the Sunflower Diamond Twin Ring seamlessly transitions from day-to-night.Inspired by the beauty of nature, the Sunflower Collection is a cluster of round brilliant diamonds, where diamonds are set with minimal metal to maximize the light returned. The result is a three-dimensional sculpture of brilliance that captures the delicate symmetry of a sunflower. Versatile and wearable, the Sunflower Diamond Twin Ring seamlessly transitions from day-to-night.",
+      "price": "650000",
+      "size": "1.69",
+      "place": "Rings",
+      "image": [
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry-img/FRDPTW003SF_348240_white_1n_mobile.png?itok=JPmNNyiq",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/FRDPTW003SF_348240_white_2n_mobile.png?itok=Tk7dLElf",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry-img/FRDPTW003SF_348240_white_1n_mobile.png?itok=JPmNNyiq"
+      ],
+      "id": 12
+    },
+    {
+      "title": "Milena",
+      "description": "9 round brilliant and 2 pear-shaped diamonds weighing a total of approximately 2.29 carats, set in platinum.",
+      "price": "12000",
+      "size": "1.69",
+      "place": "Necklace",
+      "image": [
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry-img/PEDPCLRFSPC_419899-trans-2h.png?itok=UPErB2zN",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry-img/PEDPCLRFSPC_419899-trans-2h.png?itok=UPErB2zN",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry-img/PEDPCLRFSPC_419899-trans-2h.png?itok=UPErB2zN"
+      ],
+      "id": 13
+    },
+    {
+      "title": "Marina",
+      "description": "Sparkling Cluster Diamond Earrings are the perfect gift for any occasion – from a black-tie affair, to the red carpet; from wedding anniversaries, to Mother’s Day. 16 round brilliant and 4 pear-shaped diamonds weighing a total of approximately 4.26 carats, set in platinum.",
+      "price": "150000",
+      "size": "12",
+      "place": "Earrings",
+      "image": [
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/EADPPSDRSPC_419891-trans-2h.png?itok=F1OkHaxu",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/EADPPSDRSPC_419891-trans-2h.png?itok=F1OkHaxu",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/EADPPSDRSPC_419891-trans-2h.png?itok=F1OkHaxu"
+      ],
+      "id": 14
+    },
+    {
+      "title": "Emerald Ring",
+      "description": "An emerald-cut emerald engagement ring, 5.09 carats, with trilliant-shaped diamond side stones weighing a total of approximately 0.56 carats, set in platinum and 18K yellow gold. This exceptional fine jewelry design is a shining example of Harry Winston's commitment to showcasing the natural beauty of rare diamonds and precious gemstones.",
+      "price": "5000000",
+      "size": "18.2",
+      "place": "Rings",
+      "image": [
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry/RGEPEC050CO-000_78111_1_Masked.png?itok=twHNMqQE",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry/RGEPEC050CO-000_78111_2_Masked.png?itok=-86d4IuR",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry/RGEPEC050CO-000_78111_1_Masked.png?itok=twHNMqQE"
+      ],
+      "id": 15
+    },
+    {
+      "title": "Nina",
+      "description": "At Harry Winston, inspiration often begins with the extraordinary elegance of nature. Drawing upon archival sketches made in our design studio in the 1940s, the Lily Cluster Collection brings contemporary elegance to seven decades of tradition, and recalls the natural beauty of lilies in bloom. 619 round brilliant diamonds weighing a total of approximately 5.25 carats, set in platinum.",
+      "price": "110000",
+      "size": "13.5",
+      "place": "Necklace",
+      "image": [
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry-img/NKDPRD13MLC-262527-trans-1h.png?itok=-Zht8jJ-",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry-img/NKDPRD13MLC-262527-trans-1h.png?itok=-Zht8jJ-",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry-img/NKDPRD13MLC-262527-trans-1h.png?itok=-Zht8jJ-"
+      ],
+      "id": 16
     }
   ],
   "users": [
@@ -100,34 +152,67 @@
       "email": "kubat1@gmail.com",
       "password": "123",
       "id": 4
+    },
+    {
+      "name": "kubat",
+      "lastname": "kubat",
+      "email": "kubat@gmail.com",
+      "password": "123",
+      "id": 5
     }
   ],
   "cart": [
     {
-      "title": "Marina Villa",
-      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
-      "price": "200000$",
-      "size": "3000",
-      "place": "Spain",
+      "title": "Diamond Earrings",
+      "description": "10 pear-shaped diamonds weighing a total of approximately 3.38 carats with 6 round sapphires weighing a total of approximately 2.81 carats, set in platinum.",
+      "price": "90000",
+      "size": "13",
+      "place": "Earrings",
       "image": [
-        "https://www.mk-villas.com/wp-content/uploads/2015/07/17.jpg",
-        "https://photos.zillowstatic.com/fp/4df1b93d5538a3e7fd45fb24edb8caef-uncropped_scaled_within_1536_1152.webp",
-        "https://photos.zillowstatic.com/fp/f186e73b93113b468afa0d686e8e9ae1-uncropped_scaled_within_1536_1152.webp"
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/berry_cluster_by_harry_winston_earrings_sapphire_and_diamond_EASPCLRFBER_568121_trans_1.png?itok=E24rpd7x",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/berry_cluster_by_harry_winston_earrings_sapphire_and_diamond_EASPCLRFBER_568121_trans_2.png?itok=sgYUok_N",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/berry_cluster_by_harry_winston_earrings_sapphire_and_diamond_EASPCLRFBER_568121_trans_1.png?itok=E24rpd7x"
       ],
-      "id": 1
+      "id": 9
     },
     {
-      "title": "Orlando Villa",
-      "description": "Luxury COCO-MAT Villas with antivirus certificate and large private pool each, ideal for families & friends, each Villa can comfortably host 6 persons , plus 2 in sofa beds.",
-      "price": "452430$",
-      "size": "8000",
-      "place": "Dubai",
+      "title": "Nana",
+      "description": "78 pear-shaped and round brilliant pink sapphires weighing a total of approximately 8.92 carats and 99 marquise and round brilliant diamonds weighing a total of approximately 8.61 carats, set in platinum.",
+      "price": "700000",
+      "size": "19",
+      "place": "Necklace",
       "image": [
-        "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/144140119.jpg?k=aa0dd36c1c8ac4ff70e5fe312625a96b58da59c5ee48fe3c478d98f2fdcf50da&o=",
-        "https://photos.zillowstatic.com/fp/9c0420a3fdb99e5aaed28a6c8b618215-uncropped_scaled_within_1536_1152.webp",
-        "https://photos.zillowstatic.com/fp/58d69077d5d8d181f63c651889fbc60e-uncropped_scaled_within_1536_1152.webp"
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_lariat_necklace_diamond_and_pink_sapphire_NKPSPLTFLRFMN_trans_1.png?itok=DMl97ytt",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_lariat_necklace_diamond_and_pink_sapphire_NKPSPLTFLRFMN_trans_1.png?itok=DMl97ytt",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_lariat_necklace_diamond_and_pink_sapphire_NKPSPLTFLRFMN_trans_2.png?itok=MgKlWgh8"
       ],
-      "id": 2
+      "id": 8
+    },
+    {
+      "title": "Forget-Me-Not",
+      "description": " 12 pear-shaped diamonds surround 2 round brilliant diamonds, weighing a total of approximately 1.70 carats, set in platinum. Following the House's longstanding fine jewelry tradition, this delicate design marries nature's beauty with the world's rarest diamonds. Add brilliance to any occasion and celebrate one of nature's most treasured gifts with this diamond jewelry creation.",
+      "price": "900000",
+      "size": "11",
+      "place": "Earrings",
+      "image": [
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_diamond_earrings_EADP1MFLRFMN_trans-1h.png?itok=p_rSBzBF",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_diamond_earrings_EADP1MFLRFMN_trans-1h.png?itok=p_rSBzBF",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_diamond_earrings_EADP1MFLRFMN_trans-2h.png?itok=8ot2d0Eu"
+      ],
+      "id": 10
+    },
+    {
+      "title": "Sunflower",
+      "description": " Versatile and wearable, the Sunflower Collection seamlessly transitions from day-to-night. 17 round brilliant diamonds weighing a total of approximately 1.74 carats, center stone is approximately 0.72 carats, set in platinum.",
+      "price": "700000",
+      "size": "14",
+      "place": "Rings",
+      "image": [
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry/FRDPNASMSF_258670_1_Masked.png?itok=jMsPw9FI",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/FRDPNASMSF_258670_2_Masked_0.png?itok=WgMBVe8H",
+        "https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry/FRDPNASMSF_258670_1_Masked.png?itok=jMsPw9FI"
+      ],
+      "id": 11
     }
   ],
   "comments": [
@@ -267,6 +352,24 @@
       "villaID": "3",
       "data": "26.02.2021, 20:35:18",
       "id": 24
+    },
+    {
+      "comment": "n,",
+      "villaID": "11",
+      "data": "02.03.2021, 11:09:52",
+      "id": 25
+    },
+    {
+      "comment": "dfgfgdgdfg",
+      "villaID": "11",
+      "data": "02.03.2021, 17:38:23",
+      "id": 26
+    },
+    {
+      "comment": "nargiza , ne izmenyai muju",
+      "villaID": "11",
+      "data": "03.03.2021, 14:13:41",
+      "id": 27
     }
   ]
 }

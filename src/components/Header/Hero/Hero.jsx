@@ -1,5 +1,5 @@
 import React from 'react';
-import heroVideo from '../../../assets/heroVideo.mp4'
+import briliant1 from '../../../assets/briliant1.mp4'
 import classes from './Hero.module.css';
 
 const Hero = () => {
@@ -12,7 +12,7 @@ const Hero = () => {
                 muted
             >
                 <source 
-                    src={heroVideo}
+                    src={briliant1}
                     type="video/mp4"
                 />
             </video>

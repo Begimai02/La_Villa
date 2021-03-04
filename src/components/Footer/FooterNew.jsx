@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
-            <h2>La Vitta</h2>
+            <h2>Diamonds</h2>
             <Link to='./'>How it works</Link>
             <Link to='./'>Testimonials</Link>
             <Link to='./'>Investors</Link>
@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
       <section className="social-media">
         <div className="social-media-wrap">
-          <small className="website-rights">LaVitta © 2021</small>
+          <small className="website-rights">Diamonds © 2021</small>
           <div className="social-icons">
             <Link className="social-icon-link facebook"
               to="/"

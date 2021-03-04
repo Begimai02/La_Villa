@@ -1,0 +1,50 @@
+.add-block{
+    background: url(../../../assets/img/backgrounf.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.form{
+    width: 80%;
+    height: auto;
+    max-width: 500px;
+    margin: 50px auto;
+    /* border: 2px solid blue; */
+    border-radius: 15px;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    background: oldlace;
+    align-items: center;
+    /* background: transparent; */
+}
+
+.form input{
+    margin-top: 10px;
+    height: 30px;
+}
+
+.form button{
+    margin-top: 15px;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    height: 50px;
+    width: 70px;
+    align-self: flex-end;
+    background-color: blue;
+}
+
+.add-page-form{
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.add-page-form input::placeholder{
+    text-align: center;
+}
+
+.name-of-page{
+    padding-top: 0px;
+}

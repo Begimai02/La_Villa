@@ -58,26 +58,6 @@ export default function Register() {
   const [regPassword, setRegPassword] = useState('');
   
 
-//   function setItemToStorage(obj){//добавление новых тасков в localStorage
-//     if(!localStorage.getItem('person')){//проверка есть ли что-нибудь в localStorage
-//     localStorage.setItem('person', '[]')//если нет то добавляем туда путой массив
-//     }
-
-//     let data = JSON.parse(localStorage.getItem('person'));//стягиваем массив из localStorage и преобразоваем в обычный формат js
-//     data.push(obj)//в массив добавляем новый обьект
-//     localStorage.setItem('person', JSON.stringify(data))//обновленный массив преобразовываем в формат json и отправляем обратно в localStorage
-// }
-
-  // storing input from register-form
-  // function store() {
-    // localStorage.setItem('name', regName);
-    // localStorage.setItem('lastName', regLast);
-    // localStorage.setItem('email', regEmail);
-    // localStorage.setItem('password', regPassword);
-
-    
-// }
-
   function handleRegistr() {
     let newPerson = {
         name: regName,
@@ -92,18 +72,6 @@ export default function Register() {
     setRegLast('');
     setRegEmail('');
     setRegPassword('');
-    // store()
-
-
-    // let obj = {
-    //   name: regName,
-    //   lasName: regLast,
-    //   email: regEmail,
-    //   password: regPassword
-    // };
-    // setItemToStorage(obj)//вызов функции добавления в localStorage
-    // console.log(newPerson)
-    // console.log(obj)
 }
 
   return (

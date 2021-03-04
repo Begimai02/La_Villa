@@ -18,31 +18,31 @@ export default class AutoPlay extends Component {
     };
     return (
       <div className="gallery-text">
-        <h2 >Luxury La Villas</h2>
+        <h2 >Luxury Diamonds</h2>
         <Slider {...settings}>
           <div>
-            <h3>Vanilla Villa</h3>
-            <img className="gallery-carousel" src="http://www.estategr.ru/files/catalog/1000/1166/768766486ca7aad594cbb66086f40b92.jpg" alt=""/>
+            <h3>Sunflower</h3>
+            <img className="gallery-carousel" src="https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry-img/NKDPCLRFSPC_424236-trans-1h.png?itok=p6S0_BNr" alt=""/>
           </div>
           <div>
-            <h3>Sheraton Villa</h3>
-            <img className="gallery-carousel" src="https://i.pinimg.com/736x/a7/d5/e8/a7d5e83872493f9f744182946122d520--indigo-camps.jpg" alt=""/>
+            <h3>Ring Bella</h3>
+            <img className="gallery-carousel" src="https://www.harrywinston.com/sites/default/files/styles/product_slide/public/Y57392_lily_cluster_by_harry_winston_ring_diamond_rose_gold_FRDRMQRFLC_trans-1_vD_RGB.png?itok=jA5YkSqB" alt=""/>
           </div>
           <div>
-            <h3>Ottoman Villa</h3>
-            <img className="gallery-carousel" src="https://www.wallpaperup.com/uploads/wallpapers/2016/06/04/978046/fe009aeb76495b2b91ff808fd5daab76-1400.jpg" alt=""/>
+            <h3>Milena</h3>
+            <img className="gallery-carousel" src="https://www.harrywinston.com/sites/default/files/styles/product_slide/public/winston_cluster_by_harry_winston_earrings__emerald-_and_diamond__EAEPCLPMWC_trans_3.png?itok=OqaeeYhN" alt=""/>
           </div>
           <div>
-            <h3>Hamilton Villa</h3>
-            <img className="gallery-carousel" src="https://static.prian.ru/uploads/2020_04/6/20200406191255852107260o.jpg" alt=""/>
+            <h3>Anjela</h3>
+            <img className="gallery-carousel" src="https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry-img/sparkling_cluster_by_harry_winston_sapphire_aquamarine_and_diamond_ring_FRSAQPCLRFSPC_trans-1h.png?itok=Q6axBudl" alt=""/>
           </div>
           <div>
-            <h3>Chique La Villa</h3>
-            <img className="gallery-carousel" src="https://www.atlasreal.com/wp-content/uploads/2020/01/zagaleta_arenda24-3-e1579999664186.jpg" alt=""/>
+            <h3>Adelina</h3>
+            <img className="gallery-carousel" src="https://www.harrywinston.com/sites/default/files/styles/product_slide/public/jewelry-img/NKDPYRFTRF-228790-trans-1h.png?itok=ZC48Xpbl" alt=""/>
           </div>
           <div>
-            <h3>Jannat Villa</h3>
-            <img className="gallery-carousel" src="https://krov-torg.ru/wp-content/uploads/2019/08/1-14.jpg" alt=""/>
+            <h3>Margo</h3>
+            <img className="gallery-carousel" src="https://www.harrywinston.com/sites/default/files/styles/product_slide/public/forget_me_not_by_harry_winston_lariat_necklace_diamond_and_sapphire_NKSPLTFLRFMN_trans_1.png?itok=dkgnpDud" alt=""/>
           </div>
         </Slider>
       </div>

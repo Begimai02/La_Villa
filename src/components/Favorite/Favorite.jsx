@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { villasContext } from '../../contexts/VillaContext';
+import { productsContext } from '../../contexts/ProductsContext';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -30,7 +30,7 @@ const useStyles = makeStyles({
 
 const Favorite = () => {
   
-  const { favorite } = useContext(villasContext);
+  const { favorite } = useContext(productsContext);
 
   let favos = JSON.parse(localStorage.getItem('favorite'));//стягиваем массив из localStorage и преобразоваем в обычный формат js
   const [ f, setF ] = useState(favos)

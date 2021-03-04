@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { villasContext } from '../../../contexts/VillaContext';
+import { productsContext } from '../../../contexts/ProductsContext';
 import { cartContext } from '../../../contexts/CartContext';
 import Truncate from 'react-truncate'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
@@ -30,7 +30,7 @@ const useStyles = makeStyles({
 export default function MainCard({ data }) {
 
   // const {id} = useParams();
-  const { getVillaById } = useContext(cartContext)
+  const { getDiamondById } = useContext(cartContext)
   const [like, setLike] = useState(false)
   const [favorite, setFavorite] = useState(false)
 
@@ -38,9 +38,9 @@ export default function MainCard({ data }) {
     setLike()
   }, [])
 
-  const { villas, getVillas, villaDetail, getFavoriteId } = useContext(villasContext)
+  const { villas, getDiamonds, diamondsDetail, getFavoriteId } = useContext(productsContext)
   useEffect(() => {
-    getVillas()
+    getDiamonds()
   }, [])
 
   const classes = useStyles();
@@ -56,11 +56,11 @@ export default function MainCard({ data }) {
   } = data;
 
   function handleDetail(id) {
-    villaDetail(id)
+    diamondsDetail(id)
   }
 
   function handleBuy() {
-    getVillaById(id)
+    getDiamondById(id)
   }
 
   function handleFavorite() {
@@ -88,7 +88,7 @@ export default function MainCard({ data }) {
           <Link to={`/detail/${id}`} style={{ textDecoration: "none" }}>
             <CardMedia
               className={classes.media}
-              image={image[0]}
+              image={image}
               title={title}
             />
           </Link>
@@ -105,10 +105,10 @@ export default function MainCard({ data }) {
               $ {price}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Квадратура: {size}
+              Карат: {size}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Местонахождение: {place}
+              Тип: {place}
             </Typography>
           </CardContent>
         </CardActionArea>

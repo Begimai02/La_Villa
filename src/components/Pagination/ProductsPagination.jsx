@@ -11,7 +11,7 @@ export default function ProductsPagination({onChange, page, count}) {
             page={page}
             style={{display: 'flex', justifyContent: 'center'}} 
             count={count} 
-            color="primary" 
+             
         />
     )
 }

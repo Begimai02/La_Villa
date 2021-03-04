@@ -13,6 +13,7 @@ const BookingForm = () => {
     const [order, setOrder] = useState()
 
     function handleInputValue(e) {
+
         let newObj = {
             name: ordName,
             surname: ordSurname,
@@ -29,15 +30,13 @@ const BookingForm = () => {
 
     }
 
-
-    // function handleSend(){
-    //     handleSendInfo(order)
-    // }
     return (
         <div className="formBody">
 
             <div className="BookingForm">
-                <h3>Сделать заказ</h3>
+                <div className="formTitle" style={{ background: "#a8c0ff", color: 'white', width: "300px", height: "60px", lineHeight: "1px" }}>
+                    <h1 > Сделать заказ </h1>
+                </div>
                 <input onChange={(e) => setOrdName(e.target.value)} value={ordName} name='name' placeholder="Имя" type="text" />
                 <input onChange={(e) => setOrdSurname(e.target.value)} value={ordSurname} name='surname' placeholder="Фамилия" type="text" />
                 <input onChange={(e) => setOrdPhone(e.target.value)} value={ordPhone} name='phone' placeholder="Номер телефона" type="number" />

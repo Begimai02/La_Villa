@@ -140,19 +140,6 @@ export default function Login() {
 	});
 
 
-  //---------------------not using anymore ------------------
-  // function check() {  //TO LOCAL STORAGE  
-  //   // check if stored data from register-form is equal to data from login form
-  //   let newData = JSON.parse(localStorage.getItem('person'))//стягиваем массив из localStorage и преобразоваем в обычный формат js
-  //   console.log(newData)
-  //   newData.forEach(item => {//перебираем массив 
-  //     if (item.email === logEmail && item.password === logPassword) {
-  //       return alert('You are loged in.');  //call here state and change the state of the main page: ADMIN OR USER
-  //     }
-  //   })
-  //   return alert("error")
-  // }
-
   function setUserToStorage(obj){//добавление новых тасков в localStorage
         if(!localStorage.getItem('person')){//проверка есть ли что-нибудь в localStorage
         localStorage.setItem('person', '[]')//если нет то добавляем туда путой массив

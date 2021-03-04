@@ -34,7 +34,7 @@ const CommentContextProvider = ({ children }) => {
   const addComment = async (newComment) => {
     await axios.post('http://localhost:8000/comments', newComment)
     getComments(newComment.villaID)
- 
+
   }
 
 

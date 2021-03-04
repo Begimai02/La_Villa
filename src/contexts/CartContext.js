@@ -34,7 +34,7 @@ const reducer = (state = INIT_STATE, action) => {
 const CartContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE)
 
-    const getVillasInCart = async () => {
+    const getDiamondsInCart = async () => {
         const { data } = await axios('http://localhost:8000/cart')
         dispatch({
             type: "SHOW_VILLAS_IN_CART",
@@ -42,28 +42,28 @@ const CartContextProvider = ({ children }) => {
         })
     }
 
-    const getVillaById = async (id) => {
-        const { data } = await axios(`http://localhost:8000/villas/${id}`)
+    const getDiamondById = async (id) => {
+        const { data } = await axios(`http://localhost:8000/diamonds/${id}`)
         addToCard(data)
     }
 
     const addToCard = async (newVillaToCart) => {
         try {
             await axios.post('http://localhost:8000/cart', newVillaToCart)
-            getVillasInCart()
+            getDiamondsInCart()
         }
         catch (e) {
             notifyError()
         }
     }
-    function test(){
+    function test() {
         toast("WOW")
 
     }
 
-    const deleteVilla = async (id) => {
+    const deleteDiamonds = async (id) => {
         await axios.delete(`http://localhost:8000/cart/${id}`)
-        getVillasInCart()
+        getDiamondsInCart()
     }
 
     // booking
@@ -90,10 +90,10 @@ const CartContextProvider = ({ children }) => {
 
     return (
         <cartContext.Provider value={{
-            getVillasInCart,
-            getVillaById,
+            getDiamondsInCart,
+            getDiamondById,
             addToCard,
-            deleteVilla,
+            deleteDiamonds,
             handleSendInfo,
             cart: state.cart,
             orderInfo: state.orderInfo

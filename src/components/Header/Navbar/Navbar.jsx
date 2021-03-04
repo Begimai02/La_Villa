@@ -13,7 +13,7 @@ import { red, green } from '@material-ui/core/colors';
 import { userContext } from '../../../contexts/UserContext';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import sunLogo from '../../../assets/sunLogo.svg';
+import dm from '../../../assets/dm.png';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   navbar: {
-    background: 'linear-gradient(to left, #2980b9, #6dd5fa, #ffffff)',
+    background: '#a8c0ff'
   },
   navlinks: {
     marginRight: theme.spacing(5),
@@ -156,11 +156,10 @@ export default function PrimarySearchAppBar() {
     >
       {
         newData ?
-          <>
+
             <MenuItem onClick={handleLogOut}>Log Out</MenuItem>
-          </>
           :
-          <>
+          <div>
             <Link to="/register" style={{ textDecoration: "none", color: "black" }}>
               <MenuItem onClick={handleMenuClose}>Sign Up</MenuItem>
             </Link>
@@ -171,17 +170,17 @@ export default function PrimarySearchAppBar() {
             <Link to="/isadmin" style={{ textDecoration: "none", color: "black" }}>
               <MenuItem onClick={handleMenuClose}>Admin</MenuItem>
             </Link>
-          </>
+          </div>
       }
       {
         odmen ?
-          <>
+          <div>
             <MenuItem >ADMIN: {emailOn}</MenuItem>
             <Link to="/add" style={{ textDecoration: "none" }} >
               <MenuItem onClick={handleMenuClose}><button className={classes.addBtn}>Add</button></MenuItem>
             </Link>
 
-          </>
+          </div>
           : null
       }
     </Menu>
@@ -223,7 +222,7 @@ export default function PrimarySearchAppBar() {
       </MenuItem>
       <MenuItem>
         <IconButton color="inherit">
-          <p>Our Villas</p>
+          <p>Our Diamonds</p>
         </IconButton>
       </MenuItem>
       <MenuItem>
@@ -242,7 +241,7 @@ export default function PrimarySearchAppBar() {
 
         <Link to="/" style={{textDecoration: "none"}}>
           <IconButton>
-            <img src={sunLogo} alt={"logo"}
+            <img src={dm} alt={"logo"}
               style={{
                 height: '28px',
                 width: '23px',
@@ -258,7 +257,7 @@ export default function PrimarySearchAppBar() {
                 marginLeft: '10px',
                 cursor: 'pointer',
               }}>
-              La Villa
+              Diamonda
           </Typography>
           </IconButton>
 
@@ -278,7 +277,7 @@ export default function PrimarySearchAppBar() {
             </IconButton>
             <IconButton className={classes.navlinks}>
               <Typography>
-                Our Villas
+                Our Diamonds
               </Typography>
             </IconButton>
             <IconButton className={classes.navlinks}>

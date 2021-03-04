@@ -4,11 +4,10 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
-import Button from '@material-ui/core/Button';
+
 import Grid from '@material-ui/core/Grid';
-import classes from './MainList.module.css';
 import { Link, useHistory } from 'react-router-dom';
-import { villasContext } from '../../../contexts/VillaContext';
+import { productsContext } from '../../../contexts/ProductsContext';
 import MainCard from './MainCard';
 import ProductsPagination from '../../Pagination/ProductsPagination';
 import './MainList.css'
@@ -97,7 +96,7 @@ export default function MainList({ }) {
   const search = new URLSearchParams(history.location.search);
 
   const [page, setPage] = useState(+search.get("page") || 1);
-  const { villas, count, getVillas } = useContext(villasContext)
+  const { diamonds, count, getDiamonds } = useContext(productsContext)
 
   useEffect(() => {
     setPage(+search.get("page") || 1)
@@ -105,9 +104,9 @@ export default function MainList({ }) {
 
   useEffect(() => {
     if(filter){
-      getVillas(`http://localhost:8000/villas?_limit=3&_page=${page}&q=${inpSearch}&place=${filter}`)
+      getDiamonds(`http://localhost:8000/diamonds?_limit=6&_page=${page}&q=${inpSearch}&place=${filter}`)
     }else {
-      getVillas(`http://localhost:8000/villas?_limit=3&_page=${page}&q=${inpSearch}`)
+      getDiamonds(`http://localhost:8000/diamonds?_limit=6&_page=${page}&q=${inpSearch}`)
         }
   }, [page, inpSearch, filter])
 
@@ -123,15 +122,18 @@ export default function MainList({ }) {
         marginTop: '50px',
         padding: '0 50px'
       }}>
-        Our villas are waiting for you!
+        Our diamonds are waiting for you
       </h2>
       <p style={{
         // fontFamily: 'Sawarabi Gothic, sans-serif',
         fontSize: '25px',
         padding: '0 30px'
       }}>
-        La Villa offers diverse  villas in different countries to help you spend your dream vacation. <br></br>
-        Order your villa online quickly and safely with La Vitta.
+        Diamond is a solid form of the element carbon with its atoms arranged in a crystal structure called diamond cubic. 
+        At room temperature and pressure, another solid form of carbon known as graphite is the chemically stable form of carbon, 
+        but diamond almost never converts to it. Diamond has the highest hardness and thermal conductivity of any natural material, 
+        properties that are utilized in major industrial applications such as cutting and polishing tools. 
+        They are also the reason that diamond anvil cells can subject materials to pressures found deep in the Earth.
       </p>
       <div className={classes.searchControl}>
         <FormControl className={[classes.margin, classes.inputSearch].join(' ')}>
@@ -150,22 +152,19 @@ export default function MainList({ }) {
             input={<BootstrapInput />}
           >
             <option aria-label="None" value="" />
-            <option value="Dubai">Dubai</option>
-            <option value="Spain">Spain</option>
-            <option value="Italy">Italy</option>
-            <option value="Turkey">Turkey</option>
-            <option value="Brasil">Brasil</option>
-            <option value="Maldives">Maldives</option>
+            <option value="Necklace">Necklace</option>
+            <option value="Earrings">Earrings</option>
+            <option value="Rings">Rings</option>
           </NativeSelect>
         </FormControl>
         {/* <Button className={[classes.margin, classes.inputSearch2].join(' ')} variant="contained">
           Search
         </Button> */}
       </div>
-      <h1>View our Villas</h1>
+      <h1>View our Diamonds</h1>
       <Grid container spacing={3} className="grid_container">
         {
-          villas.map(item => (
+          diamonds?.map(item => (
             <Grid key={item.id} item xs={12} sm={6} lg={4}>
               {/* <Link to={`villas/${item.id}`} style={{ textDecoration: 'none' }}> */}
               <MainCard data={item} />
@@ -174,7 +173,7 @@ export default function MainList({ }) {
           ))
         }
       </Grid>
-      <ProductsPagination count={Math.ceil(count / 3)} page={page} onChange={onPaginationChange} />
+      <ProductsPagination count={Math.ceil(count / 6)} page={page} onChange={onPaginationChange} />
 
     </div>
   );

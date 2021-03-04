@@ -8,7 +8,6 @@ const INIT_STATE = {
   yes: null
 }
 
-
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "GET_USERS":

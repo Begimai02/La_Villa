@@ -1,43 +1,5 @@
-/* /* body {
-    width: 100vw;
-    height: 100vh;}
-
-.next {
-    top: cals(50% - 20px);
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-.previous {
-    top: cals(50% - 20px);
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.next {
-    right: 20px;
-}
-
-.prev {
-    left: 20px;
-} */
-
-/* img { */
-    /* position: absolute; */
-    /* top: 50%;
-    left: 50%; */
-    /* width: 800px;
-    height: 500px; */
-    /* margin-top: 250px;
-    margin-left: -250px; */
-
-
     .SlideBox {
       font-family: sans-serif;
-      /* text-align: center; */
       
     }
     
@@ -49,7 +11,6 @@
       left: 0;
       right: 0;
       margin-left: auto;
-      /* margin-top: 80px; */
       margin-right: auto;
       background-size: cover;
       background-repeat: no-repeat;

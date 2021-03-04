@@ -70,72 +70,66 @@ export default function VerticalTabs() {
         aria-label="Vertical tabs example"
         className={classes.tabs}
       >
-        <Tab label="Vanilla Villa" {...a11yProps(0)} />
-        <Tab label="Sheraton Villa" {...a11yProps(1)} />
-        <Tab label="Ottoman Villa" {...a11yProps(2)} />
-        <Tab label="Hamilton Villa" {...a11yProps(3)} />
-        <Tab label="Chique La Villa" {...a11yProps(4)} />
-        <Tab label="Jannat Villa" {...a11yProps(5)} />
-        <Tab label="Vanilla Villa" {...a11yProps(6)} />
+        <Tab label="" {...a11yProps(0)} />
+        <Tab label="Sunflower" {...a11yProps(1)} />
+        <Tab label="Ring Bella" {...a11yProps(2)} />
+        <Tab label="Milena" {...a11yProps(3)} />
+        <Tab label="Adelina" {...a11yProps(4)} />
+        <Tab label="Margo" {...a11yProps(5)} />
+        <Tab label="Marina" {...a11yProps(6)} />
       </Tabs>
       <TabPanel className="reviews" value={value} index={0}>
         <Typography>
           Bakyt Timurov, USA
         </Typography>
         <h4>
-          I really liked the Villa, very spacious, beautiful, large pool, 
-          wonderful view from the window.<br></br>Nice interior with excellent furnishings. 
-          I will come again! Really Good!</h4>
+         really thebest ring</h4>
       </TabPanel>
       <TabPanel value={value} index={1}>
       <Typography>
           Tilek Makers. Bishkek, Kyrgyzstan
         </Typography>
         <h4>
-          Мне понравилось, такая большая вилла, прям завораживает. Обязательно приду с друзьями <br></br>
-          Классный был отдых!</h4>
+          </h4>
       </TabPanel>
       <TabPanel value={value} index={2}>
       <Typography>
           John SMITH, Colorado, USA
         </Typography>
         <h4>
-          I really liked the Villa, very spacious, beautiful, large pool, 
-          wonderful view from the window.<br></br>Nice interior with excellent furnishings. 
-          I will come again! Really Good!</h4>
+             Really Good!</h4>
       </TabPanel>
       <TabPanel value={value} index={3}>
       <Typography>
           John SMITH. Colorado, USA
         </Typography>
         <h4>
-          I really liked the Villa, very spacious, beautiful, large pool, 
-          wonderful view from the window.<br></br>Nice interior with excellent furnishings. 
-          I will come again! Really Good!</h4>
+        The hardness of diamond contributes to its suitability as a gemstone.  <br/>
+        Because it can only be scratched by other diamonds, 
+        it maintains its polish extremely well. </h4>
       </TabPanel>
       <TabPanel value={value} index={4}>
       <Typography>
           Tilek Makers. Bishkek, Kyrgyzstan
         </Typography>
         <h4>
-          Мне понравилось, такая большая вилла, прям завораживает. Обязательно приду с друзьями <br></br>
-          Классный был отдых!</h4>
+          Мне понравилось, такой красивый брилиант, прям завораживает. Обязательно купля девушке <br></br>
+          Шикарно!</h4>
       </TabPanel>
       <TabPanel value={value} index={5}>
       <Typography>
           John SMITH, Colorado, USA
         </Typography>
-        <h4>I really liked the Villa, very spacious, beautiful, large pool, 
-          wonderful view from the window.<br></br>Nice interior with excellent furnishings.
-          I will come again! Really Good!</h4>
+        <h4>the diamond ring was so sunny and beautiful I could not stay away and bought it. 
+          if anyone looking for great customer service and wants to make happy someone you are in a right place.</h4>
       </TabPanel>
       <TabPanel value={value} index={6}>
       <Typography>
           John SMITH, Colorado, USA
         </Typography>
-        <h4>I really liked the Villa, very spacious, beautiful, large pool, 
-          wonderful view from the window.<br></br>Nice interior with excellent furnishings. 
-          I will come again! Really Good!</h4>
+        <h4>the diamond ring was so sunny and beautiful I could not stay away and bought it. 
+          if anyone looking for great customer service and wants to make happy someone you are in a right place.<br></br>
+         </h4>
       </TabPanel>
     </div>
   );
